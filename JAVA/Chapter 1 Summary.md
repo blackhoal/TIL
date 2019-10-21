@@ -19,4 +19,5 @@
 6. 3 Edition & 2 Environment
 	a. Java SE(Standard Edition) / Java EE(Enterprise Edition) / Java ME(Micro Edition)
 	b. JRE(Java Runtime Environment) : 자바 애플리케이션의 실행 환경
-	c. JDK(Java Development Kit) : 자바 애플리케이션의 개발 환경 / 실행 환경 뿐만 아니라 소스 파일의 컴파일러 및 디버거 등 자바 애플리케이션을 개발하기 위한 도구가 포함 → 애플리케이션의 경우 작동만 원한다면 JRE, 운영하며 디버깅 및 분석 등을 원하는 경우 JDK 설치
+	c. JDK(Java Development Kit) : 자바 애플리케이션의 개발 환경 / 실행 환경 / 자바 애플리케이션 개발 도구(소스 파일의 컴파일러 및 디버거) 
+	→ 애플리케이션의 경우 작동만 원한다면 JRE, 운영하며 디버깅 및 분석 등을 원하는 경우 JDK 설치
