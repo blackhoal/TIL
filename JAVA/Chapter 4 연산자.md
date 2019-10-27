@@ -87,12 +87,12 @@ int n4 = -n2;
 → ★적용이 되는 시점의 차이  
 ![4-5](https://user-images.githubusercontent.com/48504392/67632041-60fc7a80-f8e1-11e9-9726-c8e749793b91.png)
 
-int a1 = 7, a2;
-a2 = (--a1) + 5;
-→ a1 = 6, a2 = 11 (감소 이후 대입)
-int a1 = 7, a2;
-a2 = (a1--) + 5;
-→ a1 = 6, a2 = 12 (감소 이전 대입)
+int a1 = 7, a2;  
+a2 = (--a1) + 5;  
+→ a1 = 6, a2 = 11 (감소 이후 대입)  
+int a1 = 7, a2;  
+a2 = (a1--) + 5;  
+→ a1 = 6, a2 = 12 (감소 이전 대입)  
 
 8. 비트 연산자  
 ![4-6](https://user-images.githubusercontent.com/48504392/67632049-770a3b00-f8e1-11e9-984b-70b1de9cc10e.png)
