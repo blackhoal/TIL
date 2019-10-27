@@ -1,3 +1,5 @@
+①②③④⑤⑥⑦⑧
+ⓐⓑⓒⓓⓔⓕⓖⓗ
 # 1. 규제의 필요성  
   - 프로그래밍 도구의 기본적인 목표는 생각하는 것을 자유롭게 표현할 수 있도록 하는 것이지만 프로그래밍의 규모가 점점 커지고, 복잡해지며 단독 작업에서 협업으로 넘어감에 따라 생기는 변화를 수용하기 위해 다양한 규제가 필요
   - 규제의 종류 : 데이터 타입, 추상 클래스, final, 접근 제어자, 인터페이스 등
@@ -6,45 +8,47 @@
 ~~~
 class FruitSaleMain4
 {
-public static void main(String[] args)
-{
-FruitSeller seller = new FruitSeller(0, 30, 1500);
-FruitBuyer buyer = new FruitBuyer(10000);
-seller.myMoney += 500; 
-buyer.myMoney -= 500;
-seller.numOfApple -= 20;
-buyer.numOfApple += 20;
-System.out.println("과일 판매자의 현재 상황");
-seller.showSaleResult();
-System.out.println("과일 구매자의 현재 상황");
-buyer.showSaleResult();
-}
+  public static void main(String[] args)
+  {
+    FruitSeller seller = new FruitSeller(0, 30, 1500);
+    FruitBuyer buyer = new FruitBuyer(10000);
+    seller.myMoney += 500; 
+    buyer.myMoney -= 500;
+    seller.numOfApple -= 20;
+    buyer.numOfApple += 20;
+    System.out.println("과일 판매자의 현재 상황");
+    seller.showSaleResult();
+    System.out.println("과일 구매자의 현재 상황");
+    buyer.showSaleResult();
+  }
 }
 ~~~
   - 개당 500원이 아니라 20개를 500원에 가져감으로써 메소드를 통해 정의한 판매 규칙을 무시하는 상황 발생
   - 외부에서 인스턴스 변수에 직접 접근을 방지하여 위의 상황을 방지
 
-## 정의  
+## ① 정의  
   - 인스턴수 변수에 private 선언을 하는 것  
 
-## 특징  
-1외부에서 인스턴스 변수에 직접 접근이 가능할 경우 문제 발생할 수 있으므로 직접적인 접근 방지
-2프로그램의 안정성을 높임
-3인스턴스 변수의 private 선언으로 인해 메소드로만 유일하게 접근 가능
-클래스는 기본적으로 데이터(변수)와 기능(메소드)이 균형 있게 존재하는데, 데이터의 표현에만 초점을 맞춰 설계된 클래스의 경우에는 편의상 인스턴스 변수를 public으로 선언하기도 함
+## ② 특징  
+### ⓐ 외부에서 인스턴스 변수에 직접 접근이 가능할 경우 문제 발생할 수 있으므로 직접적인 접근 방지  
+### ⓑ 프로그램의 안정성을 높임  
+### ⓒ 인스턴스 변수의 private 선언으로 인해 메소드로만 유일하게 접근 가능  
+- 클래스는 기본적으로 데이터(변수)와 기능(메소드)이 균형 있게 존재하는데, 데이터의 표현에만 초점을 맞춰 설계된 클래스의 경우에는 편의상 인스턴스 변수를 public으로 선언하기도 함  
 
 
-Access 메소드
--정보 은닉의 대상인 인스턴스 변수는 대부분 private로 선언됨에 따라 외부 클래스에서 접근 불가능
--외부에서 이런 상황일 때 변수의 간접접근을 허용하기 위해 제공되는 추가적인 메소드
--변수 age의 값을 변경하는 메소드는 setAge, 변수 age의 값을 반환하는 메소드는 getAge로 정의
--모든 인스턴스 변수마다 Access메소드를 정의할 필요 없이 클래스의 성격과 필요에 따라 정의 
+## ③ Access 메소드  
+### ⓐ 정보 은닉의 대상인 인스턴스 변수는 대부분 private로 선언됨에 따라 외부 클래스에서 접근 불가능  
+### ⓑ 외부에서 이런 상황일 때 변수의 간접접근을 허용하기 위해 제공되는 추가적인 메소드  
+### ⓒ 변수 age의 값을 변경하는 메소드는 setAge, 변수 age의 값을 반환하는 메소드는 getAge로 정의  
+  - 모든 인스턴스 변수마다 Access메소드를 정의할 필요 없이 클래스의 성격과 필요에 따라 정의 
+~~~
 class Person
 {
-private int age;
-public void setAge(int ag){age=ag;}
-public int getAge(){return age;}
+  private int age;
+  public void setAge(int ag){age=ag;}
+  public int getAge(){return age;}
 }
+~~~
 
 2. 접근 제어자
 클래스의 멤버(변수와 메소드)들의 접근 권한을 지정
