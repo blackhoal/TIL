@@ -3,11 +3,11 @@
 ~~~
 if (true or false)
 {
-true일 경우 실행되는 영역;
+  true일 경우 실행되는 영역;
 }
 else
 {
-false일 경우 실행되는 영역;
+  false일 경우 실행되는 영역;
 }
 ~~~
 ② 특징
