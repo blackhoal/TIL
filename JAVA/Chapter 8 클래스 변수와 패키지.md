@@ -13,42 +13,42 @@
 ### ⓓ 찾고자 하는 클래스가 보이지 않음을 명시하는 오류이므로 서브 디렉터리인 mysubclass 디렉터리에서 클래스를 찾도록 수정 필요  → 환경변수의 역할  
 ## ③ 환경변수(Environment Variable)  
 ### a. 명령 프롬프트에 구문 입력  
-C;\myclass > calc.exe
-C;\myclass > explorer.exe 
-→ myclass 디렉터리에 calc.exe와 explorer.exe가 없음에도 정상적으로 실행
+  C;\myclass > calc.exe
+  C;\myclass > explorer.exe 
+  → myclass 디렉터리에 calc.exe와 explorer.exe가 없음에도 정상적으로 실행
 ### b. 환경변수 path의 내용을 echo 명령어로 출력  
-C:\myclass> echo %path%  
-→ .;C:\WINDOWS\system32;C:\Program Files\Java\jdk1.6.0_10\bin; 구문이 출력  
+  C:\myclass> echo %path%  
+  → .;C:\WINDOWS\system32;C:\Program Files\Java\jdk1.6.0_10\bin; 구문이 출력  
 ### c. 출력된 구문 해석  
-세미콜론을 기준으로 세 부분으로 구분  
-.; C:\WINDOWS\system32; C:\Program Files\Java\jdk1.6.0_10\bin;  
+  세미콜론을 기준으로 세 부분으로 구분  
+  **.**; **C:\WINDOWS\system32**; **C:\Program Files\Java\jdk1.6.0_10\bin**;  
 #### 경로 1 .;
 - 명령 프롬프트가 위치하는 현재 디렉터리  
 #### 경로 2 C:\WINDOWS\system32;  
 - System32 디렉터리에 calc.exe, explorer.exe가 존재  
-→ ⓐ에서 계산기와 파일 탐색기가 실행이 가능했던 이유  
+  → ⓐ에서 계산기와 파일 탐색기가 실행이 가능했던 이유  
 #### 경로 3 C:\Program Files\Java\jdk1.6.0_10\bin;  
 - bin 폴더에 javac.exe와 java.exe가 존재  
-→ 명령 프롬프트가 어느 디렉터리에 위치하든 항상 자바 프로그램을 컴파일 및 실행 가능한 이유  
+  → 명령 프롬프트가 어느 디렉터리에 위치하든 항상 자바 프로그램을 컴파일 및 실행 가능한 이유  
 ## ④ 환경변수의 classpath 설정  
-### a. path가 하나만 존재 X → 필요에 따라 추가 가능  
-### b. 클래스의 경로 정보를 classpath의 환경변수에 추가함으로써 클래스의 검색 경로를 확장  
-### c. classpath 설정 구문  
+### ⓐ path가 하나만 존재 X → 필요에 따라 추가 가능  
+### ⓑ 클래스의 경로 정보를 classpath의 환경변수에 추가함으로써 클래스의 검색 경로를 확장  
+### ⓒ classpath 설정 구문  
 C:\myclass> set classpath=.;  
 → 현재 디렉터리는 별도로 추가하지 않아도 기본적인 클래스 파일의 탐색경로에 포함  
 ## ⑤ 배치 파일 생성  
-### a. .java 파일 컴파일  
+### ⓐ .java 파일 컴파일  
 javac ClassPath.java  
-### b. mysubclass 디렉터리 생성  
+### ⓑ mysubclass 디렉터리 생성  
 md mysubclass  
-### c. AAA.class, BBB.class를 mysubclass 디렉터리로 이동  
+### ⓒ AAA.class, BBB.class를 mysubclass 디렉터리로 이동  
 copy AAA.class .\mysubclass\AAA.class  
 copy BBB.class .\mysubclass\BBB.class  
 del AAA.class  
 del BBB.class  
-### d. mysubclass 디렉터리를 classpath로 추가  
+### ⓓ mysubclass 디렉터리를 classpath로 추가  
 set classpath=.;.\mysubclass  
-### e. 실행  
+### ⓔ 실행  
 java ClassPath  
 pause  
 ①②③④⑤⑥⑦⑧
