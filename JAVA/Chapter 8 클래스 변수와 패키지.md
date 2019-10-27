@@ -1,7 +1,6 @@
 # 1. 클래스 패스  
 ## ① 정의  
   - 클래스를 찾기 위한 경로  
-    - 이런
   - 자바 가상머신이 프로그램을 실행할 때 클래스 파일을 찾는 기준이 되는 파일 경로  
 ## ② ClassPath.java  
 ![8-1](https://user-images.githubusercontent.com/48504392/67634122-54851b80-f8fb-11e9-972e-e0488aa007c1.png)  
@@ -11,8 +10,7 @@
 ![8-3](https://user-images.githubusercontent.com/48504392/67634161-c3627480-f8fb-11e9-90ef-842ad8e1e918.png)  
 ### ⓒ Mysubclass로 AAA, BBB를 이동 후 ClassPath.java 실행 시 오류 발생  
 ![8-4](https://user-images.githubusercontent.com/48504392/67634170-d2492700-f8fb-11e9-98d3-d32a2dc542a0.png)  
-### ⓓ 찾고자 하는 클래스가 보이지 않음을 명시하는 오류이므로 서브 디렉터리인 mysubclass 디렉터리에서 클래스를 찾도록 수정 필요  
-→ 환경변수의 역할
+### ⓓ 찾고자 하는 클래스가 보이지 않음을 명시하는 오류이므로 서브 디렉터리인 mysubclass 디렉터리에서 클래스를 찾도록 수정 필요  → 환경변수의 역할  
 ## ③ 환경변수(Environment Variable)  
 ### a. 명령 프롬프트에 구문 입력  
 C;\myclass > calc.exe
