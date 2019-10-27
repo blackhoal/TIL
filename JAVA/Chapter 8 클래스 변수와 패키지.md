@@ -1,6 +1,7 @@
 # 1. 클래스 패스  
 ## ① 정의  
   - 클래스를 찾기 위한 경로  
+    - 이런
   - 자바 가상머신이 프로그램을 실행할 때 클래스 파일을 찾는 기준이 되는 파일 경로  
 ## ② ClassPath.java  
 ![8-1](https://user-images.githubusercontent.com/48504392/67634122-54851b80-f8fb-11e9-972e-e0488aa007c1.png)  
