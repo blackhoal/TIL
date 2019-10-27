@@ -51,8 +51,7 @@ set classpath=.;.\mysubclass
 ### ⓔ 실행  
 java ClassPath  
 pause  
-①②③④⑤⑥⑦⑧
-ⓐⓑⓒⓓⓔⓕⓖⓗ
+
 # 2. 패키지의 이해  
 ## ① 정의  
 - 서로 연관이 깊으며 유사한 성격의 자바 클래스의 집합으로 구성된 자바 디렉터리  
@@ -75,3 +74,5 @@ package orange.perimeter;
 ## ⑥ 패키지의 그룹  
 ## ⑦ 이름 없는 패키지  
 ## ⑧ import 선언  
+①②③④⑤⑥⑦⑧  
+ⓐⓑⓒⓓⓔⓕⓖⓗ  
