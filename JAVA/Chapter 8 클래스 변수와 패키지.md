@@ -52,27 +52,27 @@ set classpath=.;.\mysubclass
 ### e. 실행  
 java ClassPath  
 pause  
-
-2. 패키지의 이해
-a. 정의
-- 서로 연관이 깊으며 유사한 성격의 자바 클래스의 집합으로 구성된 자바 디렉터리
-b. 특징
-① 컴파일이 완료된 동일한 이름의 클래스 파일을 서로 다른 디렉터리에 저장 및 관리
-- area의 Circle 클래스(area.Circle)와 perimeter의 Circle 클래스(perimeter.Circle)의 명칭이 동일한 상황
-→ 상위 디렉터리 orange를 생성하고 아래 계층에 area와 perimeter를 서브 디렉터리로 설정한 구조 생성
-orange.area.Circle 
-orange.perimeter.Circle
-→ 패키지 : orange / 서브 패키지 : area, perimeter
-② 인스턴스 생성 시 저장된 디렉터리 정보를 표시하여 클래스를 구분 및 인스턴스를 생성
-c. 패키지와 클래스 패스의 관계
-
-d. 패키지의 선언
-package orange.area;
-package orange.perimeter;
-→ 작성중인 파일 내에서 생성되는 모든 클래스를 패키지(orange.area, orange.perimeter)로 묶겠음을 선언하는 구문
-e. 디렉터리의 구분 외에 패키지의 선언이 별도로 필요한 이유
-- 패키지의 선언 없이 디렉터리의 위치만 구분할 경우 일반적인 인스턴스 생성 방식 사용이 불가
-
-f. 패키지의 그룹
-g. 이름 없는 패키지
-h. import 선언
+①②③④⑤⑥⑦⑧
+ⓐⓑⓒⓓⓔⓕⓖⓗ
+# 2. 패키지의 이해  
+## ① 정의  
+- 서로 연관이 깊으며 유사한 성격의 자바 클래스의 집합으로 구성된 자바 디렉터리  
+## ② 특징  
+### ⓐ 컴파일이 완료된 동일한 이름의 클래스 파일을 서로 다른 디렉터리에 저장 및 관리  
+- area의 Circle 클래스(area.Circle)와 perimeter의 Circle 클래스(perimeter.Circle)의 명칭이 동일한 상황  
+→ 상위 디렉터리 orange를 생성하고 아래 계층에 area와 perimeter를 서브 디렉터리로 설정한 구조 생성  
+orange.area.Circle  
+orange.perimeter.Circle  
+→ 패키지 : orange / 서브 패키지 : area, perimeter  
+### ⓑ 인스턴스 생성 시 저장된 디렉터리 정보를 표시하여 클래스를 구분 및 인스턴스를 생성  
+## ③ 패키지와 클래스 패스의 관계  
+![8-5](https://user-images.githubusercontent.com/48504392/67634262-de81b400-f8fc-11e9-9bfc-418cbe3d1c3e.png)  
+## ④ 패키지의 선언  
+package orange.area;  
+package orange.perimeter;  
+→ 작성중인 파일 내에서 생성되는 모든 클래스를 패키지(orange.area, orange.perimeter)로 묶겠음을 선언하는 구문  
+## ⑤ 디렉터리의 구분 외에 패키지의 선언이 별도로 필요한 이유  
+- 패키지의 선언 없이 디렉터리의 위치만 구분할 경우 일반적인 인스턴스 생성 방식 사용이 불가  
+## ⑥ 패키지의 그룹  
+## ⑦ 이름 없는 패키지  
+## ⑧ import 선언  
