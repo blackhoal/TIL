@@ -8,7 +8,7 @@
 ③ 키워드를 변수명으로 사용 X
 → int, double과 같이 자바의 문법을 구성하는 단어
 
-자료형
+자료형#
 ![2-1](https://user-images.githubusercontent.com/48504392/67631882-8f795600-f8df-11e9-9bee-a9920ae40775.jpg)
 1. 정수형
 - byte(1byte), short(2byte), int(4byte), long(8byte)
