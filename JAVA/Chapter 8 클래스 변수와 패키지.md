@@ -12,14 +12,14 @@
 ![8-4](https://user-images.githubusercontent.com/48504392/67634170-d2492700-f8fb-11e9-98d3-d32a2dc542a0.png)  
 ### ⓓ 찾고자 하는 클래스가 보이지 않음을 명시하는 오류이므로 서브 디렉터리인 mysubclass 디렉터리에서 클래스를 찾도록 수정 필요  → 환경변수의 역할  
 ## ③ 환경변수(Environment Variable)  
-### a. 명령 프롬프트에 구문 입력  
+### ⓐ 명령 프롬프트에 구문 입력  
   C;\myclass > calc.exe
   C;\myclass > explorer.exe 
   → myclass 디렉터리에 calc.exe와 explorer.exe가 없음에도 정상적으로 실행
-### b. 환경변수 path의 내용을 echo 명령어로 출력  
+### ⓑ 환경변수 path의 내용을 echo 명령어로 출력  
   C:\myclass> echo %path%  
   → .;C:\WINDOWS\system32;C:\Program Files\Java\jdk1.6.0_10\bin; 구문이 출력  
-### c. 출력된 구문 해석  
+### ⓒ 출력된 구문 해석  
   세미콜론을 기준으로 세 부분으로 구분  
   **.**; **C:\WINDOWS\system32**; **C:\Program Files\Java\jdk1.6.0_10\bin**;  
 #### 경로 1 .;
