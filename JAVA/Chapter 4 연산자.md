@@ -1,5 +1,5 @@
 1. 대입 연산자와 산술 연산자  
-![4-1](https://user-images.githubusercontent.com/48504392/67632012-0fec8680-f8e1-11e9-83e1-d26461fd79ef.png)
+![4-1](https://user-images.githubusercontent.com/48504392/67632012-0fec8680-f8e1-11e9-83e1-d26461fd79ef.png)  
 ① 나눗셈 연산자
 - 연산 방식은 ★피연산자의 자료형에 따라 결정
 7 / 3    
@@ -29,7 +29,7 @@ int n = 5;
 n * 2.2;
 → n이 int형에서 double형으로 형 변환 후 연산하여 11.0이 되고, 다시 int형인 11로 형 변환되어 n에 저장되어 2번의 형 변환이 이루어짐
 
-3. 관계 연산자
+3. 관계 연산자  
 ![4-3](https://user-images.githubusercontent.com/48504392/67632029-40ccbb80-f8e1-11e9-96e6-5722da6380c8.png)
 - A == B → A와 B의 값이 동일하면 true가 반환되고, 다를 경우 false가 반환
 - A  != B → A와 B의 값이 동일하면 false가 반환되고, 다를 경우 true가 반환
