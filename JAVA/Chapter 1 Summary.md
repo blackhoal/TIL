@@ -13,8 +13,8 @@
 4. 자바 컴파일러(javac.exe)
 - 소스파일(JavaProgram.java)의 소스코드를 가상머신이 이해할 수 있는 자바 바이트코드로 변환하는 프로그램
 ※ 자바 바이트코드 : 자바 컴파일러에 의해 생성되는 1바이트 크기의 코드
-- 자바의 소스코드(.java)가 컴파일러(javac)에 의해 컴파일되고, 컴파일된 파일이 java.exe에 의해 가상머신을 기반으로 실행
-![1-1](./img/1-1.png)
+- 자바의 소스코드(.java)가 컴파일러(javac)에 의해 컴파일되고, 컴파일된 파일이 java.exe에 의해 가상머신을 기반으로 실행  
+![1-1](https://user-images.githubusercontent.com/48504392/67631912-e7b05800-f8df-11e9-90c8-2daf05d6d8b1.png)
 5. 오버헤드로 인한 속도 문제?
 - Java VM에 의한 오버헤드가 존재하나 JIT 컴파일러(Just In Time) 기술로 인해 속도 향상
 6. 3 Edition & 2 Environment
