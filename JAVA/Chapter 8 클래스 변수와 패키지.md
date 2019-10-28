@@ -2,6 +2,7 @@
 ## ① 정의  
   - 클래스를 찾기 위한 경로  
   - 자바 가상머신이 프로그램을 실행할 때 클래스 파일을 찾는 기준이 되는 파일 경로  
+    
 ## ② ClassPath.java  
 ![8-1](https://user-images.githubusercontent.com/48504392/67634122-54851b80-f8fb-11e9-972e-e0488aa007c1.png)  
 ### ⓐ 위의 코드를 작성 시 아래와 같은 구조가 생성  
@@ -11,6 +12,7 @@
 ### ⓒ Mysubclass로 AAA, BBB를 이동 후 ClassPath.java 실행 시 오류 발생  
 ![8-4](https://user-images.githubusercontent.com/48504392/67634170-d2492700-f8fb-11e9-98d3-d32a2dc542a0.png)  
 ### ⓓ 찾고자 하는 클래스가 보이지 않음을 명시하는 오류이므로 서브 디렉터리인 mysubclass 디렉터리에서 클래스를 찾도록 수정 필요  → 환경변수의 역할  
+  
 ## ③ 환경변수(Environment Variable)  
 ### ⓐ 명령 프롬프트에 구문 입력  
   C;\myclass > calc.exe
@@ -22,20 +24,28 @@
 ### ⓒ 출력된 구문 해석  
   세미콜론을 기준으로 세 부분으로 구분  
   **.**; **C:\WINDOWS\system32**; **C:\Program Files\Java\jdk1.6.0_10\bin**;  
-#### 경로 1 .;
+#### 경로 1 → .
 - 명령 프롬프트가 위치하는 현재 디렉터리  
-#### 경로 2 C:\WINDOWS\system32;  
+#### 경로 2 → C:\WINDOWS\system32  
 - System32 디렉터리에 calc.exe, explorer.exe가 존재  
   → ⓐ에서 계산기와 파일 탐색기가 실행이 가능했던 이유  
-#### 경로 3 C:\Program Files\Java\jdk1.6.0_10\bin;  
+#### 경로 3 → C:\Program Files\Java\jdk1.6.0_10\bin  
 - bin 폴더에 javac.exe와 java.exe가 존재  
   → 명령 프롬프트가 어느 디렉터리에 위치하든 항상 자바 프로그램을 컴파일 및 실행 가능한 이유  
+  
 ## ④ 환경변수의 classpath 설정  
 ### ⓐ path가 하나만 존재 X → 필요에 따라 추가 가능  
 ### ⓑ 클래스의 경로 정보를 classpath의 환경변수에 추가함으로써 클래스의 검색 경로를 확장  
 ### ⓒ classpath 설정 구문  
+### ⓓ 지정방식  
+- 절대경로지정방식  
+C:\myclass> set classpath=.;C:\myclass\mysubclass;  
+- 상대경로지정방식  
+C:\myclass> set classpath=.;C:\myclass\mysubclass;  
 C:\myclass> set classpath=.;  
 → 현재 디렉터리는 별도로 추가하지 않아도 기본적인 클래스 파일의 탐색경로에 포함  
+
+
 ## ⑤ 배치 파일 생성  
 ### ⓐ .java 파일 컴파일  
 javac ClassPath.java  
