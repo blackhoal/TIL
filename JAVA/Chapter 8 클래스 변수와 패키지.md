@@ -104,20 +104,29 @@ orange.perimeter.Circle
 ### ⓑ 인스턴스 생성 시 저장된 디렉터리 정보를 표시하여 클래스를 구분 및 인스턴스를 생성  
 ![8-9](https://user-images.githubusercontent.com/48504392/67650735-948ee180-f981-11e9-9b89-cb0d8ad7972c.png)  
 ~~~
-Circle c1 = new Circle(1.5); 
-Circle c2 = new Circle(2.5); 
-~~~  
-↓  
-~~~
-orange.perimeter.Circle  c1 = new Circle(1.5); 
-orange.area.Circle c2 = new Circle(2.5); 
+Circle c1 = new Circle(1.5); → orange.perimeter.Circle  c1 = new Circle(1.5); 
+Circle c2 = new Circle(2.5);   orange.area.Circle c2 = new Circle(2.5); 
 ~~~  
 ## ③ 패키지와 클래스 패스의 관계  
-![8-5](https://user-images.githubusercontent.com/48504392/67634262-de81b400-f8fc-11e9-9bfc-418cbe3d1c3e.png)  
+![8-10](https://user-images.githubusercontent.com/48504392/67651122-fac83400-f982-11e9-9d6a-490ee4e55ea6.png)  
+- 패키지도 클래스 패스를 기준으로 검색 
+~~~
+BBB.Circle c1 = new BBB.Circle();  
+CCC.Circle c2 = new CCC.Circle();  
+~~~  
+~~~
+AAA.BBB.Circle c1 = new AAA.BBB.Circle();  
+AAA.CCC.Circle c2 = new AAA.CCC.Circle();   
+~~~  
 ## ④ 패키지의 선언  
 ~~~
 package orange.area;  
 package orange.perimeter;  
+
+public class Circle
+{
+  …
+}
 ~~~  
 → 작성중인 파일 내에서 생성되는 모든 클래스를 패키지(orange.area, orange.perimeter)로 묶겠음을 선언하는 구문  
 ## ⑤ 디렉터리의 구분 외에 패키지의 선언이 별도로 필요한 이유  
