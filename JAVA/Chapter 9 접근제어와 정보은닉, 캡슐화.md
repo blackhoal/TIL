@@ -27,7 +27,7 @@ class FruitSaleMain4
   - 개당 500원이 아니라 20개를 500원에 가져감으로 인해 메소드로 정의한 판매 규칙이 무시되는 상황 발생  
 - 해결책  
   - 외부에서 인스턴스 변수에 직접 접근을 방지함으로써 위의 상황을 방지  
-    → 정보 은닉의 필요성
+    → 정보 은닉의 필요성  
   ~~~
   class FruitSeller
   {
@@ -35,6 +35,7 @@ class FruitSaleMain4
     private int myMoney;
     private final int APPLE_PRICE;
   }
+  
   class FruitBuyer
   {
     private int numOfApple;
