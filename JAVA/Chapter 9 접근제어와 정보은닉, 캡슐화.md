@@ -237,7 +237,7 @@ class BBB // 클래스 default
 ~~~  
 - 클래스는 default, 생성자는 public로 선언되었으므로 동일 패키지 내에서만 인스턴스 생성이 허용  
 ## ⑤ default 생성자  
-- default 생성자의 접근제어 지시자는 ++***클래스의 선언형태***++를 따라 결정  
+- default 생성자의 접근제어 지시자는 ***클래스의 선언형태***를 따라 결정  
 ~~~
 public class AAA // 클래스 public
 {
@@ -253,14 +253,45 @@ class BBB // 클래스 default
   …
 }
 ~~~  
-- 클래스가 default 선언 → 생성자는 default으로 선언
+- 클래스가 default 선언 → 생성자는 default으로 선언  
 #
 # 4. public 클래스 선정 기준  
 ## ① public 선언 조건  
 ### ⓐ 하나의 소스파일에는 하나의 클래스만 public으로 선언하는 것이 가능  
 ### ⓑ public 클래스 명과 소스파일 명은 동일해야함  
-## ② 자바의 라이브러리  
-- 이미 만들어져서 필요 시 언제나 사용이 가능한 클래스와 클래스를 구성하는 메소드  
+## ② 에제
+ⓐ Calculator.java
+~~~
+public class Calculator{
+  private Adder adder;
+  private Subtractor subtractor;
+  public Calculator(){
+    adder = new Adder();
+    subtractor = new Subtractor();
+  }
+  int add(int num1, int num2){
+    return adder.add(num1, num2);
+  }
+  int subtract(int num1, int num2){
+    return subtractor.subtract(num1, num2);
+  }
+}
+~~~  
+ⓑ Adder.java
+~~~
+class Adder{
+  int add(int num1, int num2){}
+}
+~~~  
+ⓒ Subtractor.java
+~~~
+class Subtractor{
+  int subtract(int num1, int num2){}
+}
+~~~  
+- 외부에서는 Calculator의 존재만 인식하고 있으면 되는 상황
+→ 외부에 노출할 클래스(Calculator)를 public으로 선언
+![9-5](https://user-images.githubusercontent.com/48504392/67677303-02a9c780-f9c7-11e9-99db-a1b1e0fb8c29.png)  
 ## ③  
 #
 # 5. 캡슐화  
