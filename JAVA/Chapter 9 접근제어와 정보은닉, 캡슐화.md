@@ -259,7 +259,7 @@ class BBB // 클래스 default
 ## ① public 선언 조건  
 ### ⓐ 하나의 소스파일에는 하나의 클래스만 public으로 선언하는 것이 가능  
 ### ⓑ public 클래스 명과 소스파일 명은 동일해야함  
-## ② 에제
+## ② 예제
 ⓐ Calculator.java
 ~~~
 public class Calculator{
@@ -292,7 +292,9 @@ class Subtractor{
 - 외부에서는 Calculator의 존재만 인식하고 있으면 되는 상황
 → 외부에 노출할 클래스(Calculator)를 public으로 선언
 ![9-5](https://user-images.githubusercontent.com/48504392/67677303-02a9c780-f9c7-11e9-99db-a1b1e0fb8c29.png)  
-## ③  
+## ③ Calculator 클래스와 나머지 계산기의 기능 클래스(Adder, Subtractor)를 합치지 않고 여러 개의 작은 클래스로 구분한 이유?
+- 변경이 필요할 때 변경되는 클래스의 범위를 최소화하는 것이 가능  
+- 작은 크기의 클래스를 다른 클래스의 정의에서 재활용 가능  
 #
 # 5. 캡슐화  
 ~~~
