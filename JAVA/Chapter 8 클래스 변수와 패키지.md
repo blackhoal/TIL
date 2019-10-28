@@ -93,15 +93,25 @@ pause
 Circle c1 = new Circle(1.5); // 둘레를 구하는 인스턴스 생성(perimeter)  
 Circle c2 = new Circle(2.5); // 넓이를 구하는 인스턴스 생성(area)  
 ~~~  
-- perimeter의 Circle 클래스(perimeter.Circle)와 area의 Circle 클래스(area.Circle)의 명칭이 동일하여 문제 발생  
-→ 상위 디렉터리 orange를 생성하고 아래 계층에 area와 perimeter를 서브 디렉터리로 설정한 구조 생성  
+- perimeter의 Circle 클래스(perimeter.Circle)와 area의 Circle 클래스(area.Circle)의 명칭이 동일하여 인스턴스 생성 과정에서 문제 발생  
+→ 상위 디렉터리 orange를 생성하고 아래 계층에 area와 perimeter를 서브 디렉터리로 설정한 구조를 생성하여 해결  
 ~~~
 orange.area.Circle  
 orange.perimeter.Circle  
 ~~~  
-패키지 : orange  
-서브 패키지 : area, perimeter  
+패키지 → orange  
+서브 패키지 → area, perimeter  
 ### ⓑ 인스턴스 생성 시 저장된 디렉터리 정보를 표시하여 클래스를 구분 및 인스턴스를 생성  
+![8-9](https://user-images.githubusercontent.com/48504392/67650735-948ee180-f981-11e9-9b89-cb0d8ad7972c.png)  
+~~~
+Circle c1 = new Circle(1.5); 
+Circle c2 = new Circle(2.5); 
+~~~  
+↓  
+~~~
+orange.perimeter.Circle  c1 = new Circle(1.5); 
+orange.area.Circle c2 = new Circle(2.5); 
+~~~  
 ## ③ 패키지와 클래스 패스의 관계  
 ![8-5](https://user-images.githubusercontent.com/48504392/67634262-de81b400-f8fc-11e9-9bfc-418cbe3d1c3e.png)  
 ## ④ 패키지의 선언  
