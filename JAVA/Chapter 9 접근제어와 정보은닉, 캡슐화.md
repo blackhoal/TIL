@@ -125,6 +125,27 @@ class BBB
 ## ③  
 #
 # 5. 캡슐화  
+~~~
+public class Product{
+  private String productId;
+  private int price;
+  
+  public void addProduct(String productID){}
+  public boolean deleteProduct(String productID){}
+  public boolean checkProduct(String productID){}
+}
+
+public class Order{
+  String orderId;
+  Payment paymentType;
+  Product product;
+}
+~~~  
+- Product 클래스로 추상화되었으며 Product 단위로 재사용이 가능  
+- private 접근자에 의해 정보은닉 구현  
+![9-3](https://user-images.githubusercontent.com/48504392/67670383-236a2100-f9b7-11e9-9795-c5a723e70a83.png)  
+- 캡슐화된 클래스를 다른 클래스의 데이터로 재사용할 경우 추상화된 클래스 내부의 데이터나 함수를 모두 재사용 가능  
+![9-4](https://user-images.githubusercontent.com/48504392/67670427-3a107800-f9b7-11e9-99da-a719bbd3b7bf.png)    
 ## ① 정의  
 - 관련된 데이터와 함수들을 클래스라는 하나의 캡슐로 묶어주는 장치 혹은 메커니즘  
 #
@@ -143,8 +164,9 @@ class BBB
 - 캡슐화를 통해 인터페이스를 제외한 데이터와 함수를 캡슐 내부에 숨김  
 #
 ## ④ 정보은닉과 캡슐화의 차이  
-정보은닉 → 캡슐 내의 요소들에 대한 세부 구현사항을 외부에 숨김
-캡슐화 → 관련 요소들을 그룹화함으로써 캡슐의 내부와 외부를 구별  
+- 정보은닉 → 캡슐 내의 요소들에 대한 세부 구현사항을 외부에 숨김  
+- 캡슐화 → 관련 요소들을 그룹화함으로써 캡슐의 내부와 외부를 구별  
+- 정보은닉이 되려면 캡슐화가 전제조건으로 되어야 하지만, 캡슐화가 되었어도 정보은닉은 필수 X  
 ①②③④⑤⑥⑦⑧
 ⓐⓑⓒⓓⓔⓕⓖⓗ
 →
