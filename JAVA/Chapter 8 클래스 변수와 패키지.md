@@ -109,15 +109,21 @@ Circle c2 = new Circle(2.5);   orange.area.Circle c2 = new Circle(2.5);
 ~~~  
 ## ③ 패키지와 클래스 패스의 관계  
 ![8-10](https://user-images.githubusercontent.com/48504392/67651122-fac83400-f982-11e9-9d6a-490ee4e55ea6.png)  
-- 패키지도 클래스 패스를 기준으로 검색 
+- 패키지도 클래스 패스를 기준으로 검색  
 ~~~
 BBB.Circle c1 = new BBB.Circle();  
 CCC.Circle c2 = new CCC.Circle();  
 ~~~  
+필요 조건  
+ⓐ BBB, CCC가 패키지로 선언  
+ⓑ C:\AAA 디렉터리가 클래스 패스에 등록  
 ~~~
 AAA.BBB.Circle c1 = new AAA.BBB.Circle();  
 AAA.CCC.Circle c2 = new AAA.CCC.Circle();   
 ~~~  
+필요 조건  
+ⓐ AAA.BBB, AAA.CCC가 패키지로 선언  
+ⓑ C:\ 디렉터리가 클래스 패스에 등록  
 ## ④ 패키지의 선언  
 ~~~
 package orange.area;  
