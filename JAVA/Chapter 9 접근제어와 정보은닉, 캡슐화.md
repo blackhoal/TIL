@@ -237,7 +237,7 @@ class BBB // 클래스 default
 ~~~  
 - 클래스는 default, 생성자는 public로 선언되었으므로 동일 패키지 내에서만 인스턴스 생성이 허용  
 ## ⑤ default 생성자  
-- default 생성자의 접근제어 지시자는 ***클래스의 선언형태***를 따라 결정  
+- default 생성자의 접근제어 지시자는 ++***클래스의 선언형태***++를 따라 결정  
 ~~~
 public class AAA // 클래스 public
 {
