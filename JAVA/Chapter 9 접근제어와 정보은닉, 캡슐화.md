@@ -43,15 +43,16 @@ class FruitSaleMain4
 #### ⓐ 정보 은닉의 대상인 인스턴스 변수는 대부분 private로 선언됨에 따라 외부 클래스에서 접근 불가능  
 #### ⓑ 외부에서 이런 상황일 때 변수의 간접접근을 허용하기 위해 제공되는 추가적인 메소드  
 #### ⓒ 변수 age의 값을 변경하는 메소드는 setAge, 변수 age의 값을 반환하는 메소드는 getAge로 정의  
-  - 모든 인스턴스 변수마다 Access메소드를 정의할 필요 없이 클래스의 성격과 필요에 따라 정의  
-    ~~~
-    class Person
-    {
-      private int age;
-      public void setAge(int ag){age=ag;}
-      public int getAge(){return age;}
-    }
-    ~~~  
+~~~
+class Person
+{
+  private int age;
+  public void setAge(int ag){age=ag;}
+  public int getAge(){return age;}
+}
+~~~  
+- 모든 인스턴스 변수마다 Access메소드를 정의할 필요 없이 클래스의 성격과 필요에 따라 정의  
+
 #
 ## ④ 정보은닉의 장점
 - 캡슐화를 수반하므로 캡슐화의 장점을 따름
@@ -165,6 +166,9 @@ public class Order{
 - 번들링(Bundling)으로도 표현  
 - 사용자(외부)는 데이터가 클래스에 어떻게 저장되는지 확인 불가  
   → 외부에서의 잘못된 조작으로 인한 객체의 데이터 손실 방지  
+- 낮은 결합도와 높은 응집도를 유지  
+  결합도 : 어떤 기능을 실행하는 데 다른 클래스나 모듈들에 의존적인 정도  
+  응집도 : 클래스나 모듈 안의 요소들이 밀접하게 관련되어 있는 정도  
 #
 ## ③ 단위로서의 캡슐화  
 ### ⓐ 추상화의 단위  
