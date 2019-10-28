@@ -59,7 +59,7 @@ set classpath=.;.\mysubclass
 java ClassPath  
 pause  
 ~~~  
-### ⓐ .java 파일 컴파일  
+### ⓐ .java 파일 컴파일 실행  
 ~~~
 javac ClassPath.java  
 ~~~  
@@ -67,7 +67,7 @@ javac ClassPath.java
 ~~~
 md mysubclass  
 ~~~  
-### ⓒ AAA.class, BBB.class를 mysubclass 디렉터리로 이동  
+### ⓒ AAA.class, BBB.class를 mysubclass 디렉터리로 이동(복사)  
 ~~~
 copy AAA.class .\mysubclass\AAA.class  
 copy BBB.class .\mysubclass\BBB.class  
@@ -88,7 +88,12 @@ pause
 - 서로 연관이 깊으며 유사한 성격의 자바 클래스의 집합으로 구성된 자바 디렉터리  
 ## ② 특징  
 ### ⓐ 컴파일이 완료된 동일한 이름의 클래스 파일을 서로 다른 디렉터리에 저장 및 관리  
-- area의 Circle 클래스(area.Circle)와 perimeter의 Circle 클래스(perimeter.Circle)의 명칭이 동일한 상황  
+![8-8](https://user-images.githubusercontent.com/48504392/67650295-d028ac00-f97f-11e9-8eff-c3dd05fdecbf.png)  
+~~~
+Circle c1 = new Circle(1.5); // 둘레를 구하는 인스턴스 생성(perimeter)  
+Circle c2 = new Circle(2.5); // 넓이를 구하는 인스턴스 생성(area)  
+~~~  
+- perimeter의 Circle 클래스(perimeter.Circle)와 area의 Circle 클래스(area.Circle)의 명칭이 동일하여 문제 발생  
 → 상위 디렉터리 orange를 생성하고 아래 계층에 area와 perimeter를 서브 디렉터리로 설정한 구조 생성  
 ~~~
 orange.area.Circle  
