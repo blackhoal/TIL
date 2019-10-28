@@ -37,13 +37,14 @@
 ### ⓐ path가 하나만 존재 X → 필요에 따라 추가 가능  
 ### ⓑ 클래스의 경로 정보를 classpath의 환경변수에 추가함으로써 클래스의 검색 경로를 확장  
 ### ⓒ classpath 설정 구문  
+C:\myclass> set classpath=.;  
+→ 현재 디렉터리는 별도로 추가하지 않아도 기본적인 클래스 파일의 탐색경로에 포함  
 ### ⓓ 지정방식  
 - 절대경로지정방식  
 C:\myclass> set classpath=.;C:\myclass\mysubclass;  
 - 상대경로지정방식  
 C:\myclass> set classpath=.;C:\myclass\mysubclass;  
-C:\myclass> set classpath=.;  
-→ 현재 디렉터리는 별도로 추가하지 않아도 기본적인 클래스 파일의 탐색경로에 포함  
+
 
 
 ## ⑤ 배치 파일 생성  
