@@ -54,8 +54,7 @@ class Person
 ~~~  
 - 모든 인스턴스 변수마다 Access메소드를 정의할 필요 없이 클래스의 성격과 필요에 따라 정의  
 #
-## ④ 정보은닉의 장점  
-- 캡슐화를 수반하므로 캡슐화의 장점을 따름  
+## ④ 정보은닉의 장점   
 #### ⓐ 추상화 정도를 향상  
 - 정보은닉이 많이 될수록 추상화 정도는 향상  
 #### ⓑ 내부 데이터나 알고리즘의 변경이 용이  
@@ -70,33 +69,81 @@ class Person
 - 접근제어 지시자에 의한 접근 허용여부는 인스턴스가 아닌 클래스를 기준으로 판단
 ## ① private(클래스 내부)  
 ~~~
-public class AccessModifier 
+class AAA 
 {
-  private String secret;
-  private String getSecret() 
+  private int num;
+  public void setNum(int n) { num=n; }
+  public int getNum() { return num; }
+  …
+}
+
+class BBB
+{
+  public accessAAA(AAA inst)
   {
-    return this.secret;
+    inst.num=20; // num → private 멤버이므로 컴파일 불가
+    inst.setNum(20);
+    System.out.println(inst.getNum());
   }
+  …
 }
 ~~~  
-- 클래스 내부에서만 접근 가능  
+- 클래스 내부(메소드)에서만 접근 가능  
 ## ② default(동일 패키지)  
 ~~~
-public class AccessModifier 
+package orange;
+
+classs AAA
 {
-  private String secret;
-  private String getSecret() 
-  {
-    return this.secret;
-  }
+  int num; // default 선언
+  …
+}
+
+class BBB
+{
+  public init(AAA a) { a.num = 20; } // AAA, BBB는 동일 패키지로 선언된 상태이므로 접근 가능
+  …
 }
 ~~~  
 - 접근 제어자를 선언하지 않는 경우  
 - 동일 패키지 내에서 접근 가능  
 ## ③ protected(상속)  
+~~~
+classs AAA
+{
+  protected int num;
+  …
+}
+
+class BBB extends AAA // 상속을 의미
+{
+  (protected int num;) // 상속된 상태의 인스턴스 변수
+  public init(int n) { num = n; } // 상속된 변수 num에 접근 가능
+}
+~~~  
 - 하위 클래스 관계(상속 관계)에서도 접근 가능  
 
 ## ④ public(모든 영역)  
+~~~
+class AAA 
+{
+  private int num;
+  public void setNum(int n) { num=n; }
+  public int getNum() { return num; }
+  …
+}
+
+class BBB
+{
+  public accessAAA(AAA inst)
+  {
+    inst.num=20;
+    inst.setNum(20); // setNum, getNum → public 멤버이므로 호출 가능
+    System.out.println(inst.getNum());
+  }
+  …
+}
+~~~  
 - 모든 클래스에서 접근이 가능  
 
 ## ⑤ 접근 제어 수준  
@@ -104,35 +151,110 @@ public class AccessModifier
 - 왼쪽으로 갈수록 제어의 정도가 약함  
 
 ## ⑥ 접근 제어자 사용가능 여부  
-ⓐ   클래스   : public, default  
-ⓑ   생성자   : public, protected, default, private  
-ⓒ  멤버변수  : public, protected, default, private  
-ⓓ 멤버메소드 : public, protected, default, private  
-ⓔ  지역변수  : 사용 불가  
-
+   클래스   : public, default  
+   생성자   : public, protected, default, private  
+  멤버변수  : public, protected, default, private  
+ 멤버메소드 : public, protected, default, private  
+  지역변수  : 사용 불가  
+#
 # 3. 클래스의 접근 제어자  
+
+## ① Default 클래스  
 ~~~
 package apple;
-class AAA
+class AAA // 패키지 apple
 {
   …
 }
 
 package pear;
-class BBB
+class BBB // 패키지 pear
 {
   public void make()
   {
-    apple.AAA inst = new apple.AAA(); → 클래스가 default로 선언되었으므로 성립 X, 같은 패키지에서만 인스턴스 생성 가능
+    apple.AAA inst = new apple.AAA(); // 클래스가 default로 선언되었으므로 인스턴스 생성 X → 같은 패키지에서만 인스턴스 생성 가능
     …
   }
   …
 }
 ~~~  
-## ① Default는 동일한 패키지로 묶여있는 클래스 내에서만 생성이 가능, public는 어느 위치에서나 인스턴스 생성 가능  
-## ② 생성자가 private로 선언되는 경우  
-- 생성자도 클래스 내부에서만 호출 가능  
+- 동일한 패키지로 묶여있는 클래스 내에서만 생성이 가능  
+## ② public 클래스  
+~~~
+package apple;
+public class AAA
+{
+  …
+}
 
+package pear;
+public class BBB
+{
+  public void make()
+  {
+    apple.AAA inst = new apple.AAA(); → 클래스가 public으로 선언되었으므로 인스턴스 생성 O
+    …
+  }
+  …
+}
+~~~  
+- 어느 위치에서나 인스턴스 생성 가능
+## ③ default 클래스에서 생성자가 private인 경우  
+~~~
+public class AAA
+{
+  private AAA(){…} // 생성자가 private로 선언
+  …
+}
+
+class BBB 
+{
+  public void make()
+  {
+    AAA inst = new AAA();
+    …
+  }
+  …
+}
+~~~  
+- 컴파일이 불가능 → 생성자(AAA)가 private로 선언되었으므로 클래스 내부에서만 호출이 가능  
+→ 외부에서의 인스턴스 생성 허용 X  
+## ④ 클래스, 생성자 - public, default
+~~~
+public class AAA // 클래스 public
+{
+  AAA(){…} // 생성자 default
+  …
+}
+~~~  
+- 클래스는 public, 생성자는 default로 선언되었으므로 동일 패키지 내에서만 인스턴스 생성이 허용  
+~~~
+class BBB // 클래스 default
+{
+  public BBB(){…} // 생성자 public
+  …
+}
+~~~  
+- 클래스는 default, 생성자는 public로 선언되었으므로 동일 패키지 내에서만 인스턴스 생성이 허용  
+## ⑤ default 생성자  
+- default 생성자의 접근제어 지시자는 ***클래스의 선언형태***를 따라 결정  
+~~~
+public class AAA // 클래스 public
+{
+  public AAA(){…} // 생성자 public
+  …
+}
+~~~  
+- 클래스가 public 선언 → 생성자는 public으로 선언  
+~~~
+class BBB // 클래스 default
+{
+  BBB(){…} // 생성자 default
+  …
+}
+~~~  
+- 클래스가 default 선언 → 생성자는 default으로 선언
+#
 # 4. public 클래스 선정 기준  
 ## ① public 선언 조건  
 ### ⓐ 하나의 소스파일에는 하나의 클래스만 public으로 선언하는 것이 가능  
