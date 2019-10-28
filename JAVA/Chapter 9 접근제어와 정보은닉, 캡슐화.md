@@ -28,6 +28,19 @@ class FruitSaleMain4
 - 해결책  
   - 외부에서 인스턴스 변수에 직접 접근을 방지함으로써 위의 상황을 방지  
     → 정보 은닉의 필요성
+  ~~~
+  class FruitSeller
+  {
+    private int numOfApple;
+    private int myMoney;
+    private final int APPLE_PRICE;
+  }
+  class FruitBuyer
+  {
+    private int numOfApple;
+    private int myMoney;    
+  }
+  ~~~  
 #
 ## ① 정의  
   - 인스턴수 변수에 private 선언을 하는 것  
