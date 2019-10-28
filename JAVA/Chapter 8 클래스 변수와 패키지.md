@@ -125,16 +125,19 @@ AAA.CCC.Circle c2 = new AAA.CCC.Circle();
 ⓐ AAA.BBB, AAA.CCC가 패키지로 선언  
 ⓑ C:\ 디렉터리가 클래스 패스에 등록  
 ## ④ 패키지의 선언  
+ⓐ 작성중인 파일 내에서 생성되는 모든 클래스(Circle)를 패키지(orange.area)로 묶어 해당 디렉터리에 저장할 것을 선언
 ~~~
-package orange.area;  
-package orange.perimeter;  
+package orange.area;   
 
 public class Circle
 {
   …
 }
 ~~~  
-→ 작성중인 파일 내에서 생성되는 모든 클래스를 패키지(orange.area, orange.perimeter)로 묶겠음을 선언하는 구문  
+ⓑ 저장된 경로를 명시하여 인스턴스 생성(orange.area.Circle)
+~~~
+orange.area.Circle c1 = new Circle(2.5);
+~~~  
 ## ⑤ 디렉터리의 구분 외에 패키지의 선언이 별도로 필요한 이유  
 - 패키지의 선언 없이 디렉터리의 위치만 구분할 경우 일반적인 인스턴스 생성 방식 사용이 불가  
 ## ⑥ 패키지의 그룹  
