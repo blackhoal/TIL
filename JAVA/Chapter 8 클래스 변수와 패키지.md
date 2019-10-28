@@ -40,27 +40,49 @@
   **C:\myclass> set classpath=.;**  
   → 현재 디렉터리는 별도로 추가하지 않아도 기본적인 클래스 파일의 탐색경로에 포함  
 ### ⓓ 지정방식  
-- 절대경로지정방식  
+- 절대경로 지정방식  
 C:\myclass> set classpath=.;C:\myclass\mysubclass;  
-- 상대경로지정방식  
+- 상대경로 지정방식  
 C:\myclass> set classpath=.;.\mysubclass;
-
-## ⑤ 배치 파일 생성  
-### ⓐ .java 파일 컴파일  
+### ⓔ 직접 추가하는 방식  
+![8-6](https://user-images.githubusercontent.com/48504392/67649879-2268cd80-f97e-11e9-84ee-a0257c9771c2.png)  
+- 적은 개수를 지정할 때는 편리, But 클래스 패스의 추가 작업을 자동화할 수 없으므로 여러 사용자의 클래스 패스를 지정해야할 상황일 때는 Bad  
+## ⑤ 배치 파일 생성 
+~~~
 javac ClassPath.java  
-### ⓑ mysubclass 디렉터리 생성  
 md mysubclass  
-### ⓒ AAA.class, BBB.class를 mysubclass 디렉터리로 이동  
 copy AAA.class .\mysubclass\AAA.class  
 copy BBB.class .\mysubclass\BBB.class  
 del AAA.class  
 del BBB.class  
-### ⓓ mysubclass 디렉터리를 classpath로 추가  
 set classpath=.;.\mysubclass  
-### ⓔ 실행  
 java ClassPath  
 pause  
-
+~~~  
+### ⓐ .java 파일 컴파일  
+~~~
+javac ClassPath.java  
+~~~  
+### ⓑ mysubclass 디렉터리 생성  
+~~~
+md mysubclass  
+~~~  
+### ⓒ AAA.class, BBB.class를 mysubclass 디렉터리로 이동  
+~~~
+copy AAA.class .\mysubclass\AAA.class  
+copy BBB.class .\mysubclass\BBB.class  
+del AAA.class  
+del BBB.class  
+~~~  
+### ⓓ mysubclass 디렉터리를 classpath로 추가  
+~~~
+set classpath=.;.\mysubclass  
+~~~  
+### ⓔ 실행  
+~~~
+java ClassPath  
+pause  
+~~~  
 # 2. 패키지의 이해  
 ## ① 정의  
 - 서로 연관이 깊으며 유사한 성격의 자바 클래스의 집합으로 구성된 자바 디렉터리  
@@ -72,7 +94,8 @@ pause
 orange.area.Circle  
 orange.perimeter.Circle  
 ~~~  
-→ 패키지 : orange / 서브 패키지 : area, perimeter  
+패키지 : orange  
+서브 패키지 : area, perimeter  
 ### ⓑ 인스턴스 생성 시 저장된 디렉터리 정보를 표시하여 클래스를 구분 및 인스턴스를 생성  
 ## ③ 패키지와 클래스 패스의 관계  
 ![8-5](https://user-images.githubusercontent.com/48504392/67634262-de81b400-f8fc-11e9-9bfc-418cbe3d1c3e.png)  
