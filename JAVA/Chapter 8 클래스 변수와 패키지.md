@@ -148,11 +148,13 @@ orange.area.Circle c1 = new Circle(2.5);
 import orange.area.circle;
 ~~~  
 → orange.area 패키지의 Circle 클래스를 명시할 때 앞부분을 생략하고 Circle로 표현하겠음을 명시  
+#
 ⓑ 아스타리스크(*)  
 ~~~
 import orange.area.*;
 ~~~  
-→ orange.area 패키지로 묶여있는 모든 클래스의 인스턴스 생성에서 패키지의 이름은 생략하고 클래스 명만 사용하겠음을 명시
+→ orange.area 패키지로 묶여있는 모든 클래스의 인스턴스 생성에서 패키지의 이름은 생략하고 클래스 명만 사용하겠음을 명시  
+#
 ⓒ import 선언 이후 인스턴스 생성   
 ~~~
 Circle c1 = new Circle(2.5);
