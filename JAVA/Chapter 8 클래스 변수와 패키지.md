@@ -105,7 +105,7 @@ orange.perimeter.Circle
 ![8-9](https://user-images.githubusercontent.com/48504392/67650735-948ee180-f981-11e9-9b89-cb0d8ad7972c.png)  
 ~~~
 Circle c1 = new Circle(1.5); → orange.perimeter.Circle  c1 = new Circle(1.5); 
-Circle c2 = new Circle(2.5);   orange.area.Circle c2 = new Circle(2.5); 
+Circle c2 = new Circle(2.5);         orange.area.Circle c2 = new Circle(2.5); 
 ~~~  
 ## ③ 패키지와 클래스 패스의 관계  
 ![8-10](https://user-images.githubusercontent.com/48504392/67651122-fac83400-f982-11e9-9d6a-490ee4e55ea6.png)  
@@ -143,5 +143,18 @@ orange.area.Circle c1 = new Circle(2.5);
 ## ⑥ 패키지의 그룹  
 ## ⑦ 이름 없는 패키지  
 ## ⑧ import 선언  
-①②③④⑤⑥⑦⑧  
-ⓐⓑⓒⓓⓔⓕⓖⓗ  
+ⓐ 기본적인 선언 방식  
+~~~
+import orange.area.circle;
+~~~  
+→ orange.area 패키지의 Circle 클래스를 명시할 때 앞부분을 생략하고 Circle로 표현하겠음을 명시  
+ⓑ 아스타리스크(*)  
+~~~
+import orange.area.*;
+~~~  
+→ orange.area 패키지로 묶여있는 모든 클래스의 인스턴스 생성에서 패키지의 이름은 생략하고 클래스 명만 사용하겠음을 명시
+ⓒ import 선언 이후 인스턴스 생성   
+~~~
+Circle c1 = new Circle(2.5);
+orange.area.Circle c1 = new Circle(2.5);
+~~~  
