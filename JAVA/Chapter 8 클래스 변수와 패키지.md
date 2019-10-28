@@ -139,7 +139,8 @@ public class Circle
 orange.area.Circle c1 = new Circle(2.5);
 ~~~  
 ## ⑤ 디렉터리의 구분 외에 패키지의 선언이 별도로 필요한 이유  
-- 패키지의 선언 없이 디렉터리의 위치만 구분할 경우 일반적인 인스턴스 생성 방식 사용이 불가  
+- 패키지의 선언 없이 디렉터리의 위치만 구분할 경우 일반적인 인스턴스 생성 방식 사용이 불가
+#
 ## ⑥ 패키지의 그룹  
 ## ⑦ 이름 없는 패키지  
 ## ⑧ import 선언  
@@ -147,13 +148,13 @@ orange.area.Circle c1 = new Circle(2.5);
 ~~~
 import orange.area.circle;
 ~~~  
-→ orange.area 패키지의 Circle 클래스를 명시할 때 앞부분을 생략하고 Circle로 표현하겠음을 명시  
+→ orange.area 패키지의 Circle 클래스를 명시할 때 앞부분을 생략하고 Circle로 표현하겠음을 명시
 #
 ⓑ 아스타리스크(*)  
 ~~~
 import orange.area.*;
 ~~~  
-→ orange.area 패키지로 묶여있는 모든 클래스의 인스턴스 생성에서 패키지의 이름은 생략하고 클래스 명만 사용하겠음을 명시  
+→ orange.area 패키지로 묶여있는 모든 클래스의 인스턴스 생성에서 패키지명은 생략하고 클래스명만 사용하겠음을 명시
 #
 ⓒ import 선언 이후 인스턴스 생성   
 ~~~
