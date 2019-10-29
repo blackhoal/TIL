@@ -43,17 +43,24 @@
 - 연속된 레코드에 데이터가 몰리는 현상  
 #
 ## ⑤ 충돌 해결(Collision Resolution)
-### ⓐ 체이닝(Chaining)
-- 충돌(Collision)이 발생하면 연결리스트로 데이터를 연결하는 방식
-### ⓑ 개방주소법(Open Addressing)
-- 선형 탐색(Linear Probing): 충돌(Collision)이 발생하면 다음 버켓, 혹은 몇 개를 건너뛰어 데이터를 삽입
-- 제곱 탐색(Quadratic Probing): 충돌(Collision)이 발생하면 제곱만큼 건너뛴 버켓에 데이터를 삽입(1,4,9,16..)
-- 이중 해시(Double Hashing): 충돌(Collision)이 발생하면 다른 해시함수를 한 번 더 적용 후 결과를 출력
+### ⓐ 체이닝(Chaining)  
+![1-3](https://user-images.githubusercontent.com/48504392/67764847-271ca700-fa8e-11e9-9e1b-b4028a4d0d6c.png)  
+- 충돌(Collision)이 발생하면 연결리스트로 데이터를 연결하는 방식  
+### ⓑ 개방주소법(Open Addressing)  
+- 선형 탐색(Linear Probing)  
+![1-4](https://user-images.githubusercontent.com/48504392/67764885-3bf93a80-fa8e-11e9-868a-490fb7d7b661.png)  
+  - 충돌(Collision)이 발생하면 다음 버켓, 혹은 몇 개를 건너뛰어 데이터를 삽입  
+- 제곱 탐색(Quadratic Probing)  
+![1-5](https://user-images.githubusercontent.com/48504392/67764943-5e8b5380-fa8e-11e9-98aa-9bf2051f25d5.png)  
+  - 충돌(Collision)이 발생하면 제곱만큼 건너뛴 버켓에 데이터를 삽입(1,4,9,16..)  
+- 이중 해시(Double Hashing)  
+![1-6](https://user-images.githubusercontent.com/48504392/67765228-fb4df100-fa8e-11e9-8a13-f2616d3e0295.png)  
+  - 충돌(Collision)이 발생하면 다른 해시함수를 한 번 더 적용 후 결과를 출력  
 #
 ## ⑥ 테이블 생성 과정
-ⓐ 해시함수를 이용하여 키의 해시코드 계산
-ⓑ 해시코드를 이용하여 배열의 인덱스 계산
-ⓒ 키와 값을 해당 인덱스에 저장
+ⓐ 키 값 → 해시코드(해시함수 이용)   
+ⓑ 해시코드를 이용하여 배열의 인덱스 계산  
+ⓒ 키와 값을 해당 인덱스에 저장  
 
 ## ⑦ 구현(JAVA)  
 ~~~
@@ -69,7 +76,9 @@ public HashMap<Integer, Student> buildMap(Student[] students)
 
 # Reference  
 https://coding-factory.tistory.com/233  
-https://kgh940525.tistory.com/entry/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%ED%95%B4%EC%8B%B1Hashing-%EC%A0%95%EB%A6%AC%ED%95%98%EA%B8%B0  
+https://kgh940525.tistory.com/entry/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%ED%95%B4%EC%8B%B1Hashing-%EC%A0%95%EB%A6%AC%ED%95%98%EA%B8%B0
 https://preamtree.tistory.com/20  
 https://dev-kani.tistory.com/1  
 https://en.wikipedia.org/wiki/Hash_function  
+https://github.com/siyoon210/Algorithm-DataStructure/blob/master/src/exercise/hash/Hash.java
+https://ratsgo.github.io/data%20structure&algorithm/2017/10/25/hash/  
