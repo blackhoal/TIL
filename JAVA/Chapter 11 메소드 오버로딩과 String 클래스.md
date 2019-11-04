@@ -213,19 +213,24 @@ public static void main(String[] args)
 }
 ~~~  
 - + 연산을 무수히 진행해도 오로지 **두 개의 인스턴스**만 생성(StringBuilder 클래스)
+- + 연산이나 concat()을 이용하여 문자열에 변화를 줘도 메모리 공간이 변하는 것이 아니라 새로운 String 객체를 생성하여 새로운 메모리 공간이 할당(★)  
 #
 ## ⑥ String Builder  
 ### 문자열의 저장 및 변경을 위한 메모리 공간을 지니는 클래스  
 ### 제공 메소드
-- append  
-- insert  
+- append()  
+- insert()  
 #
 ## ⑦ String Buffer  
 ### 메소드 수, 메소드 기능, 메소드 이름과 매개변수형은 StringBuilder와 동일
 #
-## ⑧ String 클래스, String Builder, String Buffer의 차이  
-### String 클래스는 변경이 불가능한 문자열의 표현을 위한 클래스이며, String Builder와 String Buffer는 변경이 가능한 문자열의 표현을 위한 클래스  
-### String Builder는 쓰레드에 불안전하지만, String Buffer는 쓰레드에 안전  
+## ⑧ String 클래스, String Builder, String Buffer의 차이점  
+### ⓐ String 클래스 vs String Builder, String Buffer  
+String 클래스 → 변경이 불가능한 문자열의 표현을 위한 클래스  
+String Builder, String Buffer → 변경이 가능한 문자열의 표현을 위한 클래스  
+### ⓑ String Builder vs String Buffer  
+String Builder → 동기화를 보장하지 않아 쓰레드에 불안전  
+String Buffer → 동기화를 지원하여 쓰레드에 안전  
 #
 # 3. Reference  
 https://peulblog.tistory.com/10  
