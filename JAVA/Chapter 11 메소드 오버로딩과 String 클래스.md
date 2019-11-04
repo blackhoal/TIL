@@ -212,17 +212,48 @@ public static void main(String[] args)
   Str4 += '!';                    
 }
 ~~~  
-- + 연산을 무수히 진행해도 오로지 **두 개의 인스턴스**만 생성(StringBuilder 클래스)
+- + 연산 / += 연산을 무수히 진행해도 오로지 **두 개의 인스턴스**만 생성(StringBuilder 클래스)
 - + 연산이나 concat()을 이용하여 문자열에 변화를 줘도 메모리 공간이 변하는 것이 아니라 새로운 String 객체를 생성하여 새로운 메모리 공간이 할당(★)  
 #
 ## ⑥ String Builder  
-### 문자열의 저장 및 변경을 위한 메모리 공간을 지니는 클래스  
-### 제공 메소드
-- append()  
-- insert()  
+~~~
+class BuilderString
+{
+  public static void main(String[] args)
+  {
+    StringBuiler strBuf = new StringBuilder("AB");
+    strBuf.append(25).append(true);
+    System.out.println(strBuf);          // 출력값 : AB25true
+    
+    strBuf.insert(2,false);              // 2번째 위치에 false 삽입 →  ABfalse25true
+    strBuf.insert(strBuf.length(), 'Z'); // strBuf.length()번째 위치에 'z' 삽입 →  ABfalse25trueZ
+    System.out.println(strbuf);          // 출력값 : ABfalse25trueZ
+  }
+}
+~~~  
+~~~
+StringBuilder 변수명 = new StringBuilder(문자열);
+~~~  
+### ⓐ 문자열의 저장 및 변경을 위한 메모리 공간을 지니는 클래스  
+### ⓑ String 클래스와 같이 문자열을 담는 역할을 하지만, String 클래스와 달리 문자열 수정이 가능  
+### ⓒ 제공되는 메소드  
+append(a) - StringBuilder의 인스턴스가 저장중인 문자열 데이터의 끝에 문자열 데이터 a를 추가  
+insert(a, b) - 위치가 a인 지점에 문자열 데이터 b를 삽입  
+### ⓓ 버퍼  
+~~~
+public StringBuilder()             // 기본 16개의 문자저장 버퍼 생성
+public StringBuilder(int capacity) // capacity개의 문자저장 버퍼 생성
+public StringBuilder(String str)   // str.length()+16 크기의 문자저장 버퍼 생성
+~~~
+- 추가되는 데이터 크기에 따라 버퍼의 크기가 자동으로 확장  
+- 생성자를 통해 초기 버퍼의 크기 지정 가능  
+### 문자열 조합  
+![11-2](https://user-images.githubusercontent.com/48504392/68124637-2b940480-ff53-11e9-83d6-0f9600d42fd0.png)  
+- 복잡한 문자열의 조합 과정에서 StringBuilder의 인스턴스가 활용되기 때문에 추가로 생성되는 인스턴스는 최대 2개(+ 연산 / += 연산과 동일)  
 #
 ## ⑦ String Buffer  
-### 메소드 수, 메소드 기능, 메소드 이름과 매개변수형은 StringBuilder와 동일
+### ⓐ 메소드 수, 메소드 기능, 메소드 이름과 매개변수형은 StringBuilder와 동일  
+### ⓑ StringBuilder와의 차이점은 동기화 지원 유무  
 #
 ## ⑧ String 클래스, String Builder, String Buffer의 차이점  
 ### ⓐ String 클래스 vs String Builder, String Buffer  
@@ -234,18 +265,4 @@ String Buffer → 동기화를 지원하여 쓰레드에 안전
 #
 # 3. Reference  
 https://peulblog.tistory.com/10  
-①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭
 
-ⓐ ⓑ ⓒ ⓓ ⓔ ⓕ
-
-→
-
-…
-
-↓
-
-※
-
-★
-
-≠
