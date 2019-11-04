@@ -247,7 +247,7 @@ public StringBuilder(String str)   // str.length()+16 크기의 문자저장 버
 ~~~
 - 추가되는 데이터 크기에 따라 버퍼의 크기가 자동으로 확장  
 - 생성자를 통해 초기 버퍼의 크기 지정 가능  
-### 문자열 조합  
+### ⓔ 문자열 조합  
 ![11-2](https://user-images.githubusercontent.com/48504392/68124637-2b940480-ff53-11e9-83d6-0f9600d42fd0.png)  
 - 복잡한 문자열의 조합 과정에서 StringBuilder의 인스턴스가 활용되기 때문에 추가로 생성되는 인스턴스는 최대 2개(+ 연산 / += 연산과 동일)  
 #
