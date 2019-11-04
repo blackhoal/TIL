@@ -17,10 +17,9 @@ class AAA
 class AAA
 {
   int isYourFunc(int n) { … } 
-  boolean isYourFunc(int n1, int n2) { … } 
+  boolean isYourFunc(int n1, int n2) { … } // 반환형이 각각 int와 boolean으로 다르기에 오버로딩 성립 X
 }
 ~~~  
-- 반환형이 각각 int와 boolean으로 서로 달라 오버로딩이 성립되지 않음  
 ### ⓒ 형변환의 규칙이 적용  
 ~~~
 class AAA
@@ -36,7 +35,7 @@ inst.isYourFunc(10, 'a'); // (int, char)
 ~~~
 - 형변환 규칙이 적용될 경우 **가장 가까운 위치의 자료형**으로 형변환  
 → char형의 'a'는 int형으로 변환되어 (int n1, int n2)를 매개변수로 가지는 메소드 2가 호출  
-- 형변환 규칙까지 적용하는 메소드는 가급적 지양할 것  
+- 형변환 규칙까지 적용하는 메소드는 가급적 지양  
 ### ⓓ 메소드뿐만 아니라 생성자도 오버로딩 가능  
 ~~~
 class Person
