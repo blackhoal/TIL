@@ -18,8 +18,9 @@
 ## ④ 메모리 상의 Static  
 ![10-1](https://user-images.githubusercontent.com/48504392/68106870-5320a800-ff26-11e9-8866-61b346feba5d.jpg)  
 - 사용자가 생성한 Class는 Static 영역에 생성 / new 연산을 통해 생성한 객체는 Heap 영역에 생성  
-- Static의 장점 : Static 영역에 할당된 메모리(데이터)를 모든 객체가 공유 가능
-- Static의 단점 : garbage Collector의 관리 영역 밖에 존재하므로 자주 사용할 경우 프로그램의 종료 시까지 메모리에 할당된 채로 존재하게 되어 시스템에 악영향 부여  
+- Static 사용의 장단점  
+장점 : Static 영역에 할당된 메모리(데이터)를 모든 객체가 공유 가능  
+단점 : garbage Collector의 관리 영역 밖에 존재하므로 자주 사용할 경우 프로그램의 종료 시까지 메모리에 할당된 채로 존재하게 되어 시스템에 악영향 부여  
 #
 # 2. 클래스 변수(Static 변수)
 ~~~
@@ -52,10 +53,13 @@ class ClassVar
 ~~~  
 ## ① 정의  
 - 메모리에 고정적으로 할당되어, 프로그램이 종료될 때 해제되는 변수  
+#
 ## ② 특징  
 - 클래스가 정의만 되면 어디에서나 접근이 가능, but 어디에서나 접근 가능하려면 public 선언 필요  
-- 변수가 선언된 클래스의 모든 인스턴스가 공유  
+- 변수가 선언된 클래스의 모든 인스턴스가 데이터를 공유  
+→ 동일한 클래스의 인스턴스 사이에서 데이터 공유가 필요할 때 static 변수를 사용  
 - 메모리 공간에 오직 한 개만 존재(static)  
+#
 ## ③ 접근 방식  
 - 접근하는 위치에 따라 접근의 형태가 상이  
 ~~~
@@ -94,6 +98,7 @@ way.num++;
 ~~~
 AccessWay.num
 ~~~  
+#
 ## ④ Static 변수의 초기화 시점
 ~~~
 class InstCnt
@@ -122,28 +127,27 @@ class StaticValNoInst
 #
 # 3. 클래스 메소드(Static 메소드)
 ## 정의  
+- static이 선언된 메소드  
+#
 ## 특징  
+- 기본적인 특성과 접근 방식은 static 변수와 동일  
+- 객체의 생성 없이 호출 가능  
+- 인스턴스 멤버에 접근 불가능  
+~~~
+class AAA
+{
+  int num1;
+  static int num2; // static 변수
+  static void changeNum() // static 메소드
+  {
+    num1++; // 
+    num2++; // 
+  }
+}
+~~~  
+![10-2](https://user-images.githubusercontent.com/48504392/68115929-e49b1480-ff3c-11e9-8aba-3f6e7119935b.png)  
+- static 멤버(changeNum(), num2)는 공유되는 것과 대조적으로 num1은 공유가 되지 않아 num1++을 진행할 수 없어 컴파일 오류 발생  
+#
 # 4. Reference
 https://mangkyu.tistory.com/47  
 https://devbox.tistory.com/entry/Java-static  
-
-①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭
-
-ⓐ 
-ⓑ 
-ⓒ 
-ⓓ 
-ⓔ 
-ⓕ 
-
-→
-
-…
-
-↓
-
-※
-
-★
-
-≠
