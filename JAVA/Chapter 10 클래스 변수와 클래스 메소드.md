@@ -1,7 +1,8 @@
-# 1. Static
-## 정의  
-## 메모리 상의 Static  
+# 1. Static  
+## ① 정의  
+## ② 메모리 상의 Static  
 ![10-1](https://user-images.githubusercontent.com/48504392/68106870-5320a800-ff26-11e9-8866-61b346feba5d.jpg)  
+- 
 # 2. 클래스 변수(Static 변수)
 ~~~
 class InstCnt
