@@ -11,7 +11,7 @@ class AAA
 - 매개변수의 선언형태가 다를 때 동일한 이름의 메소드를 둘 이상 동시에 정의하는 기술  
 #
 ## ② 특징  
-### ⓐ ★매개변수의 선언(전달되는 데이터의 개수 및 자료형)이 다를 경우 오버로딩 성립 O  
+### ⓐ 매개변수의 선언(전달되는 데이터의 개수 및 자료형)이 다를 경우(★) 오버로딩 성립 O   
 ### ⓑ 반환형이 다를 경우 오버로딩 성립 X  
 ~~~
 class AAA
@@ -96,8 +96,25 @@ class Person
   }
 }
 ~~~  
-- 생성자 내의 다른 생성자를 호출하는 것이 가능  
-- 생성자마다 중복되는 초기화 과정의 중복 회피  
+### ⓐ 생성자 내에 한해서(★) 오버로딩된 다른 생성자를 호출하는 것이 가능  
+### ⓑ 생성자마다 중복되는 초기화 과정의 중복 회피  
+~~~
+public Person(int pID, int bYear, int bMonth, int bDay) 
+{
+  this(pID, 0, bYear, bMonth, bDay);
+}
+~~~
+- 키워드 this를 사용하지 않을 경우 다음과 같이 불필요한 길이의 코드 작성  
+~~~
+public Person(int pID, int bYear, int bMonth, int bDay) 
+{
+  this.perID = pID;
+  this.milID = 0;
+  birthYear = bYear;
+  birthMonth = bMonth;
+  birthDay = bDay;
+}
+~~~
 #
 # 2. String 클래스  
 ## ① 정의  
