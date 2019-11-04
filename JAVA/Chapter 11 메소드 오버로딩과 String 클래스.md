@@ -201,18 +201,31 @@ String str1 = "String Instance";
 String str2 = new String(str1); // str2는 str1과 같은 문자열을 참조하지만 인스턴스는 서로 다른 참조값을 반환하므로 str1과 str2의 값(참조값)은 서로 다름
 ~~~  
 #
-## ⑤ String Builder  
+## ⑤ + 연산과 += 연산의 진실  
+~~~
+public static void main(String[] args)
+{
+  Strint str1 = "Lemon" + "ade";  // String str1 = "Lemon".concat("ade");
+  Strint str2 = "Lemon" + 'A';    // String str2 = "Lemon".concat(String.valueOf('A'));
+  Strint str3 = "Lemon" + 3;      // String str3 = "Lemon".concat(String.valueOf(3));
+  Strint str4 = 1 + "Lemon" + 2;  // String str4 = String.valueOf(1).concat("Lemon").concat(String.valueOf(2));
+  Str4 += '!';                    
+}
+~~~  
+- + 연산을 무수히 진행해도 오로지 **두 개의 인스턴스**만 생성(StringBuilder 클래스)
+#
+## ⑥ String Builder  
 ### 문자열의 저장 및 변경을 위한 메모리 공간을 지니는 클래스  
 ### 제공 메소드
 - append  
 - insert  
 #
-## ⑥ String Buffer  
+## ⑦ String Buffer  
 ### 메소드 수, 메소드 기능, 메소드 이름과 매개변수형은 StringBuilder와 동일
 #
-## ⑦ String Builder, String Buffer의 차이  
+## ⑧ String 클래스, String Builder, String Buffer의 차이  
 ### String 클래스는 변경이 불가능한 문자열의 표현을 위한 클래스이며, String Builder와 String Buffer는 변경이 가능한 문자열의 표현을 위한 클래스  
-### String Builder는 쓰레드에 불안전하지만, String Buffer는 쓰레드에 
+### String Builder는 쓰레드에 불안전하지만, String Buffer는 쓰레드에 안전  
 #
 # 3. Reference  
 https://peulblog.tistory.com/10  
