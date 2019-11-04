@@ -3,11 +3,10 @@
 - 프로그램이 시작될 때 메모리에 할당되어 프로그램이 종료될 때까지 남아있음을 명시  
 
 ## Static이 가지는 의미
-### ⓐ 공유  
-- static이 선언된 변수를 사용하는 모든 객체는 공유된 데이터를 사용  
-- 예시  
 은행의 각 기계(객체)마다 독립적으로 번호표를 사용할 경우 중복된 번호를 가진 대기자가 발생하여 문제 발생  
 → 근본적인 문제는 **각 기계(객체)가 독자적인 데이터를 가진다는 것**이므로 **모든 객체가 같은 데이터를 공유하는 방식**으로 문제 해결  
+### ⓐ 공유  
+- static이 선언된 변수를 사용하는 모든 객체는 공유된 데이터를 사용  
 ### ⓑ 객체와 무관한 메소드와 함수  
 - 객체가 가진 데이터에 의해 영향을 받는 것을 방지하기 위해 static 사용  
 ### ⓒ 단 한번만 동작할 것을 명시
@@ -55,6 +54,7 @@ class ClassVar
 - 변수가 선언된 클래스의 모든 인스턴스가 공유  
 - 메모리 공간에 오직 한 개만 존재(static)  
 ## ③ 접근 방식  
+- 접근하는 위치에 따라 접근의 형태가 상이  
 ~~~
 class AccessWay
 {
@@ -73,9 +73,9 @@ class ClassVarAccess
   public static void main(String[] args)
   {
     AccessWay way = new AccessWay();
-    way.num++; // ⓑ
+    way.num++; // ⓑ 인스턴스의 이름을 이용한 접근
     Accessway.num++;
-    System.out.println("num="+AccessWay.num); // ⓒ
+    System.out.println("num="+AccessWay.num); // ⓒ 클래스의 이름을 이용한 접근 
   }
 }
 ~~~  
