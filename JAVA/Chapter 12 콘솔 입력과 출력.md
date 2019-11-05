@@ -74,8 +74,8 @@ System.out.println("제가 어제 \"당신 누구세요?\" 라고 물었더니")
 \\ - 역슬래시  
 ~~~  
 #
-# 2. 콘솔 입력
-## 콘솔 입력의 변화
+# 2. 콘솔 입력  
+## 콘솔 입력의 변화  
 ~~~
 // 과거의 정수 입력 방식
 BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -87,3 +87,29 @@ Scanner kb = new Scanner(System.in);
 int num = kb.nextInt();
 ~~~   
 ## Scanner 클래스
+- 단순히 키보드의 입력만을 목적으로 디자인된 클래스가 아닌 **다양한 리소스를 대상으로 입력받을 수 있도록 정의된 클래스**  
+~~~
+import java.util.Scanner;
+
+class StringScanning
+{
+  public static void main(String[] args)
+  {
+    String source = "1 5 7";
+    Scanner sc = new Scanner(source);    // String을 대상으로 Scanner의 인스턴스 생성
+    Scanner sc = new Scanner(System.in); // 키보드 입력을 대상으로 Scanner의 인스턴스 생성
+    int num1 = sc.nextInt();
+    int num2 = sc.nextInt();
+    int num3 = sc.nextInt();
+    int sum = num1 + num2 + num3
+    System.out.printf("문자열에 저장된 %d, %d, %d의 합은 %d \n". num1, num2, num3, sum);
+  }
+}
+~~~  
+- Scanner 클래스의 생성자  
+~~~
+Scanner(File source)
+Scanner(InputStream source)
+Scanner(Readable source)
+Scanner(String source)
+~~~  
