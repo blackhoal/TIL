@@ -30,8 +30,8 @@ class StringToString
 ~~~  
 ## print 메소드는 출력 후 개행 X  
 ~~~
-System.out.print("출력이");
-System.out.print("종료되었습니다."); // 출력이 종료되었습니다. (개행이 되지 않고 한 줄로 표시)
+System.out.print("출력이");          // 개행이 되지 않고 한 줄로 표시
+System.out.print("종료되었습니다."); // 출력이 종료되었습니다. 
 ~~~  
 ## println 메소드는 출력 후 개행 O  
 ~~~
