@@ -141,6 +141,7 @@ int[][] arr = {
   {5,6,7,8},
   {9,10,11,12}
 };
+
 // 방법 2
 int[][] arr = new int[][] {
   {1,2,3,4},
@@ -160,4 +161,66 @@ int[][] arr = {
 ![13-4](https://user-images.githubusercontent.com/48504392/68188548-becd4880-ffec-11e9-80ca-13186665bfb3.png)  
 #
 # 4. For-each문  
-# 5. 
+## ① 배열의 일부가 아니라 전체를 참조할 필요가 있을 때 사용하는 반복문  
+~~~
+// 기존의 구문
+for(int i=0; i<arr.length; i++)
+	System.out.print(arr[i] + " ");
+
+// For-each문을 통해 간결화된 구문
+for(int e : arr)
+	System.out.print(e +  " ");
+~~~  
+## ② For-each문을 통한 값의 변경은 실제 배열에 반영 X
+~~~
+class EnhancedForInst
+{
+	public static void main(String[] args)
+	{	
+		Number[] arr=new Number[]{
+			new Number(2),
+			new Number(4),
+			new Number(8)
+		};
+		
+		for(Number e: arr) // 인스턴스 멤버에 대한 접근이므로 실제 배열에 반영 O
+			e.num++;
+		
+		for(Number e: arr)
+			System.out.print(e.getNum()+" ");
+		
+		System.out.println("");
+		for(Number e: arr)
+		{
+			e=new Number(5); // 배열의 참조값에 대한 변경이므로 실제 배열에 반영 X
+			e.num+=2;
+			System.out.print(e.getNum()+" ");
+		}
+		
+		System.out.println("");
+		for(Number e: arr)
+			System.out.print(e.getNum()+" ");
+	}
+}
+~~~  
+- 인스턴스 배열에 저장된 참조값의 변경은 불가능, But 참조값을 통한 인스턴스의 접근을 통한 데이터 변경은 가능  
+#
+# 5. main 메소드로의 전달  
+## ① main의 매개변수 선언
+~~~
+public static void main(String[] args) { … }
+~~~  
+- main 메소드의 매개변수에 String 인스턴스 배열의 참조값이 인자로 전달 필요  
+~~~
+String[] strArr1 = {"AAA", "BBB", "CCC"};
+String[] strArr2 = {"public", "static", "void", "main"};
+~~~  
+## ② main 메소드로의 데이터 전달
+~~~
+C:\..>java MainParam AAA BBB CCC
+AAA
+BBB
+CCC
+~~~  
+![13-5](https://user-images.githubusercontent.com/48504392/68189699-44ea8e80-ffef-11e9-8d65-2f21b6cdf71c.png)  
+- 명령 프롬프트 상에서 전달되는 공백으로 구분된 문자열(AAA BBB CCC)로 String 배열이 구성되어 해당 배열의 참조값이 전달  
