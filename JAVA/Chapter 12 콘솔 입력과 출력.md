@@ -1,4 +1,4 @@
-# 1. print 메소드 / println 메소드  
+# 1. print 메소드 / println 메소드 / printf 메소드  
 ~~~
 class Friend
 {
@@ -33,17 +33,20 @@ class StringToString
 System.out.print("출력이");          // 개행이 되지 않고 한 줄로 표시
 System.out.print("종료되었습니다."); // 출력이 종료되었습니다. 
 ~~~  
+#
 ## ② println 메소드는 출력 후 개행 O  
 ~~~
 [Out]
 System.out.println(fnd1); // 제 이름은 철수입니다.
 System.out.println(fnd2); // 제 이름은 영희입니다.
 ~~~  
+#
 ## ③ print, println 메소드의 인자로 인스턴스의 참조값이 전달 가능  
 ~~~
 System.out.println(fnd1); 
 System.out.println(fnd2); // println 메소드의 인자로 참조값(fnd1, fnd2)이 전달
 ~~~  
+#
 ## ④ printf 메소드는 문자열을 조합해서 출력  
 ![12-1](https://user-images.githubusercontent.com/48504392/68179391-05ae4480-ffd3-11e9-97b7-0e408349df83.png)  
 ~~~
@@ -56,6 +59,7 @@ System.out.println(fnd2); // println 메소드의 인자로 참조값(fnd1, fnd2
 %s - 문자열 출력
 %c - 문자 출력
 ~~~  
+#
 ## ⑤ 이스케이프 시퀀스  
 ### ⓐ 문자열 내에서 특별한 의미로 해석되는 문자  
 ~~~
@@ -69,3 +73,17 @@ System.out.println("제가 어제 \"당신 누구세요?\" 라고 물었더니")
 \" - 큰 따옴표  
 \\ - 역슬래시  
 ~~~  
+#
+# 2. 콘솔 입력
+## 콘솔 입력의 변화
+~~~
+// 과거의 정수 입력 방식
+BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+String str = br.readLine();
+int num = Integer.parseInt(str);
+
+// 개선된 정수 입력 방식
+Scanner kb = new Scanner(System.in);
+int num = kb.nextInt();
+~~~   
+## Scanner 클래스
