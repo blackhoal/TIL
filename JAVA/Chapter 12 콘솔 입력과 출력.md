@@ -75,7 +75,7 @@ System.out.println("제가 어제 \"당신 누구세요?\" 라고 물었더니")
 ~~~  
 #
 # 2. 콘솔 입력  
-## 콘솔 입력의 변화  
+## ① 콘솔 입력의 변화  
 ~~~
 // 과거의 정수 입력 방식
 BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -86,7 +86,7 @@ int num = Integer.parseInt(str);
 Scanner kb = new Scanner(System.in);
 int num = kb.nextInt();
 ~~~   
-## Scanner 클래스
+## ② Scanner 클래스
 - 단순히 키보드의 입력만을 목적으로 디자인된 클래스가 아닌 **다양한 리소스를 대상으로 입력받을 수 있도록 정의된 클래스**  
 ~~~
 import java.util.Scanner;
