@@ -44,7 +44,19 @@ System.out.println(fnd2); // 제 이름은 영희입니다.
 System.out.println(fnd1); 
 System.out.println(fnd2); // println 메소드의 인자로 참조값(fnd1, fnd2)이 전달
 ~~~  
-## ④ 이스케이프 시퀀스  
+## ④ printf 메소드는 문자열을 조합해서 출력  
+![12-1](https://user-images.githubusercontent.com/48504392/68179391-05ae4480-ffd3-11e9-97b7-0e408349df83.png)  
+~~~
+%d - 10진수 정수 출력
+%o - 8진수 정수 출력
+%x - 16진수 정수 출력
+%f - 실수 출력
+%e - e 표기법 기반의 실수 출력
+%g - 출력의 대상에 따라 %e or %f 출력
+%s - 문자열 출력
+%c - 문자 출력
+~~~  
+## ⑤ 이스케이프 시퀀스  
 ### ⓐ 문자열 내에서 특별한 의미로 해석되는 문자  
 ~~~
 System.out.println("제가 어제 "당신 누구세요?" 라고 물었더니"); // 문자열 내에 큰 따옴표가 들어갈 경우 문자열의 구분자로 인식됨
