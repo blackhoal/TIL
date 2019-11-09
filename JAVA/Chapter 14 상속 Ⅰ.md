@@ -79,8 +79,26 @@ public static void main(String[] args)
 - BusinessMan 인스턴스 생성 시 초기화 대상인 인스턴스 변수  
 → name(클래스 Man), company, position(클래스 BusinessMan)  
 - 외부에서 호출하는 것은 BusinessMan 클래스의 생성자이므로, 이 생성자가 부모 클래스(Man)의 인스턴스 변수(name)까지 초기화 필요(★)  
-#### ⓑ 키워드 super는 상위 클래스의 생성자 호출에 사용
+#### ⓑ 키워드 super는 상위 클래스의 생성자 호출 및 매개 변수에 전달하는 역할
 #### ⓒ super에 표시되어 전달되는 인자의 수와 자료형을 참조하여 호출할 생성자가 결정
+~~~
+class AAA
+{
+  int num1;
+}
+
+class BBB extends AAA
+{
+  int num2;
+  BBB()
+  {
+    super(5); 
+    num2 = 0;
+  }
+}
+~~~
+- 위의 코드는 **상위 클래스(AAA)에서 5를 인자로 받는 생성자가 없으므로** 컴파일 수행 X  
+- 임의의 클래스를 상속하는 하위 클래스를 정의할 시 상위 클래스에 대한 생성자 정보가 필요  
 #### ⓓ 상위 클래스의 생성자는 반드시 호출
 ![14-2](https://user-images.githubusercontent.com/48504392/68525086-3b279a80-0311-11ea-97d7-2bad4d1d183e.png)  
 ![14-3](https://user-images.githubusercontent.com/48504392/68525099-63af9480-0311-11ea-9dc6-c7fd83cba9d8.png)  
@@ -95,10 +113,63 @@ public static void main(String[] args)
 ⓐ 하위 클래스(BusinessMan)의 생성자는 상위 클래스(Man)의 인스턴스 변수를 초기화할 데이터까지 인자로 전달받을 필요 有  
 ⓑ 하위 클래스(BusinessMan)의 생성자는 내부에서 상위 클래스(Man)의 생성자 호출을 통해 상위 클래스의 인스턴스 변수를 초기화(★)  
 ⓒ super 키워드에 표시된 인자의 수와 자료형을 참조하여 호출할 생성자 결정  
+ⓓ 인스턴스 변수의 초기화는 인스턴스 변수가 선언된 클래스(상위 클래스)의 생성자를 통해 진행하고, 하위 클래스는 super 키워드를 동해 상위 클래스의 인스턴스 변수 초기화에 필요한 데이터만 전달하는 것이 이상적인 구조(★)  
+→ 상위 클래스의 생성자를 통해 진행하지 않을 경우 상위 클래스를 상속하는 모든 하위 클래스가 상위 클래스의 모든 인스턴스 변수를 초기화해야 하므로 부담 발생  
 
 # 3. 접근제어 지시자와 상속
-## ① protected 
+## ① protected  
+~~~
+class AAA
+{
+  int num1;
+  protected int num2;
+}
+
+class BBB extends AAA
+{
+  BBB()
+  {
+    num1 = 10; // AAA 클래스의 default 멤버에 접근
+    num2 = 20; // AAA 클래스의 protected 멤버에 접근
+  }
+}
+~~~  
+- default 멤버는 기존에 배웠을 때 상속 관계에서 접근 불가로 되어 있으나 그에 앞서 default라는 하나의 패키지에 묶여 있기에 접근이 허용  
+- protected는 **다른 패키지에 존재하더라도 상속관계일 경우** 접근을 허용하는 접근제어 지시자  
+
 ## ② private의 상속
+~~~
+class Accumulator
+{
+  private int val;
+  Accumulator(int init){ val = init; }
+  protected void accumulate(int num)
+  {
+    if(num<0)
+      return;
+    val += num;
+  }
+  protected int getAccVal(){return val;}
+}
+
+class SavingAccount extends Accumulator
+{
+  public SavingAccount(int initDep)
+  {
+    super(initDep);
+  }
+  public void saveMoney(int money)
+  {
+    accumulate(money)
+  }
+  public void showSavedMoney()
+  {
+    System.out.print("지금까지의 누적금액 : ");
+    System.out.println(getAccVal());
+  }
+}
+
+~~~  
 
 # 4. static 변수(메소드)의 상속
 
