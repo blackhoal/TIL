@@ -168,9 +168,14 @@ class SavingAccount extends Accumulator
     System.out.println(getAccVal());
   }
 }
-
 ~~~  
+![14-4](https://user-images.githubusercontent.com/48504392/68525547-0cf88980-0316-11ea-9fdc-37cfa98665e8.png)  
+![14-5](https://user-images.githubusercontent.com/48504392/68525548-0d912000-0316-11ea-8ad9-9019d615cbbb.png)  
+- private 멤버는 상속은 되지만 직접 접근이 불가능하며, 함께 상속된 다른 메소드를 통해 **간접 접근**이 필요  
 
 # 4. static 변수(메소드)의 상속
-
-# 5. 생성자의 상속
+- static 메소드와 static 변수는 생성되는 인스턴스가 함께 공유하는 변수 및 메소드  
+- static 변수는 public으로 선언될 경우 클래스 이름을 통해 어디서든 접근 가능  
+→ 접근 가능 여부보다 **접근 방법**에 초점  
+- 상위 클래스의 static 변수에 **이름을 통한 직접 접근**이 가능  
+![14-6](https://user-images.githubusercontent.com/48504392/68525572-7ed0d300-0316-11ea-8547-43e1b2de7ef2.png)  
