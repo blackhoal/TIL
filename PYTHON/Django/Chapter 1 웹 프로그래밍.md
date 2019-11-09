@@ -3,7 +3,7 @@
 HTTP(s) 프로토콜로 통신하는, 클라이언트와 서버를 개발하는 것  
 ## ② 웹 클라이언트 방식
 웹 클라이언트가 요청하고 웹 서버가 응답하는 클라이언트-서버 프로그램이 동작하는 방식  
-일반적인 웹 브라우저(Internet Explorer, Chrome, Firefox)는 이미 웹 클라이언트로서 개발
+일반적인 웹 브라우저(Internet Explorer, Chrome, Firefox)는 이미 웹 클라이언트로서 개발  
 #### 웹 브라우저를 사용하여 요청
 웹 브라우저는 주소창에 입력된 문장을 해석하여 웹 서버에게 HTTP 요청을 보내는 역할을 수행
 #### 리눅스 curl 명령을 사용하여 요청
@@ -22,7 +22,7 @@ GET / HTTP/1.1                // Enter 입력
 Host: www.example.com         // Enter 입력
 (빈 칸)                       // Enter 입력
 ~~~  
-telnet 명령은 터미널 창에서 입력하는 내용을 그대로 웹 서버에 전송하는 역할을 수행
+telnet 명령은 터미널 창에서 입력하는 내용을 그대로 웹 서버에 전송하는 역할을 수행  
 #### 직접 만든 클라이언트로 요청
 ~~~python
 C:\>notepad example.py
@@ -31,8 +31,9 @@ import urllib.request
 print(urllib.request.urlopen("http://www.example.com").read().decode('utf-8'))
 ~~~  
 
-# 2. HTTP 프로토콜
+# 2. HTTP 프로토콜(HyperText Transfer Protocol)
 ## ① 정의
+웹 서버와 웹 클라이언트 사이에서 데이터를 주고받기 위해 사용하여 TCP/IP 프로토콜 위에서 동작하는 통신 방식  
 ## ② 구조
 ## ③ 처리방식
 ## ④ 상태 코드
