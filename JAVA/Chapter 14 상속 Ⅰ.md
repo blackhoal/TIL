@@ -75,23 +75,16 @@ public static void main(String[] args)
   man2.tellYourInfo();
 }
 ~~~  
-#### BusinessMan 인스턴스 생성 시 초기화 대상
-- BusinessMan 인스턴스 생성 시 초기화 대상인 인스턴스 변수 → name(클래스 Man), company, position(클래스 BusinessMan) 
+#### ⓐ BusinessMan 인스턴스 생성 시 초기화 대상
+- BusinessMan 인스턴스 생성 시 초기화 대상인 인스턴스 변수  
+→ name(클래스 Man), company, position(클래스 BusinessMan)  
 - 외부에서 호출하는 것은 BusinessMan 클래스의 생성자이므로, 이 생성자가 부모 클래스(Man)의 인스턴스 변수(name)까지 초기화 필요(★)  
-#### 키워드 super는 상위 클래스의 생성자 호출에 사용
-#### super에 표시되어 전달되는 인자의 수와 자료형을 참조하여 호출할 생성자가 결정
-#### 상위 클래스의 생성자는 반드시 호출
-~~~
-class AAA
-{
-  int num1;
-}
-
-class BBB extends AAA
-{
-  int num2;
-}
-~~~  
+#### ⓑ 키워드 super는 상위 클래스의 생성자 호출에 사용
+#### ⓒ super에 표시되어 전달되는 인자의 수와 자료형을 참조하여 호출할 생성자가 결정
+#### ⓓ 상위 클래스의 생성자는 반드시 호출
+![14-2](https://user-images.githubusercontent.com/48504392/68525086-3b279a80-0311-11ea-97d7-2bad4d1d183e.png)  
+![14-3](https://user-images.githubusercontent.com/48504392/68525099-63af9480-0311-11ea-9dc6-c7fd83cba9d8.png)  
+- 상위 클래스(AAA)의 생성자는 위의 그림과 같이 명시되어 있지 않아도 컴파일러에 의해 자동으로 삽입되어 반드시 호출이 수행  
 
 # 2. 상속한 클래스의 인스턴스 생성 과정
 ## ① 메모리 공간에 인스턴스 할당 및 모든 인스턴스 변수의 디폴트 초기화
@@ -99,9 +92,9 @@ class BBB extends AAA
 ## ③ 상위 클래스(Man)의 생성자 호출 및 실행
 ## ④ 하위 클래스(BusinessMan)의 생성자 실행
 ## ⑤ 결론
-하위 클래스(BusinessMan)의 생성자는 상위 클래스(Man)의 인스턴스 변수를 초기화할 데이터까지 인자로 전달받을 필요 有  
-하위 클래스(BusinessMan)의 생성자는 내부에서 상위 클래스(Man)의 생성자 호출을 통해 상위 클래스의 인스턴스 변수를 초기화(★)  
-super 키워드에 표시된 인자의 수와 자료형을 참조하여 호출할 생성자 결정  
+ⓐ 하위 클래스(BusinessMan)의 생성자는 상위 클래스(Man)의 인스턴스 변수를 초기화할 데이터까지 인자로 전달받을 필요 有  
+ⓑ 하위 클래스(BusinessMan)의 생성자는 내부에서 상위 클래스(Man)의 생성자 호출을 통해 상위 클래스의 인스턴스 변수를 초기화(★)  
+ⓒ super 키워드에 표시된 인자의 수와 자료형을 참조하여 호출할 생성자 결정  
 
 # 3. 접근제어 지시자와 상속
 ## ① protected 
