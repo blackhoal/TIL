@@ -2,7 +2,7 @@
 ## ① 정의
 기존에 정의된 클래스에 메소드와 변수를 추가하여 새로운 클래스를 정의하는 것  
 ~~~
-// 상위 클래스(기초 클래스)
+// 상위 클래스(= 기초 클래스)
 class Man
 {
   public String name;
@@ -11,7 +11,7 @@ class Man
   }
 }
 
-// 하위 클래스(유도 클래스)
+// 하위 클래스(= 유도 클래스)
 class BusinessMan extends Man
 {
   public String company;
@@ -105,10 +105,14 @@ class BBB extends AAA
 - 상위 클래스(AAA)의 생성자는 위의 그림과 같이 명시되어 있지 않아도 컴파일러에 의해 자동으로 삽입되어 반드시 호출이 수행  
 
 # 2. 상속한 클래스의 인스턴스 생성 과정
-## ① 메모리 공간에 인스턴스 할당 및 모든 인스턴스 변수의 디폴트 초기화
-## ② 하위 클래스(BusinessMan)의 생성자 호출
-## ③ 상위 클래스(Man)의 생성자 호출 및 실행
-## ④ 하위 클래스(BusinessMan)의 생성자 실행
+## ① 메모리 공간에 인스턴스 할당 및 모든 인스턴스 변수의 디폴트 초기화  
+![14-7](https://user-images.githubusercontent.com/48504392/68525760-521dbb00-0318-11ea-908a-71a7c070754d.png)  
+## ② 하위 클래스(BusinessMan)의 생성자 호출  
+![14-8](https://user-images.githubusercontent.com/48504392/68525761-534ee800-0318-11ea-8b96-671714ceb72d.png)  
+## ③ 상위 클래스(Man)의 생성자 호출 및 실행  
+![14-8](https://user-images.githubusercontent.com/48504392/68525761-534ee800-0318-11ea-8b96-671714ceb72d.png)  
+## ④ 하위 클래스(BusinessMan)의 생성자 실행  
+![14-9](https://user-images.githubusercontent.com/48504392/68525762-53e77e80-0318-11ea-8c10-0ef2b633c511.png)  
 ## ⑤ 결론
 ⓐ 하위 클래스(BusinessMan)의 생성자는 상위 클래스(Man)의 인스턴스 변수를 초기화할 데이터까지 인자로 전달받을 필요 有  
 ⓑ 하위 클래스(BusinessMan)의 생성자는 내부에서 상위 클래스(Man)의 생성자 호출을 통해 상위 클래스의 인스턴스 변수를 초기화(★)  
@@ -138,37 +142,6 @@ class BBB extends AAA
 - protected는 **다른 패키지에 존재하더라도 상속관계일 경우** 접근을 허용하는 접근제어 지시자  
 
 ## ② private의 상속
-~~~
-class Accumulator
-{
-  private int val;
-  Accumulator(int init){ val = init; }
-  protected void accumulate(int num)
-  {
-    if(num<0)
-      return;
-    val += num;
-  }
-  protected int getAccVal(){return val;}
-}
-
-class SavingAccount extends Accumulator
-{
-  public SavingAccount(int initDep)
-  {
-    super(initDep);
-  }
-  public void saveMoney(int money)
-  {
-    accumulate(money)
-  }
-  public void showSavedMoney()
-  {
-    System.out.print("지금까지의 누적금액 : ");
-    System.out.println(getAccVal());
-  }
-}
-~~~  
 ![14-4](https://user-images.githubusercontent.com/48504392/68525547-0cf88980-0316-11ea-9fdc-37cfa98665e8.png)  
 ![14-5](https://user-images.githubusercontent.com/48504392/68525548-0d912000-0316-11ea-8ad9-9019d615cbbb.png)  
 - private 멤버는 상속은 되지만 직접 접근이 불가능하며, 함께 상속된 다른 메소드를 통해 **간접 접근**이 필요  
