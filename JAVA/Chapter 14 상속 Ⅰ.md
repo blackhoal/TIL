@@ -34,12 +34,74 @@ class BusinessMan extends Man
 ⓒ 실무 간에 다른 사용자가 설계한 클래스에 대한 이해 및 신뢰도 부족  
 
 ## ④ super 키워드
+~~~
+class Man
+{
+  private String name;
+  public Man(String name) { this.name = name;}
+  public void tellYourName() {
+    System.out.println("My name is " + name);
+  }
+}
+
+class BusinessMan extends Man
+{
+  private String company;
+  private String position;
+  public BusinessMan(String name, String company, String position)
+  {
+    super(name); // name을 인자로 전달받는 상위 클래스(Man)의 생성자를 호출하겠다의 의미
+    this.company = company;
+    this.position = position;
+  }
+  public void tellYourInfo()
+  {
+    System.out.println("My company is " + company);
+    System.out.println("My position is " + position);
+    tellYourName();
+  }
+}
+~~~  
+~~~
+public static void main(String[] args)
+{
+  BusinessMan man1 = new BusinessMan("Mr.Hong", "Hybrid 3D ELD", "Staff Eng.");
+  BusinessMan man2 = new BusinessMan("Mr.Lee", "Hybrid 3D ELD", "Assist Eng.");
+  
+  System.out.println("First man info...............");
+  man1.tellYourName();
+  man1.tellYourInfo();
+  System.out.println("Second man info...............");
+  man2.tellYourInfo();
+}
+~~~  
+#### BusinessMan 인스턴스 생성 시 초기화 대상
+- BusinessMan 인스턴스 생성 시 초기화 대상인 인스턴스 변수 → name(클래스 Man), company, position(클래스 BusinessMan) 
+- 외부에서 호출하는 것은 BusinessMan 클래스의 생성자이므로, 이 생성자가 부모 클래스(Man)의 인스턴스 변수(name)까지 초기화 필요(★)  
+#### 키워드 super는 상위 클래스의 생성자 호출에 사용
+#### super에 표시되어 전달되는 인자의 수와 자료형을 참조하여 호출할 생성자가 결정
+#### 상위 클래스의 생성자는 반드시 호출
+~~~
+class AAA
+{
+  int num1;
+}
+
+class BBB extends AAA
+{
+  int num2;
+}
+~~~  
 
 # 2. 상속한 클래스의 인스턴스 생성 과정
 ## ① 메모리 공간에 인스턴스 할당 및 모든 인스턴스 변수의 디폴트 초기화
 ## ② 하위 클래스(BusinessMan)의 생성자 호출
 ## ③ 상위 클래스(Man)의 생성자 호출 및 실행
 ## ④ 하위 클래스(BusinessMan)의 생성자 실행
+## ⑤ 결론
+하위 클래스(BusinessMan)의 생성자는 상위 클래스(Man)의 인스턴스 변수를 초기화할 데이터까지 인자로 전달받을 필요 有  
+하위 클래스(BusinessMan)의 생성자는 내부에서 상위 클래스(Man)의 생성자 호출을 통해 상위 클래스의 인스턴스 변수를 초기화(★)  
+super 키워드에 표시된 인자의 수와 자료형을 참조하여 호출할 생성자 결정  
 
 # 3. 접근제어 지시자와 상속
 ## ① protected 
