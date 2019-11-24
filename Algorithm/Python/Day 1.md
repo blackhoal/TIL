@@ -17,6 +17,13 @@ print(abs_sign(-3))
 print()
 print(abs_square(5))
 print(abs_square(-3))
+~~~
+~~~
+5
+3
+
+5.0
+3.0
 ~~~  
 # 2. 1부터 n까지의 합  
 ## 1.
