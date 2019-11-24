@@ -55,6 +55,24 @@ def sum_n(n):
 
 sum_n(5)
 ~~~  
+# 3. 리스트 내의 최대값 출력
+~~~
+list = [17, 92, 18, 33, 58, 7, 33, 42]
 
+def fmax(a):
+    length = len(a)
+    max = a[0]
+    for i in range(1, length):
+        if a[i] > max:
+            max = a[i]
+    return max
+
+print(fmax(a))
+~~~  
+# 4. 리스트 내의 최대값의 위치 출력
+~~~
+def fmax2(a):
+    
+~~~  
 # 필기  
 /은 실수형 나눗셈, //은 정수형 나눗셈에 사용  
