@@ -19,7 +19,7 @@ print(abs_square(5))
 print(abs_square(-3))
 ~~~
 ~~~
-
+출력
 5
 3
 
