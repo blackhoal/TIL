@@ -37,7 +37,7 @@ def sum_n(n):
 sum_n(10)
 ~~~
 ~~~
-# 정답 1
+[정답 1]
 def sum_n(n):
     b = 0                    # 실수1. b의 초기화
     for a in range(1, n+1): # 실수2. for문의 범위 설정 X
@@ -45,11 +45,13 @@ def sum_n(n):
     return b
 
 sum_n(100)
-~~~  
-~~~
-# 정답 2
+
+[정답 2]
 def sum_n(n):
     return n*(n+1)//2
 
 sum_n(5)
 ~~~  
+
+# 필기  
+/은 실수형 나눗셈, //은 정수형 나눗셈에 사용  
