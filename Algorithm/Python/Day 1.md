@@ -35,12 +35,15 @@ def sum_n(n):
     return b
 
 sum_n(10)
+
+실수 1 - b의 초기화 X
+실수 2 - for문의 범위 설정 X
 ~~~
 ~~~
 [정답 1]
 def sum_n(n):
-    b = 0                    # 실수1. b의 초기화
-    for a in range(1, n+1): # 실수2. for문의 범위 설정 X
+    b = 0                   
+    for a in range(1, n+1): 
         b += a
     return b
 
