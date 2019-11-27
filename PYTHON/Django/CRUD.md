@@ -23,7 +23,7 @@ bbs/
     └── views.py     # 앱의 화면(template)과 데이터(model) 사이에서 사용자의 요청을 처리하여 모델에 저장하고, 모델에 저장된 데이터를 화면에 전달하는 역할
 ~~~  
 migrations 디렉토리  
-- Django의 ORM은 모델 스키마의 변화가 생길 때마다 migration 파일을 생성하고 이를 통해 스키마를 업데이트하는 방식  
+- Django의 ORM은 모델 스키마가 변화할 때마다 migration 파일을 생성하고, 이를 통해 스키마를 업데이트  
 - migration 파일을 통해 협업자들과 함께 데이터베이스의 스키마를 동기화하는 것이 가능  
 # 참고  
 https://swarf00.github.io/2018/11/23/setup-project.html#2-%EA%B2%8C%EC%8B%9C%ED%8C%90-%EC%95%B1-%EC%83%9D%EC%84%B1
