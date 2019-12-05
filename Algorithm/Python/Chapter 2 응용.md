@@ -28,9 +28,9 @@ ch2_max(list, len(list))
 
 # [문제 3] 피보나치 수열을 재귀호출문으로 구현
 ~~~python
-def fibo(n):
+def ch2_fibo(n):
     if n <= 1:
         return n
-    return fibo(n-2) + fibo(n-1)
+    return ch2_fibo(n-2) + ch2_fibo(n-1)
 ~~~
 
