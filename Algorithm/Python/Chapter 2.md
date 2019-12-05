@@ -47,8 +47,7 @@ gcd_2(n, 0) = n
 ## 방법 1
 ~~~python
 def hanoi(n, from_pos, to_pos, aux_pos): 
-#   output : 원반의 이동 순서
-#      n   : 이동할 원반의 수 (입력값)
+#      n   : 이동할 원반의 수(Input) → 원반의 이동 순서 출력(Output)
 # from_pos : 이동할 원반이 현재 있는 출발점
 #   to_pos : 이동한 원반의 도착점
 #  aux_pos : 이동 과정에서 사용할 보조 기둥
