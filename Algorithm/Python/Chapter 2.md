@@ -14,7 +14,7 @@ def fact_2(n):
     return 1
   return n * fact_2(n-1)
 ~~~
-# 2. 최대공약수
+# 2. 최대공약수 출력
 ## 방법 1
 ~~~python
 def gcd(a,b):
@@ -31,3 +31,7 @@ def gcd_2(a,b):
     return a
   return gcd_2(b, a % b)
 ~~~
+- a와 b의 최대공약수는 'b'와 'a를 b로 나눈 나머지(a % b)'의 최대공약수와 같다  
+gcd_2(a, b) = gcd_2(b, a % b)  
+- 어떤 수와 0의 최대공약수는 자기 자신  
+gcd_2(n, 0) = n  
