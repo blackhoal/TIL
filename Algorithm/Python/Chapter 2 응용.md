@@ -14,7 +14,7 @@ list = [17, 92, 18, 33, 58, 7, 33, 42]
 
 def ch2_max(a, n):
 # a : 리스트
-# n : 리스트 내 요소의 수(len(a))
+# n : 리스트 내 요소의 수 → len(a)
     if n == 1:
         return a[0]
     max_n_1 = ch2_max(a, n-1)
