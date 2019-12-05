@@ -19,10 +19,15 @@ def fact_2(n):
 ~~~python
 def gcd(a,b):
   x = min(a,b)
-  if a % x == 0 and b % x == 0 :
-    return x
-  x = x -1
+  while True:
+    if a % x == 0 and b % x == 0 :
+      return x
+    x = x -1
 ~~~
 ## 방법 2 - 유클리드 방식
 ~~~python
+def gcd_2(a,b):
+  if b == 0 :
+    return a
+  return gcd_2(b, a % b)
 ~~~
