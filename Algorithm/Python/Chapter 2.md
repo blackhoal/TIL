@@ -44,7 +44,7 @@ gcd_2(a, b) = gcd_2(b, a % b)
 gcd_2(n, 0) = n  
 
 # 3. 하노이의 탑
-## 방법 1
+## 방법
 ~~~python
 def hanoi(n, from_pos, to_pos, aux_pos): 
 #      n   : 이동할 원반의 수(Input) → 원반의 이동 순서 출력(Output)
