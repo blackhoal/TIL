@@ -1,7 +1,17 @@
 # 1. 순차 탐색(Sequential Search)
-## 기본 
+## 로직
 ## 코드
 ~~~python
+list = [1,2,3,4,5,6,7,8]
+
+def seq(a, x):
+    n = len(a)
+    for i in range(0, n):
+        if a[i] == x :
+            return i
+    return -1
+
+seq(list, 3)
 ~~~
 ## 특징
 
@@ -48,3 +58,5 @@
 ## 특징
 
 ![3-1](https://user-images.githubusercontent.com/48504392/70370145-01918180-1907-11ea-8ced-f745787868f8.png)  
+
+참고 : https://smujihoon.tistory.com/143  
