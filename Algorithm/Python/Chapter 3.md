@@ -1,4 +1,3 @@
-①②③④⑤⑥
 # 1. 순차 탐색(Sequential Search)
 ## 로직
 ① 리스트의 첫 번째 요소부터 하나씩 비교  
@@ -61,18 +60,58 @@ bin_search(list, 3)
 즉, 두 번째 자료는 첫 번째 자료, 세 번째 자료는 두 번째와 첫 번째 자료, 네 번째 자료는 세 번째, 두 번째, 첫 번째 자료와 비교한 후 자료가 삽입될 위치를 찾는다. 자료가 삽입될 위치를 찾았다면 그 위치에 자료를 삽입하기 위해 자료를 한 칸씩 뒤로 이동시킨다.
 ## 코드
 ~~~python
+ins_list = [3, 7, 2, 9, 5, 1]
+
+def ins_sort(a):
+    n = len(a)
+    for i in range(1, n):
+        key = a[i]
+        j = i - 1
+        while j >=0 and a[j] > key:
+            a[j+1] = a[j]
+            j -= 1
+        a[j+1] = key
+        
+print(ins_list) # 정렬 전
+print(ins_sort(ins_list)) # 정렬 후
 ~~~
 ## 특징
 - 자료 배열의 모든 요소를 앞에서부터 차례대로 이미 정렬된 배열 부분과 비교 하여, 자신의 위치를 찾아 삽입  
 # 4. 선택 정렬(Selection Sort)
 ## 코드
 ~~~python
+sel_list = [3, 7, 2, 9, 5, 1]
+
+def sel_sort(a):
+    n = len(a)
+    for i in range(0, n - 1): # 0부터 n -2까지 반복
+        # i번 위치부터 끝까지 자료 값 중 최솟값의 위치를 찾음
+        min_idx = i
+        for j in range(i + 1, n):
+            if a[j] < a[min_idx]:
+                min_idx = j
+        # 찾은 최솟값을 i번 위치로
+        a[i], a[min_idx] = a[min_idx], a[i]
+
+print(sel_list) # 정렬 전
+print(sel_sort(sel_list)) # 정렬 후
 ~~~
 ## 특징
 
 # 5. 버블 정렬(Bubble Sort)
 ## 코드
 ~~~python
+bub_list = [3, 7, 2, 9, 5, 1]
+ 
+def bub_sort(a):
+    for i in range(len(a)-1, 0, -1):
+        for j in range(0, i):
+            if a[j] > a[j+1]:
+                a[j], a[j+1] = a[j+1], a[j] # 자리 바꿈
+    return a
+ 
+print(bub_list) # 정렬 전
+print(bub_sort(bub_list)) # 정렬 후
 ~~~
 ## 특징
 
@@ -96,6 +135,6 @@ bin_search(list, 3)
 
 ![3-1](https://user-images.githubusercontent.com/48504392/70370145-01918180-1907-11ea-8ced-f745787868f8.png)  
 
-참고
+참고  
 https://smujihoon.tistory.com/143  
 https://gmlwjd9405.github.io/2018/05/06/algorithm-insertion-sort.html  
