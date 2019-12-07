@@ -53,11 +53,17 @@ bin_search(list, 3)
 - 계산 복잡도 : O(logN) → 복잡도가 O(n)인 순차 탐색보다 효율적  
 
 # 3. 삽입 정렬(Insertion Sort)
+## 로직
+① 두 번째 인덱스부터 알고리즘 수행  
+③ 해당 인덱스에서 앞의 요소들과 비교 후 자료가 삽입될 위치를 탐색  
+④ 위치가 탐색되었을 경우 자료를 한 칸씩 뒤로 이동 후 해당 위치에 자료 삽입  
+
+즉, 두 번째 자료는 첫 번째 자료, 세 번째 자료는 두 번째와 첫 번째 자료, 네 번째 자료는 세 번째, 두 번째, 첫 번째 자료와 비교한 후 자료가 삽입될 위치를 찾는다. 자료가 삽입될 위치를 찾았다면 그 위치에 자료를 삽입하기 위해 자료를 한 칸씩 뒤로 이동시킨다.
 ## 코드
 ~~~python
 ~~~
 ## 특징
-
+- 자료 배열의 모든 요소를 앞에서부터 차례대로 이미 정렬된 배열 부분과 비교 하여, 자신의 위치를 찾아 삽입  
 # 4. 선택 정렬(Selection Sort)
 ## 코드
 ~~~python
@@ -90,4 +96,6 @@ bin_search(list, 3)
 
 ![3-1](https://user-images.githubusercontent.com/48504392/70370145-01918180-1907-11ea-8ced-f745787868f8.png)  
 
-참고 : https://smujihoon.tistory.com/143  
+참고
+https://smujihoon.tistory.com/143  
+https://gmlwjd9405.github.io/2018/05/06/algorithm-insertion-sort.html  
