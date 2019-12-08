@@ -17,6 +17,7 @@ def seq(a, x):
 seq(list, 3)
 ~~~
 ## 특징
+- 리스트의 첫 번째 요소부터 차례대로 비교하며 검색하는 기법
 - 평균 연산 횟수 : n+1/2  
 - 계산 복잡도 : O(n)  
 
@@ -75,7 +76,7 @@ def ins_sort(a):
             j -= 1
         a[j+1] = key
         
-print(ins_list) # 정렬 전
+print(ins_list)           # 정렬 전
 print(ins_sort(ins_list)) # 정렬 후
 ~~~
 ## 특징
@@ -94,16 +95,14 @@ sel_list = [3, 7, 2, 9, 5, 1]
 
 def sel_sort(a):
     n = len(a)
-    for i in range(0, n - 1): # 0부터 n -2까지 반복
-        # i번 위치부터 끝까지 자료 값 중 최솟값의 위치를 찾음
+    for i in range(0, n - 1): 
         min_idx = i
         for j in range(i + 1, n):
             if a[j] < a[min_idx]:
                 min_idx = j
-        # 찾은 최솟값을 i번 위치로
         a[i], a[min_idx] = a[min_idx], a[i]
 
-print(sel_list) # 정렬 전
+print(sel_list)           # 정렬 전
 print(sel_sort(sel_list)) # 정렬 후
 ~~~
 ## 특징
@@ -127,7 +126,7 @@ def bub_sort(a):
                 a[j], a[j+1] = a[j+1], a[j] # 자리 바꿈
     return a
  
-print(bub_list) # 정렬 전
+print(bub_list)           # 정렬 전
 print(bub_sort(bub_list)) # 정렬 후
 ~~~
 ## 특징
