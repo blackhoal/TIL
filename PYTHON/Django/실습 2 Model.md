@@ -9,7 +9,7 @@
 7. 게시판에서 새글쓰기 버튼을 누르면 새로운 게시글을 입력할 수 있는 화면이 출력
 8. 게시글을 작성하고 저장하기 버튼을 누르면 수정된 내용이 저장되고 게시판으로 이동
 ~~~
-→ 게시글(Article) 모델을 생성하고 제목(title), 내용(content), 작성자(author), 작성일(created_at) 속성을 정의  
+→ `게시글(Article)` 모델을 생성하고 `제목(title)`, `내용(content)`, `작성자(author)`, `작성일(created_at)` 속성을 정의  
 
 # 2. 모델 생성
 ## ① 모델 정의(bbs/models.py)
@@ -27,9 +27,9 @@ class Article(models.Model):
 위의 모델 클래스(Article)는 models.Model 클래스로부터 상속을 받음  
 
 ⓑ 데이터 타입  
-CharField : sql에서의 varchar 자료형으로 변환 / 글자수 제한 있는 문자열 데이터를 저장  
-TextField : sql에서의 text 자료형으로 변환 / 길이수 제한 없는 문자열 데이터를 저장  
-DateTimeField : sql에서의 datetime 자료형으로 변환 / 날짜와 시간이 utc 시간으로 저장  
+`CharField` : sql에서의 varchar 자료형으로 변환 / 글자수 제한 있는 문자열 데이터를 저장  
+`TextField` : sql에서의 text 자료형으로 변환 / 길이수 제한 없는 문자열 데이터를 저장  
+`DateTimeField` : sql에서의 datetime 자료형으로 변환 / 날짜와 시간이 utc 시간으로 저장  
 ## ② 앱 등록(settings.py)
 ~~~python
 # 생략
