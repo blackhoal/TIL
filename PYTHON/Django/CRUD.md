@@ -54,13 +54,13 @@ urls.py
 - path 함수는 총 4개의 인자를 받을 수 있으며 route(url)와 view(handler)는 필수 입력 요소  
 - route는 hello/처럼 평범한 url 방식으로도 표현되지만 url에 변수가 포함이 될 경우 <variable> 로 표현해서 핸들러에게 키워드인자 variable을 전달  
 
-# 4. urls.py의 route 인자 응용
+# 4. urls.py의 route 부분 응용
 ## bbs/views.py
 ~~~python
 from django.http import HttpResponse
 
-def hello(request, to):                         # request 파라미터 이후에 url패턴을 통해 전달받을 파라미터들을 선언
-    return HttpResponse('Hello {}.'.format(to)) # 파라미터 명은 키워드인자이므로 url패턴에서 사용된 변수의 이름과 동일
+def hello(request, to):                         # request 파라미터 이후에 url패턴을 통해 전달받을 파라미터를 선언(to)
+    return HttpResponse('Hello {}.'.format(to)) # 파라미터명(to)은 키워드인자이므로 url패턴에서 사용된 변수명(to)과 동일
 ~~~
 ## minitutorial/urls.py
 ~~~python
@@ -70,9 +70,10 @@ from django.urls import path
 from bbs.views import hello
 
 urlpatterns = [
-    path('hello/<to>', hello),
+    path('hello/<to>', hello),                   # hello 핸들러에 전달될 파라미터명과 동일(to)
     path('admin/', admin.site.urls),
 ]
 ~~~
+## 결과화면
 # 참고  
 https://swarf00.github.io/2018/11/23/setup-project.html#2-%EA%B2%8C%EC%8B%9C%ED%8C%90-%EC%95%B1-%EC%83%9D%EC%84%B1
