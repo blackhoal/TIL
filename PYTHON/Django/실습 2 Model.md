@@ -228,6 +228,24 @@ class ArticleAdmin(admin.ModelAdmin):
     date_created.admin_order_field = 'created_at'             # date_created 컬럼 제목을 클릭시 어떤 데이터를 기준으로 정렬할 지 결정
     date_created.short_description = '작성일'                  # date_created 컬럼 제목에 보일 텍스트
 ~~~
-### ⓑ admin의 bbs앱에 Article 모델 추가 확인  
-### ⓒ Article 모델 내의 레코드 목록 확인
+- ArticleAdmin 클래스를 생성 후 @admin.register(Article) 구문의 데코레이터로 wrapping 수행
+### ⓑ 변경된 요소 확인
+![2-6](https://user-images.githubusercontent.com/48504392/71473527-a9b9ac80-281a-11ea-9d17-5b7a4789f792.png)  
+> - 상세 페이지에서 작성일이 나타나지 않는 것을 확인
+>> → `DateTimeField`의 `auto_now_add` 속성이 `True`로 설정되면 `editable` 속성이 자동으로 `False`로 설정되면서 나타나는 현상
+### ⓒ bbs/models.py 수정
+~~~python
+from django.db import models
+  
+class Article(models.Model):
+    title      = models.CharField('제목', max_length=126, null=False)
+    content    = models.TextField('내용', null=False)
+    author     = models.CharField('작성자', max_length=16, null=False)
+    created_at = models.DateTimeField('작성일', auto_now_add=True)
+    created_at.editable = True                                     # created의 editable 속성을 True를 설정
 
+    def __str__(self):
+        return '[{}] {}'.format(self.id, self.title)
+~~~
+### ⓓ 최종 변경 확인
+![2-7](https://user-images.githubusercontent.com/48504392/71473729-9b1fc500-281b-11ea-91bf-901b87e5cd3a.png)
