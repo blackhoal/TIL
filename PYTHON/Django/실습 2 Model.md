@@ -92,7 +92,7 @@ class Migration(migrations.Migration):
 (venv) minitutorials> python manage.py shell
 >>>
 ~~~
-## ① 데이터 저장
+## ① 객체 생성
 ~~~shell
 (venv) minitutorials> python manage.py shell
 >>> from bbs.models import Article
@@ -102,9 +102,9 @@ Article object (1)
 >>> print('{} title: {}, content: {}, author: {} created_at: {}'.format(article.id, article.title, article.content, article.author, article.created_at))
 1 title: title 1, content: content 1, author: author 1 created_at: 2019-12-26 17:51:59.305617
 ~~~
-`objects`
-> - Article 모델을 관리하며 Article 클래스가 상속 받은 models.Model 클래스에 기본적으로 내장  
-> - 해당 objects 매니저를 통해 CRUD 구문 실행  
+> `objects`
+>> - Article 모델을 관리하며 Article 클래스가 상속 받은 models.Model 클래스에 기본적으로 내장  
+>> - 해당 objects 매니저를 통해 CRUD 구문 실행  
 ## ② 객체 생성 방식 3가지
 ~~~shell
 # 방법 1
@@ -165,7 +165,16 @@ AttributeError: 'str' object has no attribute 'strftime'
 >>> article.created_at.strftime('%Y-%m-%d') # 정상 출력
 '2018-11-22'
 ~~~
-
+> objects의 get 메소드를 통해 데이터를 검색
+>> - SQL의 where에 해당되는 내용을 keyword argument로 전달
+>> - 데이터가 없거나 2개 이상이 발견될 경우 에러 출력
+> Queryset 객체
+~~~shell
+>>> Article.objects.filter(author='swarf00').first() # author='swarf00'인 첫번째 레코드 검색
+>>> Article.objects.filter(author='swarf00').last()  # author='swarf00'인 마지막 레코드 검색
+>>> Article.first()                                  # Article 테이블에서 조건없이 첫번째 레코드 검색
+>>> Article.last()                                   # Article 테이블에서 조건없이 마지막 레코드 검색
+~~~
 # 4. Admin 환경
 ~~~python
 ~~~
