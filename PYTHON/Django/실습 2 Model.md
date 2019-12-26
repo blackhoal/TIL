@@ -166,9 +166,8 @@ AttributeError: 'str' object has no attribute 'strftime'
 '2018-11-22'
 ~~~
 > objects의 get 메소드를 통해 데이터를 검색
->> - SQL의 where에 해당되는 내용을 keyword argument로 전달
->> - 데이터가 없거나 2개 이상이 발견될 경우 에러 출력
-> Queryset 객체
+>> - SQL의 where에 해당되는 내용을 keyword argument로 전달  
+>> - 데이터가 없거나 2개 이상이 발견될 경우 에러 출력  
 ~~~shell
 >>> Article.objects.filter(author='swarf00').first() # author='swarf00'인 첫번째 레코드 검색
 >>> Article.objects.filter(author='swarf00').last()  # author='swarf00'인 마지막 레코드 검색
