@@ -84,6 +84,8 @@ class Migration(migrations.Migration):
         ),
     ]
 ~~~
+- primary 키를 따로 설정하지 않을 경우 자동으로 id 필드가 생성되고 pk로 설정  
+- migration 파일은 가급적 수정 및 삭제 X → 수동으로 변경 시 스키마 동기화 작업에서 문제 발생 가능성 有  
 ## ④ 모델 수정
 ~~~python
 ~~~
