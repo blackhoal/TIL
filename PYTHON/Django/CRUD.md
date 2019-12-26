@@ -75,5 +75,7 @@ urlpatterns = [
 ]
 ~~~
 ## 결과화면
+![1-2](https://user-images.githubusercontent.com/48504392/71462209-efb04980-27f5-11ea-9fb5-e7f8e8438642.png)  
+
 # 참고  
 https://swarf00.github.io/2018/11/23/setup-project.html#2-%EA%B2%8C%EC%8B%9C%ED%8C%90-%EC%95%B1-%EC%83%9D%EC%84%B1
