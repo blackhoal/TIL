@@ -106,22 +106,20 @@ Article object (1)
 > - Article 모델을 관리하며 Article 클래스가 상속 받은 models.Model 클래스에 기본적으로 내장  
 > - 해당 objects 매니저를 통해 CRUD 구문 실행  
 ## ② 객체 생성 방식 3가지
-~~~
+~~~shell
 # 방법 1
 >>> article.title = 'first' 
 >>> article.content = 'django!'
 >>> article.author = 'A'
 >>> article.created_at = '2019-12-26'
 >>> article.save() # save 메소드를 수행하지 않을 경우 insert가 이루어지지 않음(☆)
-~~~
-~~~
+
 # 방법 2
 >>> article = Article(title = 'second', content = 'django!', author = 'B', created_at = '2019-12-26') 
 >>> article.save()
 Output : 
 <Board: Board object (2)>   # 숫자는 객체의 번호를 의미 / 만약 2번 객체를 지우더라도 새로 생성시 2번이 아닌 3번부터 생성
- ~~~
- ~~~
+
  # 방법 3 
 >>> Article.objects.create(title = 'third', content='django!', author = 'C', created_at = '2019-12-26') 
 >>> Article.objects.all() # save 메소드가 필요 X / 즉각적으로 반영 및 저장까지 수행
