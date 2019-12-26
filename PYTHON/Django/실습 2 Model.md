@@ -14,7 +14,7 @@
 # 2. 모델 생성
 ## ① 모델 정의(bbs/models.py)
 ~~~python
-from django.db import models
+'from django.db import models'
   
 class Article(models.Model):
     title      = models.CharField('제목', max_length=126, null=False)
