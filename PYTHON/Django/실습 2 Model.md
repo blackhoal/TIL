@@ -182,13 +182,17 @@ AttributeError: 'str' object has no attribute 'strftime'
 ## ① Administrator 등록
 ~~~shell
 (venv) minitutorials> python manage.py createsuperuser
-Username (leave blank to use 'swarf00'): [입력]
-Email address: [입력]
-Password: [입력]
-Password (again): [입력]
+Username (leave blank to use 'swarf00'):
+Email address: 
+Password:
+Password (again):
 Superuser created successfully.
 ~~~
+> - 위의 항목 4개를 적절하게 입력 시 admin 사이트에서 `username`과 `password`로 접속 가능
 ## ② Admin 사이트 접속
+<img width="397" alt="2-1" src="https://user-images.githubusercontent.com/48504392/71472472-8bea4880-2816-11ea-9a99-cc0676cb25bd.png">
+<img width="392" alt="2-2" src="https://user-images.githubusercontent.com/48504392/71472474-8db40c00-2816-11ea-8025-1b5e6458191a.png">
+![2-3](https://user-images.githubusercontent.com/48504392/71472477-8ee53900-2816-11ea-92fe-4e731ad857e7.png)
 ## ③ Admin 사이트 등록
 ## ④ Admin 사이트 커스터마이징
 
