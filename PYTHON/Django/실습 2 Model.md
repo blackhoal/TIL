@@ -10,12 +10,12 @@
 8. 게시글을 작성하고 저장하기 버튼을 누르면 수정된 내용이 저장되고 게시판으로 이동
 ~~~
 → 게시글(Article) 모델을 생성하고 제목(title), 내용(content), 작성자(author), 작성일(created_at) 속성을 정의  
-
+'연습'입니다
 # 2. 모델 생성
 ## ① 모델 정의(bbs/models.py)
 ~~~python
-'from django.db import models'
-  
+from django.db import models
+'연습'입니다  
 class Article(models.Model):
     title      = models.CharField('제목', max_length=126, null=False)
     content    = models.TextField('내용', null=False)                  
@@ -86,7 +86,7 @@ class Migration(migrations.Migration):
 ~~~
 - primary 키를 따로 설정하지 않을 경우 자동으로 id 필드가 생성되고 pk로 설정  
 - migration 파일은 가급적 수정 및 삭제 X → 수동으로 변경 시 스키마 동기화 작업에서 문제 발생 가능성 有  
-'연습'
+
 # 3. Django Shell 환경에서 테스트
 ~~~
 (venv) minitutorials> python manage.py shell
