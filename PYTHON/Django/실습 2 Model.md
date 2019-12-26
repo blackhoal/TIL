@@ -168,11 +168,15 @@ AttributeError: 'str' object has no attribute 'strftime'
 > objects의 get 메소드를 통해 데이터를 검색
 >> - SQL의 where에 해당되는 내용을 keyword argument로 전달  
 >> - 데이터가 없거나 2개 이상이 발견될 경우 에러 출력  
+
+> Queryset 객체
+>> - 이터레이터의 모든 기능 사용 가능
+>> - 검색 결과가 0인 경우 None 반환
 ~~~shell
 >>> Article.objects.filter(author='swarf00').first() # author='swarf00'인 첫번째 레코드 검색
 >>> Article.objects.filter(author='swarf00').last()  # author='swarf00'인 마지막 레코드 검색
->>> Article.first()                                  # Article 테이블에서 조건없이 첫번째 레코드 검색
->>> Article.last()                                   # Article 테이블에서 조건없이 마지막 레코드 검색
+>>> Article.first()                                  # Article 테이블의 첫번째 레코드 검색
+>>> Article.last()                                   # Article 테이블의 마지막 레코드 검색
 ~~~
 # 4. Admin 환경
 ~~~python
