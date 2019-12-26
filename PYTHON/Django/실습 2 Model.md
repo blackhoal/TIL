@@ -93,7 +93,7 @@ class Migration(migrations.Migration):
 >>>
 ~~~
 ## ① 데이터 저장
-~~~
+~~~shell
 (venv) minitutorials> python manage.py shell
 >>> from bbs.models import Article
 >>> article = Article.objects.create(title='title 1', content='content 1', author='author 1', created_at='2019-12-26')
@@ -108,21 +108,24 @@ Article object (1)
 ## ② 객체 생성 방식 3가지
 ~~~shell
 # 방법 1
+# save 메소드를 수행하지 않을 경우 insert가 이루어지지 않음(☆)
 >>> article.title = 'first' 
 >>> article.content = 'django!'
 >>> article.author = 'A'
 >>> article.created_at = '2019-12-26'
->>> article.save() # save 메소드를 수행하지 않을 경우 insert가 이루어지지 않음(☆)
+>>> article.save() 
 
 # 방법 2
+# 숫자는 객체의 번호를 의미 / 만약 2번 객체를 지우더라도 새로 생성시 2번이 아닌 3번부터 생성
 >>> article = Article(title = 'second', content = 'django!', author = 'B', created_at = '2019-12-26') 
 >>> article.save()
 Output : 
-<Board: Board object (2)>   # 숫자는 객체의 번호를 의미 / 만약 2번 객체를 지우더라도 새로 생성시 2번이 아닌 3번부터 생성
+<Board: Board object (2)>   
 
- # 방법 3 
+# 방법 3 
+# save 메소드가 필요 X / 즉각적으로 반영 및 저장까지 수행
 >>> Article.objects.create(title = 'third', content='django!', author = 'C', created_at = '2019-12-26') 
->>> Article.objects.all() # save 메소드가 필요 X / 즉각적으로 반영 및 저장까지 수행
+>>> Article.objects.all() 
 Output : 
 <QuerySet [<Board: Board object (1)>, <Board: Board object (2)>, <Board: Board object (3)>]>
 ~~~
