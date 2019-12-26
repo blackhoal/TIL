@@ -25,7 +25,7 @@ class Article(models.Model):
 ⓐ models 모듈  
 - 장고의 모델과 관련된 모든 기능이 구현된 모듈  
 - 위의 모델 클래스(Article)는 models.Model 클래스로부터 상속을 받음  
-ⓑ 데이터 타입
+ⓑ 데이터 타입  
 - CharField : sql에서의 varchar 자료형으로 변환 / 글자수 제한 있는 문자열 데이터를 저장  
 - TextField : sql에서의 text 자료형으로 변환 / 길이수 제한 없는 문자열 데이터를 저장  
 - DateTimeField : sql에서의 datetime 자료형으로 변환 / 날짜와 시간이 utc 시간으로 저장  
