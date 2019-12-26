@@ -74,7 +74,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 ]
 ~~~
-## 결과화면
+## 결과
 ![1-2](https://user-images.githubusercontent.com/48504392/71462209-efb04980-27f5-11ea-9fb5-e7f8e8438642.png)  
 
 # 참고  
