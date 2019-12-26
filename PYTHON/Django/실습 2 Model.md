@@ -190,15 +190,15 @@ Superuser created successfully.
 ~~~
 > - 위의 항목 4개를 적절하게 입력 시 admin 사이트에서 `username`과 `password`로 접속 가능
 ## ② Admin 사이트 접속
-### Django를 재시작 후 /127.0.0.1:8000/admin로 접속 및 superuser로 로그인
+### ⓐ Django를 재시작 후 /127.0.0.1:8000/admin로 접속 및 superuser로 로그인
 ![2-1](https://user-images.githubusercontent.com/48504392/71472911-3b73ea80-2818-11ea-95b0-437ef22bf233.png)
-### 로그인 후 나오는 화면
+### ⓑ 로그인 후 나오는 화면
 ![2-2](https://user-images.githubusercontent.com/48504392/71472926-429af880-2818-11ea-98e1-bd50acee1308.png)
-### Users 내의 정보 화면
+### ⓒ Users 내의 정보 화면
 ![2-3](https://user-images.githubusercontent.com/48504392/71472933-4890d980-2818-11ea-9055-1180be03eb90.png)
 
 ## ③ Admin 사이트 등록
-### bbs/admin.py 수정
+### ⓐ bbs/admin.py 수정
 ~~~python
 from django.contrib import admin
 from .models import Article
@@ -206,10 +206,28 @@ from .models import Article
 admin.site.register(Article) 
 ~~~
 - `admin.site.register` 함수를 통해 Article 모델이 admin 사이트에 등록   
-### admin의 bbs앱에 Article 모델 추가 확인  
+### ⓑ admin의 bbs앱에 Article 모델 추가 확인  
 ![2-4](https://user-images.githubusercontent.com/48504392/71473059-d5d42e00-2818-11ea-804b-d89a0e084ba1.png)  
-### Article 모델 내의 레코드 목록 확인
+### ⓒ Article 모델 내의 레코드 목록 확인
 ![2-5](https://user-images.githubusercontent.com/48504392/71473219-7aef0680-2819-11ea-947a-8f6ce3089fe0.png)
 ## ④ Admin 사이트 커스터마이징
+### ⓐ bbs/admin.py 수정
+~~~python
+from django.contrib import admin
+  
+from .models import Article
 
+@admin.register(Article)
+class ArticleAdmin(admin.ModelAdmin):
+    list_display = ('id', 'title', 'author', 'date_created') 
+    list_display_links = ('id', 'title')                      # 상세페이지로 이동할 수 있는 필드 리스트
+
+    def date_created(self, obj):                              # create_at 필드의 출력 형식을 변경해주는 메소드
+        return obj.created_at.strftime("%Y-%m-%d")
+
+    date_created.admin_order_field = 'created_at'             # date_created 컬럼 제목을 클릭시 어떤 데이터를 기준으로 정렬할 지 결정
+    date_created.short_description = '작성일'                  # date_created 컬럼 제목에 보일 텍스트
+~~~
+### ⓑ admin의 bbs앱에 Article 모델 추가 확인  
+### ⓒ Article 모델 내의 레코드 목록 확인
 
