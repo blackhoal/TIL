@@ -102,8 +102,9 @@ Article object (1)
 >>> print('{} title: {}, content: {}, author: {} created_at: {}'.format(article.id, article.title, article.content, article.author, article.created_at))
 1 title: title 1, content: content 1, author: author 1 created_at: 2019-12-26 17:51:59.305617
 ~~~
-objects 매니저
+`objects`
 > Article 모델을 관리하며 Article 클래스가 상속 받은 models.Model 클래스에 기본적으로 내장  
+> 해당 objects 매니저를 통해 CRUD 구문 실행  
 # 4. Admin 환경
 
 ~~~python
