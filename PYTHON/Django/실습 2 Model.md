@@ -93,7 +93,6 @@ class Migration(migrations.Migration):
 >>>
 ~~~
 ## ① 데이터 저장
-
 ~~~
 (venv) minitutorials> python manage.py shell
 >>> from bbs.models import Article
@@ -106,7 +105,30 @@ Article object (1)
 `objects`
 > - Article 모델을 관리하며 Article 클래스가 상속 받은 models.Model 클래스에 기본적으로 내장  
 > - 해당 objects 매니저를 통해 CRUD 구문 실행  
-## ② 데이터 표시 형식 변경
+## ② 객체 생성 방식 3가지
+~~~
+# 방법 1
+>>> article.title = 'first' 
+>>> article.content = 'django!'
+>>> article.author = 'A'
+>>> article.created_at = '2019-12-26'
+>>> article.save() # save 메소드를 수행하지 않을 경우 insert가 이루어지지 않음(☆)
+~~~
+~~~
+# 방법 2
+>>> article = Article(title = 'second', content = 'django!', author = 'B', created_at = '2019-12-26') 
+>>> article.save()
+Output : 
+<Board: Board object (2)>   # 숫자는 객체의 번호를 의미 / 만약 2번 객체를 지우더라도 새로 생성시 2번이 아닌 3번부터 생성
+ ~~~
+ ~~~
+ # 방법 3 
+>>> Article.objects.create(title = 'third', content='django!', author = 'C', created_at = '2019-12-26') 
+>>> Article.objects.all() # save 메소드가 필요 X / 즉각적으로 반영 및 저장까지 수행
+Output : 
+<QuerySet [<Board: Board object (1)>, <Board: Board object (2)>, <Board: Board object (3)>]>
+~~~
+## ③ 데이터 표시 형식 변경
 > - 위의 Article 객체의 `created_at` 필드가 입력한 값과 다르게 출력되는 상황 확인
 >> → 매번 `string formatter`를 이용할 수 없으므로 models.py에서 `__str__`메소드를 오버라이딩
 ~~~python
@@ -123,25 +145,26 @@ class Article(models.Model):
     def __str__(self):
         return '[{}] {}'.format(self.id, self.title)
 ~~~
-## ③ 데이터 검색, 수정, 저장
+## ④ 데이터 검색, 수정, 저장
 ~~~shell
 >>> from bbs.models import Article
->>> article = Article.objects.get(id=1)     # id가 1인 Article 데이터 검색. 없거나 2개 이상일 경우 에러발생
+>>> article = Article.objects.get(id=1)     # id가 1인 Article 데이터 검색 / 없거나 2개 이상일 경우 에러 발생
 >>> print(article)
 <Article: [1] How to create a article>
->>> article.created_at = '2018-11-22 01:15'
->>> article.save()                          # 변경된 값 저장. `time formatter('%Y-%m-%d %H:%M')` 형식의 문자열은 DateTimeField에서 자동으로 시간 데이터로 변환해줍니다.
->>> article.created_at.strftime('%Y-%m-%d') # 변경된 created_at 값을 time fomatter를 이용해 출력해보지만 에러발생
+>>> article.created_at = '2018-11-22 01:15' # 'time formatter' 형식의 문자열은 DateTimeField에서 자동으로 시간 데이터로 변환
+>>> article.save()                          # 변경된 값 저장                                 
+>>> article.created_at.strftime('%Y-%m-%d') # 변경된 created_at 값을 time fomatter를 이용해 출력 / but 에러 발생
 ---------------------------------------------------------------------------
 AttributeError                            Traceback (most recent call last)
 <ipython-input-16-560946d1936a> in <module>
 ----> 1 article.created_at.strftime('%Y-%m-%d')
-
 AttributeError: 'str' object has no attribute 'strftime'
->>> article.refresh_from_db()               # db로 부터 새로 검색
->>> article.created_at.strftime('%Y-%m-%d') # 정상출력
+
+>>> article.refresh_from_db()               # DB로부터 새로 검색
+>>> article.created_at.strftime('%Y-%m-%d') # 정상 출력
 '2018-11-22'
 ~~~
+
 # 4. Admin 환경
 ~~~python
 ~~~
