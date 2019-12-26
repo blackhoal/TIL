@@ -179,9 +179,15 @@ AttributeError: 'str' object has no attribute 'strftime'
 >>> Article.last()                                   # Article 테이블의 마지막 레코드 검색
 ~~~
 # 4. Admin 환경
-~~~python
-~~~
 ## ① Administrator 등록
+~~~shell
+(venv) minitutorials> python manage.py createsuperuser
+Username (leave blank to use 'swarf00'): [입력]
+Email address: [입력]
+Password: [입력]
+Password (again): [입력]
+Superuser created successfully.
+~~~
 ## ② Admin 사이트 접속
 ## ③ Admin 사이트 등록
 ## ④ Admin 사이트 커스터마이징
