@@ -9,6 +9,7 @@ minitutorial/       # 프로젝트의 루트 디렉토리 / 이름 변경해도 
     ├── urls.py     # 웹의 url과 view를 매칭시켜주는 파일
     └── wsgi.py     # WSGI 호환 웹 서버 / 서비스할 때 실행되는 시작점
 ~~~  
+
 # 2. 게시판 앱 생성
 ## (venv) $ python manage.py startapp bbs
 ~~~
@@ -25,5 +26,27 @@ bbs/
 migrations 디렉토리  
 - Django의 ORM은 모델 스키마가 변화할 때마다 migration 파일을 생성하고, 이를 통해 스키마를 업데이트  
 - migration 파일을 통해 협업자들과 함께 데이터베이스의 스키마를 동기화하는 것이 가능  
+
+# 3. 앱 테스트
+## bbs/view.py
+~~~
+from django.http import HttpResponse
+
+def hello(request):                     # 핸들러 선언 / 언제나 첫번째 인자는 request 객체
+    return HttpResponse('Hello world.') # 핸들러의 반환값 / HttpResponse 함수를 통해 문자열을 반환
+~~~
+## urls.py
+~~~python
+from django.contrib import admin
+from django.urls import path
+
+from bbs.views import hello
+
+urlpatterns = [
+    path('hello/', hello),
+    path('admin/', admin.site.urls),
+]
+~~~
+
 # 참고  
 https://swarf00.github.io/2018/11/23/setup-project.html#2-%EA%B2%8C%EC%8B%9C%ED%8C%90-%EC%95%B1-%EC%83%9D%EC%84%B1
