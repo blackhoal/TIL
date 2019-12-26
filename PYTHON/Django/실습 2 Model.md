@@ -196,6 +196,7 @@ Superuser created successfully.
 <img width="392" alt="2-2" src="https://user-images.githubusercontent.com/48504392/71472611-10d56200-2817-11ea-8497-594fb2b4aad1.png">
 ### Users 내의 정보 화면
 ![2-3](https://user-images.githubusercontent.com/48504392/71472667-41b59700-2817-11ea-998c-0d1a87ec2aaf.png)  
+
 ## ③ Admin 사이트 등록
 ## ④ Admin 사이트 커스터마이징
 
