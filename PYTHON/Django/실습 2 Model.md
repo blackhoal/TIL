@@ -22,14 +22,13 @@ class Article(models.Model):
     auther     = models.CharField('작성자', max_length=16, null=False) 
     created_at = models.DateTimeField('작성일', auto_now_add=True)     
 ~~~
-ⓐ models 모듈  
-장고의 모델과 관련된 모든 기능이 구현된 모듈  
-위의 모델 클래스(Article)는 models.Model 클래스로부터 상속을 받음  
-
-ⓑ 데이터 타입  
-`CharField` : sql에서의 varchar 자료형으로 변환 / 글자수 제한 있는 문자열 데이터를 저장  
-`TextField` : sql에서의 text 자료형으로 변환 / 길이수 제한 없는 문자열 데이터를 저장  
-`DateTimeField` : sql에서의 datetime 자료형으로 변환 / 날짜와 시간이 utc 시간으로 저장  
+### ⓐ models 모듈  
+- 장고의 모델과 관련된 모든 기능이 구현된 모듈  
+- 위의 모델 클래스(Article)는 models.Model 클래스로부터 상속을 받음  
+### ⓑ 데이터 타입  
+- `CharField` : sql에서의 varchar 자료형으로 변환 / 글자수 제한 있는 문자열 데이터를 저장  
+- `TextField` : sql에서의 text 자료형으로 변환 / 길이수 제한 없는 문자열 데이터를 저장  
+- `DateTimeField` : sql에서의 datetime 자료형으로 변환 / 날짜와 시간이 utc 시간으로 저장  
 ## ② 앱 등록(settings.py)
 ~~~python
 # 생략
@@ -105,30 +104,36 @@ Article object (1)
 > `objects`
 >> - Article 모델을 관리하며 Article 클래스가 상속 받은 models.Model 클래스에 기본적으로 내장  
 >> - 해당 objects 매니저를 통해 CRUD 구문 실행  
+
 ## ② 객체 생성 방식 3가지
+### 방법 1
 ~~~shell
-# 방법 1
-# save 메소드를 수행하지 않을 경우 insert가 이루어지지 않음(☆)
 >>> article.title = 'first' 
 >>> article.content = 'django!'
 >>> article.author = 'A'
 >>> article.created_at = '2019-12-26'
 >>> article.save() 
-
-# 방법 2
-# 숫자는 객체의 번호를 의미 / 만약 2번 객체를 지우더라도 새로 생성시 2번이 아닌 3번부터 생성
+~~~
+- save 메소드를 수행하지 않을 경우 insert가 이루어지지 않음(☆)
+### 방법 2
+~~~shell
 >>> article = Article(title = 'second', content = 'django!', author = 'B', created_at = '2019-12-26') 
 >>> article.save()
 Output : 
 <Board: Board object (2)>   
-
-# 방법 3 
-# save 메소드가 필요 X / 즉각적으로 반영 및 저장까지 수행
+~~~
+- Output의 괄호 내의 숫자는 객체의 번호를 의미
+- 만약 2번 객체를 지우더라도 새로 생성시 2번이 아닌 3번부터 생성
+### 방법 3
+~~~shell
 >>> Article.objects.create(title = 'third', content='django!', author = 'C', created_at = '2019-12-26') 
 >>> Article.objects.all() 
 Output : 
 <QuerySet [<Board: Board object (1)>, <Board: Board object (2)>, <Board: Board object (3)>]>
 ~~~
+- save 메소드가 필요 X
+- 즉각적으로 반영 및 저장까지 수행  
+
 ## ③ 데이터 표시 형식 변경
 > - 위의 Article 객체의 `created_at` 필드가 입력한 값과 다르게 출력되는 상황 확인
 >> → 매번 `string formatter`를 이용할 수 없으므로 models.py에서 `__str__`메소드를 오버라이딩
