@@ -92,7 +92,8 @@ class Migration(migrations.Migration):
 (venv) minitutorials> python manage.py shell
 >>>
 ~~~
-## 데이터 저장
+## ① 데이터 저장
+
 ~~~
 (venv) minitutorials> python manage.py shell
 >>> from bbs.models import Article
@@ -103,12 +104,19 @@ Article object (1)
 1 title: title 1, content: content 1, author: author 1 created_at: 2019-12-26 17:51:59.305617
 ~~~
 `objects`
-> Article 모델을 관리하며 Article 클래스가 상속 받은 models.Model 클래스에 기본적으로 내장  
-> 해당 objects 매니저를 통해 CRUD 구문 실행  
-# 4. Admin 환경
+> - Article 모델을 관리하며 Article 클래스가 상속 받은 models.Model 클래스에 기본적으로 내장  
+> - 해당 objects 매니저를 통해 CRUD 구문 실행  
+## ② 데이터 표시 형식 변경
+## ③ 데이터 검색, 수정, 저장
 
+# 4. Admin 환경
 ~~~python
 ~~~
+## ① Administrator 등록
+## ② Admin 사이트 접속
+## ③ Admin 사이트 등록
+## ④ Admin 사이트 커스터마이징
+
 ①
 ②
 ③
