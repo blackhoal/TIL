@@ -124,7 +124,7 @@ class Article(models.Model):
         return '[{}] {}'.format(self.id, self.title)
 ~~~
 ## ③ 데이터 검색, 수정, 저장
-~~~ipython
+~~~shell
 >>> from bbs.models import Article
 >>> article = Article.objects.get(id=1)     # id가 1인 Article 데이터 검색. 없거나 2개 이상일 경우 에러발생
 >>> print(article)
