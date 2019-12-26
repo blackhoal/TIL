@@ -51,6 +51,13 @@ USE_TZ = False           # 기본 시간대(UTC)를 사용 X
 # 생략
 ~~~
 ## ③ 데이터베이스 설정(settings.py)
+~~~
+(venv) minitutorials> python manage.py makemigrations
+
+Migrations for 'bbs':
+  bbs\migrations\0001_initial.py
+    - Create model Article
+~~~
 ~~~python
 ~~~
 ## ④ 모델 수정
