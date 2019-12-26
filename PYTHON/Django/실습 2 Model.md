@@ -190,9 +190,12 @@ Superuser created successfully.
 ~~~
 > - 위의 항목 4개를 적절하게 입력 시 admin 사이트에서 `username`과 `password`로 접속 가능
 ## ② Admin 사이트 접속
-<img width="397" alt="2-1" src="https://user-images.githubusercontent.com/48504392/71472472-8bea4880-2816-11ea-9a99-cc0676cb25bd.png">
-<img width="392" alt="2-2" src="https://user-images.githubusercontent.com/48504392/71472474-8db40c00-2816-11ea-8025-1b5e6458191a.png">
-![2-3](https://user-images.githubusercontent.com/48504392/71472527-bf2cd780-2816-11ea-8e6c-61bf95a6ecda.png)
+### Django를 재시작 후 `/127.0.0.1:8000/admin`로 접속 및 로그인
+<img width="397" alt="2-1" src="https://user-images.githubusercontent.com/48504392/71472555-db307900-2816-11ea-86b3-29ebca87fc05.png">  
+### 로그인 후 나오는 Welcome 화면  
+<img width="392" alt="2-2" src="https://user-images.githubusercontent.com/48504392/71472611-10d56200-2817-11ea-8497-594fb2b4aad1.png">
+### Users 내의 정보 화면
+![2-3](https://user-images.githubusercontent.com/48504392/71472667-41b59700-2817-11ea-998c-0d1a87ec2aaf.png)  
 ## ③ Admin 사이트 등록
 ## ④ Admin 사이트 커스터마이징
 
