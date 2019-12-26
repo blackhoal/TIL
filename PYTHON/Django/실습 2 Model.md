@@ -108,8 +108,8 @@ Article object (1)
 > - 해당 objects 매니저를 통해 CRUD 구문 실행  
 ## ② 데이터 표시 형식 변경
 > - 위의 Article 객체의 `created_at` 필드가 입력한 값과 다르게 출력되는 상황 확인
->> → 매번 `string formatter`를 이용할 수 없으므로 모델에서 `__str__`메소드를 오버라이딩
-~~~
+>> → 매번 `string formatter`를 이용할 수 없으므로 models.py에서 `__str__`메소드를 오버라이딩
+~~~python
 # bbs/models.py
 
 from django.db import models
@@ -124,7 +124,24 @@ class Article(models.Model):
         return '[{}] {}'.format(self.id, self.title)
 ~~~
 ## ③ 데이터 검색, 수정, 저장
+~~~ipython
+>>> from bbs.models import Article
+>>> article = Article.objects.get(id=1)     # id가 1인 Article 데이터 검색. 없거나 2개 이상일 경우 에러발생
+>>> print(article)
+<Article: [1] How to create a article>
+>>> article.created_at = '2018-11-22 01:15'
+>>> article.save()                          # 변경된 값 저장. `time formatter('%Y-%m-%d %H:%M')` 형식의 문자열은 DateTimeField에서 자동으로 시간 데이터로 변환해줍니다.
+>>> article.created_at.strftime('%Y-%m-%d') # 변경된 created_at 값을 time fomatter를 이용해 출력해보지만 에러발생
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+<ipython-input-16-560946d1936a> in <module>
+----> 1 article.created_at.strftime('%Y-%m-%d')
 
+AttributeError: 'str' object has no attribute 'strftime'
+>>> article.refresh_from_db()               # db로 부터 새로 검색
+>>> article.created_at.strftime('%Y-%m-%d') # 정상출력
+'2018-11-22'
+~~~
 # 4. Admin 환경
 ~~~python
 ~~~
