@@ -84,8 +84,8 @@ class Migration(migrations.Migration):
         ),
     ]
 ~~~
-- primary 키를 따로 설정하지 않을 경우 자동으로 id 필드가 생성되고 pk로 설정  
-- migration 파일은 가급적 수정 및 삭제 X → 수동으로 변경 시 스키마 동기화 작업에서 문제 발생 가능성 有  
+> - primary 키를 따로 설정하지 않을 경우 자동으로 id 필드가 생성되고 pk로 설정  
+> - migration 파일은 가급적 수정 및 삭제 X → 수동으로 변경 시 스키마 동기화 작업에서 문제 발생 가능성 有  
 
 # 3. Django Shell 환경에서 테스트
 ~~~
@@ -107,6 +107,22 @@ Article object (1)
 > - Article 모델을 관리하며 Article 클래스가 상속 받은 models.Model 클래스에 기본적으로 내장  
 > - 해당 objects 매니저를 통해 CRUD 구문 실행  
 ## ② 데이터 표시 형식 변경
+> - 위의 Article 객체의 `created_at` 필드가 입력한 값과 다르게 출력되는 상황 확인
+>> → 매번 `string formatter`를 이용할 수 없으므로 모델에서 `__str__`메소드를 오버라이딩
+~~~
+# bbs/models.py
+
+from django.db import models
+
+class Article(models.Model):
+    title      = models.CharField('타이틀', max_length=126, null=False)
+    content    = models.TextField('내용', null=False)
+    author     = models.CharField('작성자', max_length=16, null=False)
+    created_at = models.DateTimeField('작성일', auto_now_add=True)
+
+    def __str__(self):
+        return '[{}] {}'.format(self.id, self.title)
+~~~
 ## ③ 데이터 검색, 수정, 저장
 
 # 4. Admin 환경
