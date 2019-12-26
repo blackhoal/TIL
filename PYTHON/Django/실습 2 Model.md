@@ -198,6 +198,7 @@ Superuser created successfully.
 ![2-3](https://user-images.githubusercontent.com/48504392/71472933-4890d980-2818-11ea-9055-1180be03eb90.png)
 
 ## ③ Admin 사이트 등록
+### `admin.site.register` 함수를 이용하여 Article 모델을 admin 사이트에 등록
 ~~~python
 # bbs/admin.py
 
@@ -206,7 +207,7 @@ from .models import Article
 
 admin.site.register(Article) 
 ~~~
-> - `admin.site.register` 함수를 이용하여 Article 모델을 admin 사이트에 등록
+### admin의 bbs앱에 Article 모델 추가 확인  
 ![2-4](https://user-images.githubusercontent.com/48504392/71473059-d5d42e00-2818-11ea-804b-d89a0e084ba1.png)  
 ## ④ Admin 사이트 커스터마이징
 
