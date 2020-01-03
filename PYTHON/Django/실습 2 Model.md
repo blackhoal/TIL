@@ -254,3 +254,6 @@ class Article(models.Model):
 ~~~
 ### ⓓ 최종 변경 확인
 ![2-7](https://user-images.githubusercontent.com/48504392/71473729-9b1fc500-281b-11ea-91bf-901b87e5cd3a.png)
+
+# 5. 참고
+https://swarf00.github.io/2018/11/23/build-model.html
