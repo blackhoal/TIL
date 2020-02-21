@@ -97,15 +97,20 @@ for(ⓐint num=0; ⓑnum<5 ; ⓒnum++)
 ## ② 특징  
 - while문과 달리 반복에 필요한 모든 것을 한 줄에 나열할 수 있는 장점
 - 콤마 연산자를 이용하여 둘 이상의 변수 선언 및 연산문 삽입 가능
+~~~
 for(int i=0, j=7; i<7; i++, j--)
 System.out.println("I love Java" + i + j)
-→ I love Java 07
+~~~
+~~~
+I love Java 07
 I love Java 16
 I love Java 25
 I love Java 34
+~~~
 
 # 6. continue
 ## ① 구조
+~~~
 int num=0;
 int count=0;
 while(num++<100)
@@ -116,12 +121,14 @@ continue;
 count++;
 System.out.println(num);
 }
+~~~
 
 ## ② 특징
 - 실행하던 반복문의 나머지 영역을 생략하고 프로그램의 흐름을 반복문의 조건검사 영역으로 이동
 
 # 7. break문
 ## ① 구조
+~~~
 int num=1;
 boolean search=false;
 while(num<100)
@@ -133,6 +140,7 @@ break;
 }
 num++;
 }
+~~~
 ## ② 특징
 - 반복문을 빠져나가는 용도로 사용
 - 가장 근접한 거리에서 자신을 감싸는 반복문을 찾은 후 해당 반복문을 탈출
@@ -140,6 +148,7 @@ num++;
 
 # 8. 무한 루프
 ## ① 구조
+~~~
 do
 {
 반복 영역
@@ -154,12 +163,15 @@ for( ; ;)
 {
 반복 영역
 }
+~~~
+
 ## ② 특징
 - break문과 결합되어 최소공배수 등을 구할 때 사용
 → 자연수의 크기를 예측할 필요가 없기 때문에 무한루프를 사용
 
 # 9. 반복문의 중첩
 ## ① 구조
+~~~
 for(int i=0; i<3 ; i++)
 {
 for(int j=0; j<3 ; j++)
@@ -173,10 +185,12 @@ while(j<10)
 반복 문장
 }
 }
+~~~
 ## ② 특징
 - 구구단과 같이 연속된 중첩이 필요할 경우에 사용
 - Break문을 사용할 경우 탈출할 수 있는 반복문은 1개뿐
 ★ 중첩된 반복문 전체를 벗어나려면 OuterLoop 사용
+~~~
 outerLoop:
 for(int i=0; i<3 ; i++)
 {
@@ -185,5 +199,5 @@ for(int j=0; j<3 ; j++)
 if(조건)
 break outerLoop;
 }
-
+~~~
 
