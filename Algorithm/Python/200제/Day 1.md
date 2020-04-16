@@ -177,23 +177,41 @@ txt2 = '이 또한 지나가리라.'
 print(txt1[5])      # 앞에서 6번째 문자 'e'가 출력
 print(txt2[-2])     # 끝에서 2번째 문자 '라'가 출력
 ~~~
-# 76.
+# 76. 문자열에서 지정한 구간의 문자열 출력
 ~~~python
-
+txt1 = 'A tale that was not right'
+txt2 = '이 또한 지나가리라.'
+print(txt1[3:7])      # 3~6번째 문자 'ale '이 출력
+print(txt1[:6])       # 처음~5번째 문자 'A tal'이 출력
+print(txt2[-4:])      # 끝에서 4번째부터 마지막 문자 '가리라.'가 출력
 ~~~
-# 77.
+# 77. 문자열에서 홀수 번째 문자만 출력
 ~~~python
-
+txt = 'aAbBcCdDeEfFgGhHiIjJkK'
+ret = txt[::2]   # 처음부터 끝까지 스텝 2로 슬라이싱
+print(ret)       # 'abcdefghijk'가 출력
 ~~~
-# 78.
+> - 슬라이싱의 스텝 이용  
+> - 짝수의 경우 txt[1::2]로 수정하여 출력  
+# 78. 문자열을 거꾸로 생성
 ~~~python
-
+txt = 'abcdefghijk'
+ret = txt[::-1]
+print(ret)       # 'kjihgfedcba'가 출력
 ~~~
-# 79.
+> - 역순 및 홀수로 추출 : txt[::-2]  
+> - 역순 및 짝수로 추출 : txt[-2::-2]  
+# 79. 두 개의 문자열 합치기
 ~~~python
-
+filename = input('저장할 파일 이름을 입력하세요: ')
+filename = filename + '.jpg'
+display_msg = '당신이 저장한 파일은 [' + filename + '] 입니다.'
+print(display_msg)
 ~~~
-# 80.
+# 80. 문자열을 반복해서 새로운 문자열로 생성(*)
 ~~~python
-
+msg1 = '여러분'
+msg2 = '파이팅!'
+display_msg = msg1 + ', ' + msg2*3 + '~!'
+print(display_msg)
 ~~~
