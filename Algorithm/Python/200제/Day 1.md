@@ -132,9 +132,24 @@ listdata = [117, 119, 1113, 11113, 11119]
 ret = filter(getPrime, listdata)
 print(list(ret))            # [11113, 11119] 가 출력됨
 ~~~
-# 72.
+# 72. 최대값, 최소값 출력(max, min)
 ~~~python
+listdata = [9.96, 1.27, 5.07, 6.45, 8.38, 9.29, 4.93, 7.73, 3.71, 0.93]
+maxval = max(listdata)
+minval = min(listdata)
+print(maxval)     # 9.96이 출력됨
+print(minval)     # 0.93이 출력됨
 
+txt = 'Alotofthingsoccureachday'
+maxval = max(txt)
+minval = min(txt)
+print(maxval);     # 'y'가 출력됨
+print(minval)      # 'A'가 출력됨
+
+maxval = max(2+3, 2*3, 2**3, 3**2)
+minval = min('abz', 'a12')
+print(maxval)    # '9'가 출력됨
+print(minval)    # 'a12'가 출력됨
 ~~~
 # 73.
 ~~~python
