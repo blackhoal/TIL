@@ -151,6 +151,8 @@ minval = min('abz', 'a12')
 print(maxval)    # '9'가 출력됨
 print(minval)    # 'a12'가 출력됨
 ~~~
+> 문자열에서 코드값이 가장 큰 문자가 출력  
+
 # 73.
 ~~~python
 
