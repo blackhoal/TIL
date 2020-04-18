@@ -61,9 +61,9 @@
 
 ## 4. Post Detail 페이지에 대한 테스트 코드 작성
 > ① tests.py 수정  
->> create_post 함수 생성  
+>> - create_post 함수 생성  
 ![6-13](https://user-images.githubusercontent.com/48504392/79629104-7613e100-8181-11ea-949f-bc3bac0b230e.png)  
->> test_post_list 함수 수정  
+>> - test_post_list 함수 수정  
 ![6-14](https://user-images.githubusercontent.com/48504392/79629105-76ac7780-8181-11ea-9ebc-a7ebbf3d7d05.png)  
 
 > ② tests.py 수정  
