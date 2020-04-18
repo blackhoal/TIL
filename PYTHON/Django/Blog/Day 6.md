@@ -6,45 +6,56 @@
 > - 점점 페이지가 많아지고 구조도 점점 복잡해질 경우 지금과 같은 과정 적용이 Hard  
 
 ## 2. TDD 개발 메커니즘
-> Test Code 우선적으로 작성  
+> ① Test Code 우선적으로 작성  
 >> - 만들고 싶은 기능에 대한 Test 먼저 작성  
 >> - 어떠한 것도 구현이 되어있지 않기에 Fail  
 
-> 기능 구현  
+> ② 기능 구현  
 >> - Test Code를 만족시킬 수 있도록 기능을 구현  
 >> - 만족시키는 것을 우선적으로 집중하여 개발  
 
-> Refactoring  
+> ③ Refactoring  
 >> - 성능 향상, 재사용성 개선, 코드 가독성 개선 등의 작업 수행  
 >> - 이미 자동화된 코드를 작성했으므로 test를 실행만 하면 완료  
 
 ## 3. Post List 페이지에 대한 테스트 코드 작성
-> $ pip install beautifulsoup4  
-> tests.py 수정  
+> ① $ pip install beautifulsoup4  
+
+> ② tests.py 수정  
 ![6-3](https://user-images.githubusercontent.com/48504392/79629093-71e7c380-8181-11ea-9e0a-909cdcbe7ac0.png)  
 >> - Client : 기존에는 개발자가 직접 브라우저를 열어 확인했는데, 클라이언트가 기존의 역할을 수행  
-> post_list.html 수정  
+
+> ③ post_list.html 수정  
 ![6-2](https://user-images.githubusercontent.com/48504392/79629091-714f2d00-8181-11ea-8e1a-739179fdff1b.png)  
-> admin 페이지에서 전체 Post 삭제  
-> tests.py 수정  
+
+> ④ admin 페이지에서 전체 Post 삭제  
+
+> ⑤ tests.py 수정  
 ![6-4](https://user-images.githubusercontent.com/48504392/79629094-71e7c380-8181-11ea-91bf-5517c0d31c9d.png)  
-> post_list.html 수정  
+
+> ⑥ post_list.html 수정  
 ![6-5](https://user-images.githubusercontent.com/48504392/79629095-72805a00-8181-11ea-9b03-5f05b60d62e5.png)  
-> admin 페이지에서 Post 객체 생성  
+
+> ⑦ admin 페이지에서 Post 객체 생성  
 ![6-6](https://user-images.githubusercontent.com/48504392/79629096-7318f080-8181-11ea-90f3-44037b6652eb.png)
-> test.py 수정  
+
+> ⑧ test.py 수정  
 ![6-7](https://user-images.githubusercontent.com/48504392/79629097-73b18700-8181-11ea-9b05-bf29f96f24fc.png)  
-> cmd로 test 수행  
+
+> ⑨ cmd로 test 수행  
 ![6-8](https://user-images.githubusercontent.com/48504392/79629098-73b18700-8181-11ea-8b02-adbc2d5ffc26.png)  
 >> - Post 객체를 생성했음에도 객체의 카운트가 0으로 인식되어 오류가 발생하는 이유 : 테스트를 수행 시마다 초기화된 환경에서 시작하기 때문  
 >> -> 따라서 test_post_list 함수 내에 객체 생성 코드를 삽입  
-> tests.py 수정  
+
+> ⑩ tests.py 수정  
 >> ![6-9](https://user-images.githubusercontent.com/48504392/79629099-744a1d80-8181-11ea-9cd5-08986f0c7316.png)  
 >> ![6-10](https://user-images.githubusercontent.com/48504392/79629100-74e2b400-8181-11ea-9044-0be4621b5293.png)  
 >> ![6-11](https://user-images.githubusercontent.com/48504392/79629101-757b4a80-8181-11ea-8a99-6d1133bc4ccc.png)  
 >> - test 결과 fail 출력 확인  
-> post_list.html 수정  
+
+> ⑪ post_list.html 수정  
 ![6-12](https://user-images.githubusercontent.com/48504392/79629102-757b4a80-8181-11ea-9124-95450f054c8e.png)  
+
 > Q. Post를 삭제 후 재생성했음에도 주소가 http://127.0.0.1:8000/blog/5/ 인 이유?  
 >> - blog/pk/ 구조에서 pk는 기존의 객체를 삭제했어도 값은 초기화되지 않고 누적되어 진행  
 
