@@ -43,7 +43,33 @@
 >> - test 결과 fail 출력 확인  
 > post_list.html 수정
 사진 6-12
-> Q. Post를 삭제 후 재생성했음에도 주소가 http://127.0.0.1:8000/blog/5/ 인 이유?
->> -> 기존의 객체를 삭제했어도 pk는 초기화되지 않고 누적되어 진행
+> Q. Post를 삭제 후 재생성했음에도 주소가 http://127.0.0.1:8000/blog/5/ 인 이유?  
+>> - blog/pk/ 구조에서 pk는 기존의 객체를 삭제했어도 값은 초기화되지 않고 누적되어 진행  
 
 ## 4. Post Detail 페이지에 대한 테스트 코드 작성
+> tests.py 수정  
+>> create_post 함수 생성  
+사진 6-13
+>> test_post_list 함수 수정  
+사진 6-14
+> tests.py 수정  
+사진 6-15
+> models.py 수정  
+사진 6-16
+> Q. get_absolute_url()의 역할?  
+>> - 페이지의 이동 방식 중 하나이며 모델 클래스 내 멤버함수로 사용함으로써 코드의 간결성을 강화  
+>> 사진 6-17  
+> tests.py 수정
+사진 6-18
+> 테스트 수행 시 Fail 확인
+사진 6-19
+> post_detail.html 수정
+사진 6-20
+> 테스트 수행 시 OK 확인
+> tests.py 수정
+사진 6-21
+> tests.py 수정
+사진 6-22
+> post_detail.html 수정
+>> - post_list.html의 navbar 부분을 body 태크 밑에 복사 및 붙여넣기
+사진 6-23
