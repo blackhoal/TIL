@@ -1,6 +1,7 @@
-현재 여러 HTML 페이지에서 navbar와 같이 중복되는 코드가 자주 발생
+
 
 # HTML 모듈별로 분류
+- 현재 여러 HTML 페이지에서 navbar와 같이 공통적으로 적용이 필요한 부분의 코드 블록화가 
 ## HTML 분리해서 관리하기
 > 1. base.html 생성  
 > 2. post_list.html의 내용을 복사하여 base.html에 붙여넣기  
