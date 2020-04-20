@@ -11,6 +11,7 @@
 >> - 코드 수정  
 >> ![7-2](https://user-images.githubusercontent.com/48504392/79717615-1d754d00-8315-11ea-9b3c-d9d9cecea567.png)  
 > 4. post_list.html 수정  
+>> - block 처리  
 >> ![7-3](https://user-images.githubusercontent.com/48504392/79717617-1e0de380-8315-11ea-91fe-2a66bc9d6ea1.png)   
 >> ![7-4](https://user-images.githubusercontent.com/48504392/79717619-1ea67a00-8315-11ea-856e-a45ded4134b9.png)  
 >> - block 처리한 부분 이외의 코드 삭제  
