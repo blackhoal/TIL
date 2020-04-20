@@ -29,36 +29,36 @@
 > 8. post_detail.html 수정  
 >> ![7-10](https://user-images.githubusercontent.com/48504392/79717612-1bab8980-8315-11ea-9eb7-596ed2111f17.png)  
 
-## read more 버튼 동작
+## read more 버튼 동작 & post_detail 페이지 개선
 > 1. post_list.html 수정  
->> 사진 7-13
+>> ![7-13](https://user-images.githubusercontent.com/48504392/79723055-1c95e880-8320-11ea-85f8-ec23e1890504.png)  
 > 2. tests.py 수정  
->> 사진 7-14
+>> ![7-14](https://user-images.githubusercontent.com/48504392/79723057-1dc71580-8320-11ea-803a-c4b7022a4b13.png)  
 > 3. test 수행  
->> 사진 7-12
+>> ![7-12](https://user-images.githubusercontent.com/48504392/79723051-1a338e80-8320-11ea-818a-0677c775a392.png)  
 > 4. tests.py 수정  
 >> 오타 post_000.get_absolute_url -> post_000.get_absolute_url()
->> 사진 7-15
+>> ![7-15](https://user-images.githubusercontent.com/48504392/79723060-1e5fac00-8320-11ea-9640-b9b73cbf51f4.png)  
 > 5. post_list.html 수정  
->> 사진 7-16
+>> ![7-16](https://user-images.githubusercontent.com/48504392/79723062-1f90d900-8320-11ea-9bba-e12cf7aba36d.png)  
 >> - 템플릿 형식에 get_absolute_url 구문을 get_absolute_url()로 사용하지 않도록 주의  
 > 6. startbootstrap 홈페이지에서 Detail 홈페이지에 사용할 양식 코드 복사  
->> https://blackrockdigital.github.io/startbootstrap-blog-post/  
->> 사진 7-18
->> 사진 7-19
+>> - 주소 : https://blackrockdigital.github.io/startbootstrap-blog-post/  
+>> ![7-18](https://user-images.githubusercontent.com/48504392/79723066-20c20600-8320-11ea-8538-26f265dc6fa2.png)  
+>> ![7-19](https://user-images.githubusercontent.com/48504392/79723068-215a9c80-8320-11ea-845d-bca3aea47627.png)  
 > 7. post_detail에 복사한 내용 붙여넣기  
->> 사진 7-17
+>> ![7-17](https://user-images.githubusercontent.com/48504392/79723064-20296f80-8320-11ea-970b-de0c5f176e4a.png)  
 > 8. tests.py 수정  
->> 사진 7-23
+>> ![7-23](https://user-images.githubusercontent.com/48504392/79723079-23bcf680-8320-11ea-8ad7-0b3e00e235c6.png)  
 > 9. base.html 수정  
->> 사진 7-21
+>> ![7-21](https://user-images.githubusercontent.com/48504392/79723077-23246000-8320-11ea-8acf-a2d60bbc4939.png)  
 > 10. post_detail.html 수정  
 >> - detail 페이지의 title, author, created, Preview Image 부분 수정  
->> 사진 7-22
+>> ![7-22](https://user-images.githubusercontent.com/48504392/79723078-23246000-8320-11ea-9a0b-226b9dec7af2.png)  
 >> - Post Content 부분 수정  
->> 사진 7-20
->> 사진 7-24
+>> ![7-20](https://user-images.githubusercontent.com/48504392/79723072-21f33300-8320-11ea-8d3f-83d6e4563776.png)  
+>> ![7-24](https://user-images.githubusercontent.com/48504392/79723080-24558d00-8320-11ea-9dae-78dc5ff6e19d.png)  
 > 11. tests.py 수정  
 >> - 코드 추가  
->> 사진 7-25
-## post_detail 페이지 개선
+>> ![7-25](https://user-images.githubusercontent.com/48504392/79723084-24558d00-8320-11ea-8c7f-583eec843d2e.png)  
+
