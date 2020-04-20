@@ -1,7 +1,7 @@
 
 
 # HTML 모듈별로 분류
-- 현재 여러 HTML 페이지에서 navbar와 같이 공통적으로 적용이 필요한 부분의 코드 블록화가 
+- 현재 여러 HTML 페이지에서 navbar와 같이 공통적으로 적용이 필요한 부분의 코드 블록화가 필요
 ## HTML 분리해서 관리하기
 > 1. base.html 생성  
 > 2. post_list.html의 내용을 복사하여 base.html에 붙여넣기  
@@ -30,4 +30,35 @@
 >> ![7-10](https://user-images.githubusercontent.com/48504392/79717612-1bab8980-8315-11ea-9eb7-596ed2111f17.png)  
 
 ## read more 버튼 동작
+> 1. post_list.html 수정  
+>> 사진 7-13
+> 2. tests.py 수정  
+>> 사진 7-14
+> 3. test 수행  
+>> 사진 7-12
+> 4. tests.py 수정  
+>> 오타 post_000.get_absolute_url -> post_000.get_absolute_url()
+>> 사진 7-15
+> 5. post_list.html 수정  
+>> 사진 7-16
+>> - 템플릿 형식에 get_absolute_url 구문을 get_absolute_url()로 사용하지 않도록 주의  
+> 6. startbootstrap 홈페이지에서 Detail 홈페이지에 사용할 양식 코드 복사  
+>> https://blackrockdigital.github.io/startbootstrap-blog-post/  
+>> 사진 7-18
+>> 사진 7-19
+> 7. post_detail에 복사한 내용 붙여넣기  
+>> 사진 7-17
+> 8. tests.py 수정  
+>> 사진 7-23
+> 9. base.html 수정  
+>> 사진 7-21
+> 10. post_detail.html 수정  
+>> - detail 페이지의 title, author, created, Preview Image 부분 수정  
+>> 사진 7-22
+>> - Post Content 부분 수정  
+>> 사진 7-20
+>> 사진 7-24
+> 11. tests.py 수정  
+>> - 코드 추가  
+>> 사진 7-25
 ## post_detail 페이지 개선
