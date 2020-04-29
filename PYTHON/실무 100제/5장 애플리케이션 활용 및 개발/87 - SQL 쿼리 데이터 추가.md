@@ -57,6 +57,7 @@ conn.close()
 
 # 필기
 ~~~
+- INSERT INTO 테이블명 VALUES 
 - INSERT 방식 
 1. 각 행의 레코드를 SQL 쿼리에 직접 입력
 2. ? Placeholder를 활용
