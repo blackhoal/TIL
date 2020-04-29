@@ -53,9 +53,12 @@ conn.close()
 ~~~
 
 # 출력
-
+![200429_2](https://user-images.githubusercontent.com/48504392/80578314-3c758c80-8a43-11ea-9f6c-c58c9dc0383d.png)  
 
 # 필기
 ~~~
-
+- INSERT 방식 
+1. 각 행의 레코드를 SQL 쿼리에 직접 입력
+2. ? Placeholder를 활용
+3. executemany 메소드로 여러 개의 행 레코드를 입력
 ~~~
