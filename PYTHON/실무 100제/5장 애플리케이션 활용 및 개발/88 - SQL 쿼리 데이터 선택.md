@@ -49,6 +49,6 @@ conn.close()
 
 # 필기
 ~~~
-- SELECT 속성명 FROM 테이블명 WHERE 
+- SELECT 속성명 FROM 테이블명 WHERE 조건
 - fetchall() : 커서 객체에 적용하여 앞에 선택한 모든 행 레코드를 가져오는 메소드
 ~~~
