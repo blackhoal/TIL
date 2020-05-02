@@ -8,14 +8,23 @@
 ~~~
 # 소스코드
 ~~~python
-# 나의 답안
-
+01 import sys
+02 sys.stdin = open("input.txt", "rt")
+03 n, k = map(int, input().split()) # 입력값
+04 a = list(map(int, input().split()))
+05 res = set() # 중복을 제거하는 자료구조 set
+06 
+07 for i in range(n):
+08     for j in range(i+1, n):
+09         for m in range(j+1, n):
+10             res.add(a[i]+a[j]+a[m])
+11 
+12 res = list(res)
+13 res.sort(reverse=True)
+14 print(res[k-1])
 ~~~
-~~~python
-# 선생님의 답안
-
+# 필기
 ~~~
-# 피드백
-~~~
-
+- set : 중복을 제거하는 자료구조
+- Line 12 : set은 sort 기능이 없으므로 다시 리스트로 변환
 ~~~
