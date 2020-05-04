@@ -10,19 +10,19 @@
 # 데이터 준비
 ## 1. 데이터 테이블 등록
 > - 청구 프로젝트 / 프로젝트 / 데이터 집합 설정 후 원하는 테이블을 작업 공간으로 끌어오기  
-> 사진 6  
+> ![200502_6](https://user-images.githubusercontent.com/48504392/80967289-112edb00-8e51-11ea-8307-7d2ef17f38f3.png)  
 > - '지금 업데이트' 버튼을 누를 경우 Row 목록이 1000개까지 출력되어 작업 전 원하는 데이터가 들어있는지 확인 가능
-> 사진 7  
-> 사진 8  
+> ![200502_7](https://user-images.githubusercontent.com/48504392/80967290-12600800-8e51-11ea-8409-c0caf544febe.png)  
+> ![200502_8](https://user-images.githubusercontent.com/48504392/80967291-12f89e80-8e51-11ea-8a67-0f6803749d6a.png)  
 ## 2. 데이터 추가하기
-> 사진 4  
-> 사진 5  
+> ![200502_4](https://user-images.githubusercontent.com/48504392/80967283-0ecc8100-8e51-11ea-9f90-3477c06446d3.png)  
+> ![200502_5](https://user-images.githubusercontent.com/48504392/80967288-112edb00-8e51-11ea-8859-4b06d44f80f2.png)  
 ## 3. 데이터 간의 조인
 > - 서로 호출한 연결이 달라도 데이터 간의 조인 가능  
-> 사진 9
-> 사진 10
+> ![200502_9](https://user-images.githubusercontent.com/48504392/80967296-13913500-8e51-11ea-9a6c-8af8568fe7b5.png)  
+> ![200502_10](https://user-images.githubusercontent.com/48504392/80967298-1429cb80-8e51-11ea-8b48-c1086f93c8df.png)  
 > - 원하지 않는 컬럼의 경우 숨기기 기능 수행  
-> 사진 11
+> ![200502_11](https://user-images.githubusercontent.com/48504392/80967300-1429cb80-8e51-11ea-8539-ae72d87382ab.png)  
 ## 4. 연결 라이브 VS 추출
 > - 사용자가 사용하는 DB의 종류에 따라 연결 방식 선택  
 ~~~
@@ -37,11 +37,12 @@
 단점 : 상대적으로 느린 업데이트 주기
 ~~~
 ## 5. 데이터 원본 필터
-> 사진 13
-> 사진 14
-> 사진 15
-> 사진 16
-> 사진 17
+> ![200502_12](https://user-images.githubusercontent.com/48504392/80967302-14c26200-8e51-11ea-9ac5-c563946c604e.png)  
+> ![200502_13](https://user-images.githubusercontent.com/48504392/80967306-155af880-8e51-11ea-9acd-f9feb101bbef.png)  
+> ![200502_14](https://user-images.githubusercontent.com/48504392/80967312-15f38f00-8e51-11ea-9048-74a9b68b2c4c.png)  
+> ![200502_15](https://user-images.githubusercontent.com/48504392/80967314-1724bc00-8e51-11ea-8dc9-a32d1553aedd.png)  
+> ![200502_16](https://user-images.githubusercontent.com/48504392/80967315-17bd5280-8e51-11ea-9294-86531be3cc2b.png)  
+> ![200502_17](https://user-images.githubusercontent.com/48504392/80967317-17bd5280-8e51-11ea-898b-9e865d681ead.png)  
 
 # 데이터 작업
 ## 1. 개요
