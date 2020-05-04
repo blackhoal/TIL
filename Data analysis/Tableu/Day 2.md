@@ -3,24 +3,24 @@
 
 # 2. 바 차트의 가시성 강화  
 > 1. 불필요한 필드 레이블 숨기기  
-> 사진 3  
+> ![200504_3](https://user-images.githubusercontent.com/48504392/80967608-9c0fd580-8e51-11ea-863d-b754e35df6a6.png)  
 > 2. 축의 머리글 표시 해제 후 레이블 직접 붙이기  
-> 사진 4  
-> 사진 5  
+> ![200504_4](https://user-images.githubusercontent.com/48504392/80967613-9dd99900-8e51-11ea-98d4-9c2b0e0b215b.png)  
+> ![200504_5](https://user-images.githubusercontent.com/48504392/80967617-9e722f80-8e51-11ea-8200-32a7593a8be7.png)  
 > 3. 불필요한 참조선 제거  
-> 사진 6  
+> ![200504_6](https://user-images.githubusercontent.com/48504392/80967619-9f0ac600-8e51-11ea-9a81-6a415e289707.png)  
 > 4. 0이 되는 기준선 표시  
 > 5. 필요에 따라 색상 조절 및 테두리 적용  
 
 # 3. 날짜 필드 앞의 + 기호
-> 사진 7  
+> ![200504_7](https://user-images.githubusercontent.com/48504392/80967620-9f0ac600-8e51-11ea-8021-99f42d9a057c.png)  
 > - 날짜 데이터의 계층 구조를 의미(연-(분기)-월-일-시-분-초)  
 > - + 기호를 클릭할 때마다 아래 단계의 계층으로 분리  
 
 # 4. 연속형 & 비연속형
-> 사진 8  
 > - 아래 사각형의 월 항목 클릭 시 연속형 데이터로 바뀌게 되어 라인 차트가 연속형으로 변화  
-> 사진 9  
+> ![200504_8](https://user-images.githubusercontent.com/48504392/80967621-9fa35c80-8e51-11ea-83d9-746d4d22b700.png)  
+> ![200504_9](https://user-images.githubusercontent.com/48504392/80967622-a03bf300-8e51-11ea-8b08-ee9a76836811.png)   
 
 # 5. 라인 차트의 가시성 강화
 > 1. 머리글 표시 해제하여 축 숨기기  
