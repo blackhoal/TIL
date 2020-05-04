@@ -25,6 +25,7 @@
 > ![200502_11](https://user-images.githubusercontent.com/48504392/80967300-1429cb80-8e51-11ea-8539-ae72d87382ab.png)  
 ## 4. 연결 라이브 VS 추출
 > - 사용자가 사용하는 DB의 종류에 따라 연결 방식 선택  
+> ![200502_12](https://user-images.githubusercontent.com/48504392/80967302-14c26200-8e51-11ea-9ac5-c563946c604e.png)  
 ~~~
 라이브 연결
 - 작업에 대해 항상 사용자가 DB로 쿼리를 직접 전송하는 방식
@@ -37,7 +38,6 @@
 단점 : 상대적으로 느린 업데이트 주기
 ~~~
 ## 5. 데이터 원본 필터
-> ![200502_12](https://user-images.githubusercontent.com/48504392/80967302-14c26200-8e51-11ea-9ac5-c563946c604e.png)  
 > ![200502_13](https://user-images.githubusercontent.com/48504392/80967306-155af880-8e51-11ea-9acd-f9feb101bbef.png)  
 > ![200502_14](https://user-images.githubusercontent.com/48504392/80967312-15f38f00-8e51-11ea-9048-74a9b68b2c4c.png)  
 > ![200502_15](https://user-images.githubusercontent.com/48504392/80967314-1724bc00-8e51-11ea-8dc9-a32d1553aedd.png)  
