@@ -1,3 +1,7 @@
+# ETL이란?
+> -  추출(Extract) + 변환(Transform) + 적재(Load)
+> - 저장소의 데이터를 필요에 따라 다른 저장소로 이동시키는 것  
+
 # 추출(Extract)
 ~~~python
 import sqlite3
