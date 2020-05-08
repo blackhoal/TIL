@@ -1,4 +1,7 @@
 # 비율 표현 차트 - 파이 차트
+~~~
+- 대표적으로 거론되는 비율 표현 차트  
+~~~
 ## 구현 1
 > ![200508-2](https://user-images.githubusercontent.com/48504392/81385426-4cc9ed80-914e-11ea-9639-459d158ad273.png)
 ## 구현 2
@@ -18,6 +21,10 @@
 > ![200508-12](https://user-images.githubusercontent.com/48504392/81385446-505d7480-914e-11ea-967e-3d8d228a60be.png)
 
 # 비율 표현 차트 - 비율 바 차트
+~~~
+- 파이 차트는 각도로 크기를 표현하므로 직관성이 부족  
+  → 길이로 표현하는 비율 바 차트가 대안
+~~~
 ## 구현
 > ![200508-13](https://user-images.githubusercontent.com/48504392/81385448-50f60b00-914e-11ea-9030-5cb33278bcb8.png)
 > ![200508-14](https://user-images.githubusercontent.com/48504392/81385450-518ea180-914e-11ea-9ccb-175bb0b9e540.png)
