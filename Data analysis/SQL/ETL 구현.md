@@ -52,8 +52,8 @@ def num_list_to_double_digit(list):
         
     return list
 
-# hour = num_list_to_double_digit(hour)
-# minute = num_list_to_double_digit(minute)
+hour = num_list_to_double_digit(hour)
+minute = num_list_to_double_digit(minute)
 
 hm = [hour[i] + minute[i] for i in range(len(hour))]
 print(hm)
