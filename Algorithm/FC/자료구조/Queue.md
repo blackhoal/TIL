@@ -21,5 +21,20 @@ PriorityQueue(): 데이터마다 우선순위를 넣어 우선순위가 높은 �
 
 # 파이썬으로 Queue 구현
 ~~~python
+def enqueue(data):
+    queue_list.append(data)
+    
+def dequeue():
+    if len(queue_list) != 0:
+        data = queue_list[0]
+        del queue_list[0]
+        return data
+    else:
+        print("Underflow 발생")
+        
+queue_list = []
+for i in range(10):
+    queue_list.append(i)
+    
 
 ~~~
