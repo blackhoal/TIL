@@ -7,8 +7,8 @@
 # 용어
 - Enqueue : 큐에서 데이터를 넣는 기능
 - Dequeue : 큐에서 데이터를 꺼내는 기능
-- Overflow : Queue가 전부 채워진 상태에서 Enqueue할 때 발생
-- Underflow : Queue가 전부 비워진 상태에서 Dequeue할 때 발생
+- Overflow : 큐가 전부 채워진 상태에서 Enqueue할 때 발생
+- Underflow : 큐가 전부 비워진 상태에서 Dequeue할 때 발생
 
 # 파이썬 queue 라이브러리
 - 파이썬에서 Queue(), LifoQueue(), PriorityQueue() 제공  
