@@ -8,9 +8,9 @@
 2. Dequeue : 큐에서 데이터를 꺼내는 기능
 
 # 파이썬 queue 라이브러리
-## 파이썬에서 Queue(), LifoQueue(), PriorityQueue() 제공  
-## 프로그램 작성 시 프로그램에 따라 적절한 구조 사용  
-- Queue(): 가장 일반적인 큐  
-- LifoQueue(): 나중에 입력된 데이터가 먼저 출력되는 구조이며 스택과 동일  
-- PriorityQueue(): 데이터마다 우선순위를 넣어 우선순위가 높은 순으로 데이터 출력  
+1. 파이썬에서 Queue(), LifoQueue(), PriorityQueue() 제공  
+2. 프로그램 작성 시 프로그램에 따라 적절한 구조 사용  
+> Queue(): 가장 일반적인 큐  
+> LifoQueue(): 나중에 입력된 데이터가 먼저 출력되는 구조이며 스택과 동일  
+> PriorityQueue(): 데이터마다 우선순위를 넣어 우선순위가 높은 순으로 데이터 출력  
 
