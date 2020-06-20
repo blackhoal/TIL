@@ -1,3 +1,9 @@
+# Relation
+## 1. 1:N 관계
+![1](https://user-images.githubusercontent.com/48504392/85196514-b1639500-b315-11ea-8432-914602cc04d4.png)
+## 2. M:N 관계
+![2](https://user-images.githubusercontent.com/48504392/85196515-b294c200-b315-11ea-942c-ff86d2363f68.png)
+
 # 블로그 post에 카테고리 추가
 > 1. models.py 수정  
 >> 사진 8-1
