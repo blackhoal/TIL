@@ -1,11 +1,14 @@
 # 장고 기초
-## 1. 가상환경 활성화/
+## 1. github와 프로젝트 연결
+![1-3](https://user-images.githubusercontent.com/48504392/95469173-48825480-09ba-11eb-9257-6c621f8b3b21.png)
+
+## 2. 가상환경 활성화/
 ~~~
 $ venv\Scripts\activate.bat
 $ deactivate.bat
 ~~~
 
-## 2. gitignore 생성
+## 3. gitignore 생성
 > - .gitignore
 ~~~
 venv/
@@ -18,17 +21,17 @@ db.sqlite3
 migrations/
 ~~~
 
-## 3. 프로젝트 생성
+## 4. 프로젝트 생성
 ~~~
 $ django-admin startproject 프로젝트명 .
 $ python manage.py migrate
 $ python manage.py makemigrations 
 ~~~
 
-## 4. blog 앱 생성
+## 5. blog 앱 생성
 > - settings.py - INSTALLED_APPS 부분에 'blog' 추가  
 > - author = models.Foreignkey(User, on_delete=True)  
->> - 사용자 객체가 삭제될 시 작성한 Post도 함께 삭제될 것임을 명시  
+>> → 사용자 객체가 삭제될 시 작성한 Post도 함께 삭제될 것임을 명시  
 > - initial.py를 git으로 관리하지 않도록 하기 위해 admin.py에 아래 구문 추가  
 ~~~
 from .models import Post
@@ -36,7 +39,7 @@ from .models import Post
 admin.site.register(Post)
 ~~~
 
-## 5. Django 지역(시간, 언어 등) 세팅
+## 6. Django 지역(시간, 언어 등) 세팅
 > - settings.py
 ~~~
 LANGUAGE_CODE = 'ko-kr'
@@ -44,13 +47,13 @@ LANGUAGE_CODE = 'ko-kr'
 TIME_ZONE = 'Asia/Seoul'
 ~~~
 > - def __str__의 역할  
->> - Post 객체의 출력을 어떻게 표현할 것인지를 암시  
+>> → Post 객체의 출력을 어떻게 표현할 것인지를 암시  
 ~~~python
 def __str__(self):
         return '{} :: {}'.format(self.title, self.author)
 ~~~
 
-## 6. MTV 구조 생성
+## 7. MTV 구조 생성
 > - my_site_prj\urls.py 수정
 ~~~python
 from django.urls import path, include # 추가
@@ -112,7 +115,7 @@ def index(request):
 ~~~
 ![6](https://user-images.githubusercontent.com/48504392/79460629-0e01b580-8030-11ea-8cfb-b2706fb8dfc7.png)  
 
-## 7. FBV에서 CBV로 변환(리스트뷰 적용)  
+## 8. FBV에서 CBV로 변환(리스트뷰 적용)  
 > - blog\views.py 코드 수정  
 ~~~python
 from .models import Post
