@@ -29,14 +29,14 @@ migrations/
 λ git push
 ~~~
 
-## 4. 프로젝트 생성
+## 5. 프로젝트 생성
 ~~~
 $ django-admin startproject 프로젝트명 .
 $ python manage.py migrate
 $ python manage.py makemigrations 
 ~~~
 
-## 5. blog 앱 생성
+## 6. blog 앱 생성
 > - settings.py - INSTALLED_APPS 부분에 'blog' 추가  
 > - author = models.Foreignkey(User, on_delete=True)  
 >> → 사용자 객체가 삭제될 시 작성한 Post도 함께 삭제될 것임을 명시  
@@ -47,7 +47,7 @@ from .models import Post
 admin.site.register(Post)
 ~~~
 
-## 6. Django 지역(시간, 언어 등) 세팅
+## 7. Django 지역(시간, 언어 등) 세팅
 > - settings.py
 ~~~
 LANGUAGE_CODE = 'ko-kr'
@@ -61,7 +61,7 @@ def __str__(self):
         return '{} :: {}'.format(self.title, self.author)
 ~~~
 
-## 7. MTV 구조 생성
+## 8. MTV 구조 생성
 > - my_site_prj\urls.py 수정
 ~~~python
 from django.urls import path, include # 추가
@@ -123,7 +123,7 @@ def index(request):
 ~~~
 ![6](https://user-images.githubusercontent.com/48504392/79460629-0e01b580-8030-11ea-8cfb-b2706fb8dfc7.png)  
 
-## 8. FBV에서 CBV로 변환(리스트뷰 적용)  
+## 9. FBV에서 CBV로 변환(리스트뷰 적용)  
 > - blog\views.py 코드 수정  
 ~~~python
 from .models import Post
