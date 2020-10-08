@@ -21,6 +21,14 @@ db.sqlite3
 migrations/
 ~~~
 
+## 4. Github에 업로드
+~~~
+# cmd
+λ git add .
+λ git commit -m "주석명"
+λ git push
+~~~
+
 ## 4. 프로젝트 생성
 ~~~
 $ django-admin startproject 프로젝트명 .
