@@ -41,6 +41,11 @@ migrations/
 ~~~
 
 ## 6. blog 앱 생성
+~~~
+[cmd]
+
+λ python manage.py startapp blog
+~~~
 > - settings.py - INSTALLED_APPS 부분에 'blog' 추가  
 > - author = models.Foreignkey(User, on_delete=True)  
 >> → 사용자 객체가 삭제될 시 작성한 Post도 함께 삭제될 것임을 명시  
