@@ -9,7 +9,7 @@ $ deactivate.bat
 ~~~
 
 ## 3. gitignore 생성
-> - .gitignore
+> - .gitignore 파일 생성 후 버전 관리를 하면 안되는 목록 
 ~~~
 venv/
 .idea/
