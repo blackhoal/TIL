@@ -23,7 +23,8 @@ migrations/
 
 ## 4. Github에 업로드
 ~~~
-# cmd
+[cmd]
+
 λ git add .
 λ git commit -m "주석명"
 λ git push
@@ -31,9 +32,12 @@ migrations/
 
 ## 5. 프로젝트 생성
 ~~~
-$ django-admin startproject 프로젝트명 .
-$ python manage.py migrate
-$ python manage.py makemigrations 
+[cmd]
+
+λ pip install django
+λ django-admin startproject my_site_prj(프로젝트명) .
+λ python manage.py migrate
+λ python manage.py makemigrations 
 ~~~
 
 ## 6. blog 앱 생성
