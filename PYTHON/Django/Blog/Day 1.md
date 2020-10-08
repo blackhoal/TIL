@@ -1,6 +1,6 @@
 # 장고 기초
 ## 1. github와 프로젝트 연결
-![1-3](https://user-images.githubusercontent.com/48504392/95469173-48825480-09ba-11eb-9257-6c621f8b3b21.png)
+
 
 ## 2. 가상환경 활성화/
 ~~~
