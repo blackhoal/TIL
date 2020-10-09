@@ -133,6 +133,11 @@ def index(request):
 ![6](https://user-images.githubusercontent.com/48504392/79460629-0e01b580-8030-11ea-8cfb-b2706fb8dfc7.png)  
 
 ## 9. FBV에서 CBV로 변환(리스트뷰 적용)  
+~~~
+[FBV와 CBV의 차이]
+FBV(함수 기반 뷰/Function Based View)
+CBV(클래스 기반 뷰/Class Based View)
+~~~
 > - blog\views.py 코드 수정  
 ~~~python
 from .models import Post
