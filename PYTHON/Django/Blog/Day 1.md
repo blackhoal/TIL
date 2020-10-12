@@ -136,6 +136,7 @@ def index(request):
 ~~~
 [FBV와 CBV의 차이]
 FBV(함수 기반 뷰/Function Based View)
+
 CBV(클래스 기반 뷰/Class Based View)
 ~~~
 > - blog\views.py 코드 수정  
