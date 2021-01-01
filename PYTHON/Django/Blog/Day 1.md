@@ -61,6 +61,7 @@ INSTALLED_APPS = [
 ~~~
 > models.py 수정
 > - on_delete=True → 사용자 객체가 삭제될 시 작성한 Post도 함께 삭제될 것임을 명시
+> - title(블로그 포스트의 제목), content(블로그 내용), created(블로그 포스트 작성시간), author(블로그 포스트 작성자)
 ~~~python
 from django.db import models
 from django.contrib.auth.models import User
@@ -76,6 +77,12 @@ class Post(models.Model):
 from .models import Post
 
 admin.site.register(Post)
+~~~
+> admin 계정 생성
+> - ID, Email, Password 순으로 입력
+~~~
+[cmd]
+λ python manage.py createsuperuser
 ~~~
 
 ## 8. Django 지역(시간, 언어 등) 세팅
