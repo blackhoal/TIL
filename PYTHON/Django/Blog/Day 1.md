@@ -47,8 +47,18 @@ migrations/
 λ python manage.py startapp blog
 ~~~
 > - settings.py - INSTALLED_APPS 부분에 'blog' 추가  
-> - author = models.Foreignkey(User, on_delete=True)  
->> → 사용자 객체가 삭제될 시 작성한 Post도 함께 삭제될 것임을 명시  
+> - models.py 수정
+~~~python
+from django.db import models
+from django.contrib.auth.models import User
+
+class Post(models.Model):
+    title = models.CharField(max_length=30)
+    content = models.TextField()
+    created = models.DateTimeField()
+    author = models.ForeignKey(User, on_delete=True)
+~~~
+>> on_delete=True → 사용자 객체가 삭제될 시 작성한 Post도 함께 삭제될 것임을 명시  
 > - initial.py를 git으로 관리하지 않도록 하기 위해 admin.py에 아래 구문 추가  
 ~~~
 from .models import Post
