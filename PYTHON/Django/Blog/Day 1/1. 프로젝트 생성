@@ -5,7 +5,9 @@
 > 생성한 github/django 폴더를 Open Project
 > File-Settings-Project-Project interpreter-add-OK
 ~~~
+[가상환경 실행]
 $ venv\Scripts\activate.bat
+[가상환경 ]
 $ deactivate.bat
 ~~~
 
