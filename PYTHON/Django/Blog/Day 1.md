@@ -47,7 +47,7 @@ migrations/
 λ python manage.py startapp blog
 ~~~
 > settings.py 수정 
->> - INSTALLED_APPS 부분에 'blog' 추가  
+> - INSTALLED_APPS 부분에 'blog' 추가  
 ~~~python
 INSTALLED_APPS = [
     'blog',
