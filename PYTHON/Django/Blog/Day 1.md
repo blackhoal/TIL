@@ -47,7 +47,19 @@ migrations/
 λ python manage.py startapp blog
 ~~~
 > - settings.py - INSTALLED_APPS 부분에 'blog' 추가  
-> - models.py 수정
+~~~python
+INSTALLED_APPS = [
+    'blog',
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+]
+~~~
+
+## 7. models.py 수정
 ~~~python
 from django.db import models
 from django.contrib.auth.models import User
@@ -58,30 +70,29 @@ class Post(models.Model):
     created = models.DateTimeField()
     author = models.ForeignKey(User, on_delete=True)
 ~~~
->> on_delete=True → 사용자 객체가 삭제될 시 작성한 Post도 함께 삭제될 것임을 명시  
-> - initial.py를 git으로 관리하지 않도록 하기 위해 admin.py에 아래 구문 추가  
+> on_delete=True → 사용자 객체가 삭제될 시 작성한 Post도 함께 삭제될 것임을 명시  
+> initial.py를 git으로 관리하지 않도록 하기 위해 admin.py에 아래 구문 추가  
 ~~~
 from .models import Post
 
 admin.site.register(Post)
 ~~~
 
-## 7. Django 지역(시간, 언어 등) 세팅
-> - settings.py
+## 8. Django 지역(시간, 언어 등) 세팅
+> settings.py
 ~~~
 LANGUAGE_CODE = 'ko-kr'
 
 TIME_ZONE = 'Asia/Seoul'
 ~~~
-> - def __str__의 역할  
->> → Post 객체의 출력을 어떻게 표현할 것인지를 암시  
+> def __str__의 역할  → Post 객체의 출력을 어떻게 표현할 것인지를 암시  
 ~~~python
 def __str__(self):
         return '{} :: {}'.format(self.title, self.author)
 ~~~
 
-## 8. MTV 구조 생성
-> - my_site_prj\urls.py 수정
+## 9. MTV 구조 생성
+> my_site_prj\urls.py 수정
 ~~~python
 from django.urls import path, include # 추가
 
@@ -90,7 +101,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 ]
 ~~~
-> - urls.py를 복사하여 blog 앱에 붙여넣기 후 수정
+> urls.py를 복사하여 blog 앱에 붙여넣기 후 수정
 ~~~python
 # blog\urls.py
 from django.urls import path, include
@@ -100,7 +111,7 @@ urlpatterns = [
     path('blog/', views.index),
 ]
 ~~~
-> - blog\views.py 수정  
+> blog\views.py 수정  
 ~~~python
 from django.shortcuts import render
 
@@ -110,9 +121,9 @@ def index(request):
 
     )
 ~~~
-> - blog\templates\blog 폴더 구조 생성 후 index.html 생성  
+> blog\templates\blog 폴더 구조 생성 후 index.html 생성  
 
-> - views.py 수정  
+> views.py 수정  
 ~~~python
 from django.shortcuts import render
 from .models import Post # 추가
@@ -126,8 +137,7 @@ def index(request):
         }
     )
 ~~~
-
-> - index.html 수정  
+> index.html 수정  
 ~~~
 ~
 <body>
@@ -142,14 +152,14 @@ def index(request):
 ~~~
 ![6](https://user-images.githubusercontent.com/48504392/79460629-0e01b580-8030-11ea-8cfb-b2706fb8dfc7.png)  
 
-## 9. FBV에서 CBV로 변환(리스트뷰 적용)  
+## 10. FBV에서 CBV로 변환(리스트뷰 적용)  
 ~~~
 [FBV와 CBV의 차이]
 FBV(함수 기반 뷰/Function Based View)
 
 CBV(클래스 기반 뷰/Class Based View)
 ~~~
-> - blog\views.py 코드 수정  
+> blog\views.py 코드 수정  
 ~~~python
 from .models import Post
 from django.views.generic import ListView # 추가
@@ -158,20 +168,20 @@ class PostList(ListView): # 기존의 def index() 구문 삭제 후 추가
     model = Post
 ~~~
 
-> - blog\urls.py 코드 수정  
+> blog\urls.py 코드 수정  
 ~~~
 urlpatterns = [
     path('', views.PostList.as_view()),
 ]
 ~~~
-> - index.html을 post_list로 이름 변경 후 코드 수정  
+> index.html을 post_list로 이름 변경 후 코드 수정  
 ~~~
 <body>
     {% for p in object_list %} # posts -> object_list
     ~
 </body>
 ~~~
-> - 작성일이 최신인 Post부터 출력이 되도록 views.py 코드 수정  
+> 작성일이 최신인 Post부터 출력이 되도록 views.py 코드 수정  
 ~~~python
 class PostList(ListView):
     ~
