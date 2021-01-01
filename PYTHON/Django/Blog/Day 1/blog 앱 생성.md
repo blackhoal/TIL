@@ -42,6 +42,7 @@ class Post(models.Model):
 ~~~
 > initial.py를 git으로 관리하지 않도록 하기 위해 admin.py에 아래 구문 추가  
 ~~~
+from django.contrib import admin
 from .models import Post
 
 admin.site.register(Post)
