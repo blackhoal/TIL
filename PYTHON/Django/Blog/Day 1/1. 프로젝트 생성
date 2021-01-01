@@ -1,0 +1,40 @@
+# github와 프로젝트 연결
+![1-3](https://user-images.githubusercontent.com/48504392/95469882-158c9080-09bb-11eb-9d10-06cc7ccd5978.png)
+
+# 가상환경 활성화/
+~~~
+$ venv\Scripts\activate.bat
+$ deactivate.bat
+~~~
+
+# gitignore 생성
+> .gitignore 파일 생성 후 버전 관리를 하면 안되는 목록 
+~~~
+venv/
+.idea/
+
+*.pyc
+
+db.sqlite3
+
+migrations/
+~~~
+
+# Github에 업로드
+~~~
+[cmd]
+
+λ git add .
+λ git commit -m "주석명"
+λ git push
+~~~
+
+# 프로젝트 생성
+~~~
+[cmd]
+
+λ pip install django
+λ django-admin startproject my_site_prj(프로젝트명) .
+λ python manage.py migrate
+λ python manage.py makemigrations 
+~~~
