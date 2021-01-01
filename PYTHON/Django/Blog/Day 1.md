@@ -46,7 +46,8 @@ migrations/
 
 λ python manage.py startapp blog
 ~~~
-> - settings.py - INSTALLED_APPS 부분에 'blog' 추가  
+> settings.py  
+>> INSTALLED_APPS 부분에 'blog' 추가  
 ~~~python
 INSTALLED_APPS = [
     'blog',
@@ -58,8 +59,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 ~~~
-
-## 7. models.py 수정
+> models.py 수정
 ~~~python
 from django.db import models
 from django.contrib.auth.models import User
