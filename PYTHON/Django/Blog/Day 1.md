@@ -60,7 +60,7 @@ INSTALLED_APPS = [
 ]
 ~~~
 > models.py 수정
->> - on_delete=True → 사용자 객체가 삭제될 시 작성한 Post도 함께 삭제될 것임을 명시
+> - on_delete=True → 사용자 객체가 삭제될 시 작성한 Post도 함께 삭제될 것임을 명시
 ~~~python
 from django.db import models
 from django.contrib.auth.models import User
