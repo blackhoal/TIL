@@ -1,0 +1,69 @@
+# MTV 구조 생성
+> my_site_prj\urls.py 수정
+~~~python
+[Before]
+from django.contrib import admin
+from django.urls import path
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+]
+[After]
+from django.contrib import admin
+from django.urls import path, include
+
+urlpatterns = [
+    path('blog/', include('blog.urls')), 
+    path('admin/', admin.site.urls),
+]
+~~~
+> urls.py를 복사하여 blog 앱에 붙여넣기 후 수정
+~~~python
+[blog\urls.py]
+from django.urls import path, include
+from . import views
+
+urlpatterns = [
+    path('blog/', views.index),
+]
+~~~
+> blog\views.py 수정  
+~~~python
+from django.shortcuts import render
+
+def index(request):
+    return render(
+        request,
+
+    )
+~~~
+> blog\templates\blog 폴더 구조 생성 후 index.html 생성  
+
+> views.py 수정  
+~~~python
+from django.shortcuts import render
+from .models import Post # 추가
+
+def index(request):
+    posts = Post.objects.all() # 추가
+    return render(
+        ~
+        {
+            'posts': posts, # 추가
+        }
+    )
+~~~
+> index.html 수정  
+~~~
+~
+<body>
+    ~
+    {% for p in posts %}
+        <h3>{{ p.title }}</h3>
+        <h4>{{ p.created }} by {{ p.author }}</h4>
+        <p>{{ p.content }}</p>
+    {% endfor %}
+</body>
+~
+~~~
+![6](https://user-images.githubusercontent.com/48504392/79460629-0e01b580-8030-11ea-8cfb-b2706fb8dfc7.png) 
