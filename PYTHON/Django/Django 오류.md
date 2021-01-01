@@ -12,3 +12,24 @@ author = models.ForeignKey(User, on_delete=True)
 [After]
 author = models.ForeignKey(User, on_delete=models.CASCADE)
 ~~~
+
+# TypeError: argument of type 'WindowsPath' is not iterable
+- Django의 버전을 다운그레이드한 이후 makemigrations를 실행할 경우 발생하는 오류
+- 아래와 같이 settings.py를 수정
+~~~python
+[Before]
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
+
+[After]
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': str(BASE_DIR / 'db.sqlite3'),
+    }
+}
+~~~
