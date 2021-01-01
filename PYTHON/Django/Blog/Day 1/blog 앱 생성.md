@@ -33,7 +33,7 @@ class Post(models.Model):
     author = models.ForeignKey(User, on_delete=True)
 ~~~
 
-# Admin에 추가
+# admin에 추가
 > admin 계정 생성
 > - ID, Email, Password 순으로 입력
 ~~~
