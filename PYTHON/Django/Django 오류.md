@@ -35,7 +35,8 @@ DATABASES = {
 ~~~
 
 # A server error occurred.  Please contact the administrator.
-- 
+- 템플릿의 유니코드 인코딩 문제  
+- 참고 : https://practice-a-lot.tistory.com/107  
 - Lib\site-packages\django\views\debug.py
 ~~~python
 [Before]
