@@ -55,3 +55,10 @@ def get_traceback\_html(self):
     c = Context(self.get_traceback_data(), use_l10n=False) 
     return t.render(c) 
 ~~~
+
+# Python Pillow failed with error code 1 in
+- cmd로 pip 현재 버전 확인 및 설치 시도
+~~~
+$ python -m pip install --upgrade pip
+$ python -m pip install --upgrade Pillow
+~~~
