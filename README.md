@@ -10,6 +10,8 @@
 - NoSQL
 04. OS
 05. 클라우드 서비스
+- AZURE
+- AWS
 06. 네트워크
 07. Infrastructure as Code
 08. CI/CD
