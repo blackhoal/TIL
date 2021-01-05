@@ -14,6 +14,9 @@
 - AWS
 06. 네트워크
 07. Infrastructure as Code
+- Terraform
+- AWS CloudFormation
+- Ansible
 08. CI/CD
 09. Docker
 ~~~
