@@ -57,7 +57,7 @@ def get_traceback\_html(self):
 ~~~
 
 # Python Pillow failed with error code 1 in
-- cmd로 pip 현재 버전 확인 및 설치 시도
+- cmd로 pip 현재 버전 확인 및 아래 구문으로 설치  
 ~~~
 $ python -m pip install --upgrade pip
 $ python -m pip install --upgrade Pillow
