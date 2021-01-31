@@ -1,5 +1,4 @@
-# Personal-Learning
-## Data Engineer Loadmap
+# Data Engineer Loadmap
 ~~~
 01. CS
 02. 개발 언어
