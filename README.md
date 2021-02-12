@@ -18,5 +18,5 @@
 - Ansible
 08. CI/CD
 09. Docker
-10.kafka
+10. kafka
 ~~~
