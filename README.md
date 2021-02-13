@@ -4,6 +4,8 @@
 02. 개발 언어
 - Python
 - Java
+03. Framework 
+- Django
 03. DB
 - RDB
 - NoSQL
