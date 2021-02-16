@@ -13,7 +13,6 @@
 03. DB
 - MySQL
 - MSSQL
-- AWS RDS
 - DynamoDB
 - SQL
 04. Public Cloud
@@ -22,6 +21,7 @@
 05. DevOps
 - Terraform
 - Ansible
+- Apache Airflow
 - Docker
 - Kubernetes
 08. Data Science
