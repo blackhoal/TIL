@@ -1,24 +1,28 @@
 # Data Engineer Loadmap
 ~~~
 01. CS
+- Algorithm
+- Design Pattern
+- Network
+- OS
 02. 개발 언어
 - Python
 - Java
-03. Framework 
+03. Web Framework 
 - Django
-03. DB
-- RDB
-- NoSQL
-04. OS
+03. RDB
+- MySQL
+- MSSQL
+- AWS RDS
+04. NoSQL
+- DynamoDB
 05. 클라우드 서비스
 - AZURE
 - AWS
-06. 네트워크
-07. Infrastructure as Code
+06. Infrastructure as Code
 - Terraform
-- AWS CloudFormation
 - Ansible
-08. CI/CD
-09. Docker
-10. kafka
+07. CI/CD
+08. Docker
+09. kafka
 ~~~
