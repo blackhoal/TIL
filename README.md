@@ -10,19 +10,21 @@
 - Java
 03. Web Framework 
 - Django
-03. RDB
+03. DB
 - MySQL
 - MSSQL
 - AWS RDS
-04. NoSQL
 - DynamoDB
-05. 클라우드 서비스
+- SQL
+04. Public Cloud
 - AZURE
 - AWS
-06. Infrastructure as Code
+05. DevOps
 - Terraform
 - Ansible
-07. CI/CD
-08. Docker
-09. kafka
+- Docker
+- Kubernetes
+08. Data Science
+- Apache Kafka
+- Tableu
 ~~~
