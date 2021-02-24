@@ -48,7 +48,7 @@ docker restart [options] 컨테이너ID
 ~~~
 
 # docker attach
-- 실행중인 컨테이너를 인수로 지정하면 
+- 실행중인 컨테이너를 인수로 지정하면 컨테이너 접속
 ~~~
 docker attach [options] 컨테이너ID
 ~~~
