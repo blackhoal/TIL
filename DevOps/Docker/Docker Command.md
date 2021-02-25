@@ -48,47 +48,66 @@ docker restart [options] 컨테이너ID
 ~~~
 
 # docker attach
-- 실행중인 컨테이너를 인수로 지정하면 컨테이너 접속
+- 실행중인 컨테이너를 인수로 지정시 사용자가 해당 컨테이너에 인터랙티브 방식으로 연결함으로써 컨테이너를 제어하거나 현재 출력되는 내용 확인 가능
 ~~~
 docker attach [options] 컨테이너ID
 ~~~
 
-# docker
+# docker remove
+- 인수로 지정한 컨테이너 삭제
 ~~~
-docker
-~~~
-
-# docker
-~~~
-docker
+docker rm [options] 컨테이너ID
 ~~~
 
-# docker
+# docker inspect
+- 컨테이너나 이미지의 상세하고 낮은 수준의 정보 확인
 ~~~
-docker
-~~~
-
-# docker
-~~~
-docker
+docker inspect [options] 컨테이너ID/이미지
 ~~~
 
-# docker
+# docker exec
+- 이미 구동 중인 컨테이너를 원겨에서 실행 가능
 ~~~
-docker
-~~~
-
-# docker
-~~~
-docker
+docker exec [options] 컨테이너ID 커맨드 [인수...]
 ~~~
 
-# docker
+# docker rename
+- 현재 구동 중인 컨테이너의 이름을 변경
 ~~~
-docker
+docker rename 컨테이너ID 새로운_명칭
 ~~~
 
-# docker
+# docker copy
+- 컨테이너와 컨테이너를 구동하는 머신 사이에서 파일을 복사할 때 사용
 ~~~
-docker
+# 컨테이너의 파일을 로컬 호스트에 복사
+docker cp [options] 컨테이너:소스_경로 타깃_경로
+~~~
+~~~
+# 로컬 머신에 있는 파일을 특정 컨테이너로 복사
+docker cp [options] 소스_경로 |- 컨테이너:타깃_경로
+~~~
+
+# docker pause/unpause
+- 인수로 지정한 컨테이너에 있는 모든 프로세스를 일시적으로 중지(pause) / 해제(unpause)
+~~~
+docker pause/unpause 컨테이너 [컨테이너...]
+~~~
+
+# docker create
+- 인수로 지정한 이미지 위에 작성 가능한 컨테이너 계층을 새로 생성
+~~~
+docker create [options] 이미지 [커맨드] [인수...]
+~~~
+
+# docker commit
+- 컨테이너에 발생한 변경 내역을 반영한 상태로 새로 생성하여 개발 팀이나 테스트 팀 등 다른 곳에 배포할 때 사용
+~~~
+docker commit [options] 컨테이너 [저장소:태그]
+~~~
+
+# docker diff
+- 컨테이너 파일 시스템에서 변경된 파일이나 디렉터리를 나열
+~~~
+docker diff 컨테이너_ID
 ~~~
