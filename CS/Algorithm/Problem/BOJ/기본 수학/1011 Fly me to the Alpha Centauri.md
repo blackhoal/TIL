@@ -32,12 +32,12 @@ cnt = 0                           # 이동 횟수
 mv = 1                            # 한 번의 이동에 이동 가능한 거리
 mv_sum = 0                        # 이동한 거리의 합
 ```
-4. 이동한 거리의 합이 총 거리보다 작을 때까지 반복
+4. 이동한 거리의 합이 총 거리보다 작을 때만 반복
 `while mv_sum < distance :`
 5. 반복될 때마다 cnt(이동 횟수)에 1씩 추가, mv_sum(이동한 거리의 합)에 mv(한 번의 이동에 이동 가능한 거리)씩 추가
 ```
 cnt += 1
-`mv_sum += mv `
+mv_sum += mv
 ```
 # Reference
 https://ooyoung.tistory.com/91
