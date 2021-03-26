@@ -20,9 +20,13 @@ for _ in range(t):
 ~~~
 
 # 풀이
-`t = int(input())`
+1. 테스트 케이스 수 입력
+`t = int(input())` 
+2. 테스트 케이스 수 t만큼 반복 
 `for _ in range(t) :`
-`x, y = map(int, input().split()) # 위치 x, 위치 y
+3. 위치 x, 위치 y 입력
+`x, y = map(int, input().split())`
+
 `distance = y - x` # 총 거리
 cnt = 0 # 이동 횟수
 mv = 1 # 한 번의 이동에 이동 가능한 거리
