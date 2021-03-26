@@ -20,17 +20,24 @@ for _ in range(t):
 ~~~
 
 # 풀이
-1. 테스트 케이스 수 입력
+1. 테스트 케이스 수 입력  
 `t = int(input())` 
-2. 테스트 케이스 수 t만큼 반복 
+2. 테스트 케이스 수 t만큼 반복  
 `for _ in range(t) :`
-3. 위치 x, 위치 y 입력
-`x, y = map(int, input().split())`
+3. 값 입력
+```
+x, y = map(int, input().split())  # 위치 x, 위치 y
+distance = y - x                  # 총 거리
+cnt = 0                           # 이동 횟수
+mv = 1                            # 한 번의 이동에 이동 가능한 거리
+mv_sum = 0                        # 이동한 거리의 합
+```
+ 
+ 
 
-`distance = y - x` # 총 거리
-cnt = 0 # 이동 횟수
-mv = 1 # 한 번의 이동에 이동 가능한 거리
-mv_sum = 0 # 이동한 거리의 합
 while mv_sum < distance : # 이동한 거리의 합이 총 거리보다 작을 때까지 반복
 cnt += 1
 mv_sum += mv # 
+
+# Reference
+https://ooyoung.tistory.com/91
