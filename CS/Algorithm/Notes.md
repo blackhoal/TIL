@@ -31,3 +31,11 @@ print(r*r*math.pi)
 # 택시기하학 원의 넓이
 print(2*r*r)        
 ~~~
+
+3. 피보나치 수열
+~~~python
+def fib(n) : 
+    if n <= 1 :
+        return n
+    return fib(n-1) + fib(n-2)
+~~~
