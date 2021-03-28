@@ -1,4 +1,5 @@
-1. 소수 구하기
+# 소수 구하기
+## 코드
 ~~~python
 # 방법 1 - 차집합 = 에라토스테네스의 체를 이용한 소수의 집합 구하기
 nums = {x for x in range(2, 10_001) if x == 2 or x % 2 == 1}
@@ -21,7 +22,8 @@ def sieve(n) :
     return [i for i in range(2, n) if arr[i] == True ]
 ~~~
 
-2. 유클리드 기하학, 택시 기하학
+# 유클리드 기하학, 택시 기하학
+## 코드
 ~~~python
 # 반지름
 r = int(input())
@@ -32,10 +34,33 @@ print(r*r*math.pi)
 print(2*r*r)        
 ~~~
 
-3. 피보나치 수열
+# 피보나치 수열
+## 코드
 ~~~python
 def fib(n) : 
     if n <= 1 :
         return n
     return fib(n-1) + fib(n-2)
+~~~
+
+# 팩토리얼
+## 코드
+~~~python
+def factorial(n) :
+    result = 1
+    if n > 0 :
+        result = n * factorial(n-1)
+    return result
+~~~
+
+# 하노이의 탑
+## 코드 
+~~~python
+
+~~~
+## 메커니즘
+~~~
+1. n-1개의 원반을 2번 위치로 이동
+2. 가장 큰 원반의 위치를 1번에서 3번으로 이동
+3. n-1개의 원반을 2번 위치에서 3번 위치로 이동
 ~~~
