@@ -1,6 +1,6 @@
 # 연산자란?
 - 연산을 위해 사용되는 규칙
-- 어떠한 기능을 수행하는 기호(+, -, *, / 등)
+- 어떠한 기능을 수행하는 기호(+, -, *, / 등)  
 ![4-8](https://cremazer.github.io/assets/img/java/20140919/20171207_001_java-Types-of-Operators.jpg)
 
 # 연산자의 우선 순위
@@ -20,16 +20,16 @@
 - 사칙 연산자, 나머지 연산자, 시프트 연산자 모두 두 개의 피연산자를 취하는 이항 연산자
 - 피연산자의 크기가 4 byte보다 작을 경우 4 byte(int)로 변환 후 연산 수행
 - 연산 수행 전 피연산자들의 자료형 통일이 필요
-	- int보다 크기가 작은 타입은 int로 변환
+	- int보다 크기가 작은 타입은 int로 변환  
 	`byte, char, short -> int`
 	- 피연산자 중 표현 범위가 큰 타입으로 형변환
-```
-byte + short -> int + int
-char + int -> int + int
-float + int -> float + float
-long + float -> float + float
-float + double -> double + double
-```
+	```
+	byte + short -> int + int
+	char + int -> int + int
+	float + int -> float + float
+	long + float -> float + float
+	float + double -> double + double
+	```
 ## ① 나눗셈 연산자  
 - 연산 방식은 ★피연산자의 자료형에 따라 결정
 ```java
