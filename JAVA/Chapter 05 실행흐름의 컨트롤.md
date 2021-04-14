@@ -1,6 +1,6 @@
 # 1. If-else문  
 ## ① 구조  
-~~~
+~~~java
 if (true or false)
 {
   true일 경우 실행되는 영역;
@@ -13,17 +13,11 @@ else
 ## ② 특징    
 - If-else문은 하나의 문장
 → 한 줄에 전부를 표현할 필요는 없으나, 중간에 다른 문장을 삽입할 경우 에러가 발생
-- (조건)? A : B  
-→ 유사한 성격의 조건 연산자이며, 조건이 true일 경우 A가 반환되고 false일 경우 B가 반환  
-예시)  
-int big  
-int n1 = 50, n2 = 100;  
-big = (n1>n2)? n1: n2  
-→ n1>n2(조건)이 true일 경우 변수 big에 n1(50) 값을 저장, false일 경우 변수 big에 n2(100) 값을 저장  
+
 
 # 2. switch문  
 ## ① 구조  
-~~~
+~~~java
 switch(n)
 {
   case 1:
