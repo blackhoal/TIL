@@ -1,6 +1,12 @@
 # 그리디
-[2839](https://www.acmicpc.net/problem/2839) [11399](https://www.acmicpc.net/problem/11399) [11047](https://www.acmicpc.net/problem/11047) [1931](https://www.acmicpc.net/problem/1931) [5585](https://www.acmicpc.net/problem/5585) [1541](https://www.acmicpc.net/problem/1541) [2217 : 로프](https://www.acmicpc.net/problem/2217) [13305](https://www.acmicpc.net/problem/13305) 
-[10162 전자레인지](https://www.acmicpc.net/problem/10162)
+[2839](https://www.acmicpc.net/problem/2839) [11399](https://www.acmicpc.net/problem/11399) [11047](https://www.acmicpc.net/problem/11047) [1931](https://www.acmicpc.net/problem/1931) [5585](https://www.acmicpc.net/problem/5585) [1541](https://www.acmicpc.net/problem/1541) 
+[2217 - 로프](https://www.acmicpc.net/problem/2217) 
+[13305](https://www.acmicpc.net/problem/13305)  
+[10162 - 전자레인지](https://www.acmicpc.net/problem/10162)  
+
+# 정수론 및 조합론
+[5086 - 배수와 약수](https://www.acmicpc.net/problem/5086)  
+[1037 - 약수](https://www.acmicpc.net/problem/1037)  
 
 # 자주 출제되는 유형
 ~~~
