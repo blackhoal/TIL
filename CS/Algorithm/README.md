@@ -7,6 +7,7 @@
 # 정수론 및 조합론
 [5086 - 배수와 약수](https://www.acmicpc.net/problem/5086)  
 [1037 - 약수](https://www.acmicpc.net/problem/1037)  
+[2609 - 최대공약수와 최소공배수](https://www.acmicpc.net/problem/2609)  
 
 # 자주 출제되는 유형
 ~~~
