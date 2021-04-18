@@ -154,3 +154,35 @@ for i in range(1, 10001) :
 - 원소끼리 비교하지 않고 원소가 몇 번 등장하는지 갯수를 세서 정렬하는 방식
 - 시간복잡도는 O(n+k) → 리스트의 범위가 넓은 경우 불필요한 공간이 발생하여 일반 정렬보다 효율 ↓
 ~~~
+
+# 유클리드 호제법을 활용한 최소공배수, 최대공약수 구하기
+```python
+a, b = map(int, sys.stdin.readline().split())
+if a == b :
+    gcd = a
+else :
+    if a > b :
+        temp_1 = a
+        temp_2 = b
+    else :
+        temp_1 = b
+        temp_2 = a
+
+    while True :
+        temp_1 = temp_1 % temp_2
+        if temp_1 == 0 :
+            gcd = temp_2
+            break
+        else :
+            temp_1, temp_2 = temp_2, temp_1
+
+lcm = int((a * b) / gcd)
+print(gcd) # 최대공약수
+print(lcm) # 최소공배수
+
+# 최대공약수 구하는 간단한 함수
+def gcd(a, b) :
+    while b :
+        a, b = b, a % b
+    return a
+```
