@@ -5,11 +5,11 @@
 [10162 - 전자레인지](https://www.acmicpc.net/problem/10162)  
 
 # 정수론 및 조합론
-[5086 - 배수와 약수](https://www.acmicpc.net/problem/5086)  
-[1037 - 약수](https://www.acmicpc.net/problem/1037)  
-[2609 - 최대공약수와 최소공배수](https://www.acmicpc.net/problem/2609)  
+[5086 - 배수와 약수](https://github.com/blackhoal/TIL/blob/master/CS/Algorithm/Problem/BOJ/%EC%A0%95%EC%88%98%EB%A1%A0%20%EB%B0%8F%20%EC%A1%B0%ED%95%A9%EB%A1%A0/5086%20%EB%B0%B0%EC%88%98%EC%99%80%20%EC%95%BD%EC%88%98.md)  
+[1037 - 약수](https://github.com/blackhoal/TIL/blob/master/CS/Algorithm/Problem/BOJ/%EC%A0%95%EC%88%98%EB%A1%A0%20%EB%B0%8F%20%EC%A1%B0%ED%95%A9%EB%A1%A0/1037%20%EC%95%BD%EC%88%98.md)  
+[2609 - 최대공약수와 최소공배수](https://github.com/blackhoal/TIL/blob/master/CS/Algorithm/Problem/BOJ/%EC%A0%95%EC%88%98%EB%A1%A0%20%EB%B0%8F%20%EC%A1%B0%ED%95%A9%EB%A1%A0/2609%20%EC%B5%9C%EB%8C%80%EA%B3%B5%EC%95%BD%EC%88%98%EC%99%80%20%EC%B5%9C%EC%86%8C%EA%B3%B5%EB%B0%B0%EC%88%98.md)  
 [1934 - 최소공배수](https://www.acmicpc.net/problem/1934)  
-[3036 - 링](https://www.acmicpc.net/problem/3036)  
+[3036 - 링](https://github.com/blackhoal/TIL/blob/master/CS/Algorithm/Problem/BOJ/%EC%A0%95%EC%88%98%EB%A1%A0%20%EB%B0%8F%20%EC%A1%B0%ED%95%A9%EB%A1%A0/3036%20%EB%A7%81.md)  
 
 # 자주 출제되는 유형
 ~~~
