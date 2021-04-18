@@ -1,13 +1,11 @@
 # 소수 구하기
-## 코드
+## 1. 코드
 ~~~python
 # 방법 1 - 차집합 = 에라토스테네스의 체를 이용한 소수의 집합 구하기
 nums = {x for x in range(2, 10_001) if x == 2 or x % 2 == 1}
 for odd in range(3, 101, 2):
     nums -= {i for i in range(2 * odd, 10_001, odd) if i in nums}
-~~~
-
-~~~python
+    
 # 방법 2 - 에라토스테네스의 체
 def sieve(n) : 
     n += 1
@@ -21,30 +19,34 @@ def sieve(n) :
 
     return [i for i in range(2, n) if arr[i] == True ]
 ~~~
+<br></br>
 
 # 유클리드 기하학, 택시 기하학
-## 코드
+## 1. 코드
 ~~~python
 # 반지름
 r = int(input())
 
 # 유클리드기하학 원의 넓이
 print(r*r*math.pi)  
+
 # 택시기하학 원의 넓이
 print(2*r*r)        
 ~~~
+<br></br>
 
 # 피보나치 수열
-## 코드
+## 1. 코드
 ~~~python
 def fib(n) : 
     if n <= 1 :
         return n
     return fib(n-1) + fib(n-2)
 ~~~
+<br></br>
 
 # 팩토리얼
-## 코드
+## 1. 코드
 ~~~python
 def factorial(n) :
     result = 1
@@ -52,21 +54,23 @@ def factorial(n) :
         result = n * factorial(n-1)
     return result
 ~~~
+<br></br>
 
 # 하노이의 탑
-## 코드 
+## 1. 코드 
 ~~~python
 
 ~~~
-## 메커니즘
+## 2. 메커니즘
 ~~~
 1. n-1개의 원반을 2번 위치로 이동
 2. 가장 큰 원반의 위치를 1번에서 3번으로 이동
 3. n-1개의 원반을 2번 위치에서 3번 위치로 이동
 ~~~
+<br></br>
 
 # 삽입 정렬
-## 코드 
+## 1. 코드 
 ~~~python
 def insertion_sort(arr):
     for end in range(1, len(arr)):
@@ -76,16 +80,17 @@ def insertion_sort(arr):
                 
     return arr
 ~~~
-## 메커니즘
+## 2. 메커니즘
 ~~~
 1. 두 번째 인덱스부터 시작 / 현재 인덱스는 별도의 변수에 저장 / 비교 인덱스는 현재 인덱스 - 1로 설정
 2. 별도로 저장한 삽입을 위한 변수와 비교 인덱스의 배열 값을 비교
 3. 삽입 변수의 값이 더 작으면, 현재 인덱스로 비교 인덱스의 값을 저장 및 비교 인덱스를 -1하여 비교 반복
 4. 삽입 변수의 값이 더 크면, 비교 인덱스 + 1에 삽입 변수를 저장
 ~~~
+<br></br>
 
 # 선택 정렬
-## 코드 
+## 1. 코드 
 ~~~python
 def selection_sort(arr):
     for i in range(len(arr) - 1):
@@ -97,15 +102,16 @@ def selection_sort(arr):
         
     return arr
 ~~~
-## 메커니즘
+## 2. 메커니즘
 ~~~
 1. 정렬되지 않은 인덱스의 맨 앞에서부터, 이를 포함한 그 이후의 배열 값 중 가장 작은 값을 탐색
 2. 가장 작은 값을 발견 시 해당 값을 현재 인덱스의 값과 swap
 3. 다음 인덱스부터 1~2 과정 반복
 ~~~
+<br></br>
 
 # 버블 정렬
-## 코드 
+## 1. 코드 
 ~~~python
 def bubble_sort(arr):
     for i in range(len(arr) - 1, 0, -1):
@@ -115,16 +121,17 @@ def bubble_sort(arr):
                 
     return arr
 ~~~
-## 메커니즘
+## 2. 메커니즘
 ~~~
 1. 두 번째 인덱스부터 시작하며 현재의 인덱스 값과 이전의 인덱스 값을 비교
 2. 이전 인덱스 값이 더 클 경우, 현재 인덱스와 swap
 3. 현재 인덱스 값이 더 클 경우, 교환하지 않고 연속되는 다음 두 배열의 값을 비교
 4. 1~3 과정을 (전체 배열의 크기 - 현재까지 순환한 바퀴의 수)만큼 반복
 ~~~
+<br></br>
 
 # 계수 정렬
-## 코드
+## 1. 코드
 ~~~python
 # BOJ 10989
 import sys
@@ -142,12 +149,13 @@ for i in range(1, 10001) :
         print(i)
 ~~~
 
-## 메커니즘
+## 2. 메커니즘
 ~~~
 1. 각 숫자의 빈도를 저장하기 위한 배열 생성
 2. 각 숫자에 해당하는 인덱스에 빈도수 저장 → 리스트의 모든 원소는 양의 정수 必
 3. 배열을 탐색하며 저장된 빈도수만큼 인덱스 출력
 ~~~
+<br></br>
 
 ## Notes
 ~~~
@@ -186,3 +194,4 @@ def gcd(a, b) :
         a, b = b, a % b
     return a
 ```
+<br></br>
