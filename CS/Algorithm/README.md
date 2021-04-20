@@ -13,6 +13,7 @@
 [11050 - 이항 계수 1](https://github.com/blackhoal/TIL/blob/master/CS/Algorithm/Problem/BOJ/%EC%A0%95%EC%88%98%EB%A1%A0%20%EB%B0%8F%20%EC%A1%B0%ED%95%A9%EB%A1%A0/11050%20%EC%9D%B4%ED%95%AD%20%EA%B3%84%EC%88%98%201.md)  
 [11051 - 이항 계수 2](https://github.com/blackhoal/TIL/blob/master/CS/Algorithm/Problem/BOJ/%EC%A0%95%EC%88%98%EB%A1%A0%20%EB%B0%8F%20%EC%A1%B0%ED%95%A9%EB%A1%A0/11051%20%EC%9D%B4%ED%95%AD%20%EA%B3%84%EC%88%98%202.md)  
 [1010 - 다리 놓기](https://github.com/blackhoal/TIL/blob/master/CS/Algorithm/Problem/BOJ/%EC%A0%95%EC%88%98%EB%A1%A0%20%EB%B0%8F%20%EC%A1%B0%ED%95%A9%EB%A1%A0/1010%20%EB%8B%A4%EB%A6%AC%20%EB%86%93%EA%B8%B0.md)  
+[1676 - 팩토리얼 0의 개수](https://github.com/blackhoal/TIL/blob/master/CS/Algorithm/Problem/BOJ/%EC%A0%95%EC%88%98%EB%A1%A0%20%EB%B0%8F%20%EC%A1%B0%ED%95%A9%EB%A1%A0/1676%20%ED%8C%A9%ED%86%A0%EB%A6%AC%EC%96%BC%200%EC%9D%98%20%EA%B0%9C%EC%88%98.md)  
 
 # 자주 출제되는 유형
 ~~~
