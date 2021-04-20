@@ -10,6 +10,7 @@
 [2609 - 최대공약수와 최소공배수](https://github.com/blackhoal/TIL/blob/master/CS/Algorithm/Problem/BOJ/%EC%A0%95%EC%88%98%EB%A1%A0%20%EB%B0%8F%20%EC%A1%B0%ED%95%A9%EB%A1%A0/2609%20%EC%B5%9C%EB%8C%80%EA%B3%B5%EC%95%BD%EC%88%98%EC%99%80%20%EC%B5%9C%EC%86%8C%EA%B3%B5%EB%B0%B0%EC%88%98.md)  
 [1934 - 최소공배수](https://github.com/blackhoal/TIL/tree/master/CS/Algorithm/Problem/BOJ/%EC%A0%95%EC%88%98%EB%A1%A0%20%EB%B0%8F%20%EC%A1%B0%ED%95%A9%EB%A1%A0)  
 [3036 - 링](https://github.com/blackhoal/TIL/blob/master/CS/Algorithm/Problem/BOJ/%EC%A0%95%EC%88%98%EB%A1%A0%20%EB%B0%8F%20%EC%A1%B0%ED%95%A9%EB%A1%A0/3036%20%EB%A7%81.md)  
+[11050 - 이항 계수 1](https://github.com/blackhoal/TIL/blob/master/CS/Algorithm/Problem/BOJ/%EC%A0%95%EC%88%98%EB%A1%A0%20%EB%B0%8F%20%EC%A1%B0%ED%95%A9%EB%A1%A0/11050%20%EC%9D%B4%ED%95%AD%20%EA%B3%84%EC%88%98%201.md)
 
 # 자주 출제되는 유형
 ~~~
