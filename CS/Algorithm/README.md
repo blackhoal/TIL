@@ -15,6 +15,8 @@
 [1010 - 다리 놓기](https://github.com/blackhoal/TIL/blob/master/CS/Algorithm/Problem/BOJ/%EC%A0%95%EC%88%98%EB%A1%A0%20%EB%B0%8F%20%EC%A1%B0%ED%95%A9%EB%A1%A0/1010%20%EB%8B%A4%EB%A6%AC%20%EB%86%93%EA%B8%B0.md)  
 [1676 - 팩토리얼 0의 개수](https://github.com/blackhoal/TIL/blob/master/CS/Algorithm/Problem/BOJ/%EC%A0%95%EC%88%98%EB%A1%A0%20%EB%B0%8F%20%EC%A1%B0%ED%95%A9%EB%A1%A0/1676%20%ED%8C%A9%ED%86%A0%EB%A6%AC%EC%96%BC%200%EC%9D%98%20%EA%B0%9C%EC%88%98.md)  
 
+# 스택
+
 # 자주 출제되는 유형
 ~~~
 - 완전탐색
