@@ -1,1 +1,1 @@
-Day 1 : 2839 / 12871
+Day 1 : [2839](https://github.com/blackhoal/TIL/blob/master/CS/Algorithm/Problem/BOJ/Homework/JAVA/2839.md) / [12871](https://github.com/blackhoal/TIL/blob/master/CS/Algorithm/Problem/BOJ/Homework/JAVA/12871.md)  
