@@ -106,3 +106,21 @@
   />
 ```
 ## ③ 컴포넌트에 메소드 추가
+```js
+class ScrollBox extends Component {
+    scrollBottom = () => {
+        // 비구조화 할당 문법
+        const { scrollHeight, clientHeight } = this.box;
+        /*
+            위의 코드는 다음과 동일한 구문
+            const scrollHeight = this.box.scrollHeight;
+            const clientHeight = this.box.clientHeight;
+        */
+       this.box.scrollTop = scrollHeight - clientHeight;
+    }
+
+    render() {
+        (...)
+    }
+}
+```
