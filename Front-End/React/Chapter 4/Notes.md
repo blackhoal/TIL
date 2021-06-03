@@ -55,6 +55,48 @@
 ## ① 컴포넌트 생성 및 불러오기
 ## ② onCharge 이벤트 핸들링
 ## ③ 임의 메소드 생성
+```js
+class EventPractice extends Component {
+    state = {
+        message : ''
+    }
+
+    constructor(props) {
+        super(props);
+        this.handleChange = this.handleChange.bind(this);
+        this.handleClick = this.handleClick.bind(this);
+    }
+
+    handleChange(e) {
+        this.setState({
+            message : e.target.value
+        })
+    }
+
+    handleClick() {
+        alert(this.state.message);
+        this.setState({
+            message : ''
+        })
+    }
+
+    render() {
+        return (
+            <div>
+                <h1>이벤트 연습</h1>
+                <input
+                    type = "text"
+                    name = "message"
+                    placeholder = "아무거나 입력하세요."
+                    value = {this.state.message}
+                    onChange = {this.handleChange}
+                />
+                <button onClick = {this.handleClick}>확인</button>
+            </div>
+        );
+    }
+}
+```
 - 컴포넌트에 임의 메소드를 생성 시 기본적으로 this에 접근 불가
     - 컴포넌트의 생성자 메소드 constructor에서 각 메소드를 this와 바인딩하는 작업 필요
     - Bind : 메소드에서 this를 사용할 수 있도록 메소드에 this를 묶어주는 역할 
