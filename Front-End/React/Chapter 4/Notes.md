@@ -20,9 +20,6 @@
 - HTML의 onclick은 리액트에서 onClick으로 작성해야 사용 가능
 ## ② 이벤틍 실행할 자바스크립트 코드를 전달하는 것이 아니라 `함수 형태의 값을 전달`
 ## ③ `DOM 요소`에만 이벤트를 설정 가능
-- div, button, input, form, span 등 DOM 요소 → 이벤트 사용 가능
-- 사용자가 직접 생성한 컴포넌트 → 이벤트 사용 불가능
-- 컴포넌트에 자체적으로 이벤트를 설정 불가능하지만 전달받은 props를 컴포넌트 내부의 DOM 이벤트로 설정 가능
 ```js
 // Mycomponent를 클릭할 때 doSomething 함수를 실행하는 것이 아니라 그저 이름이 onClick인 props를 Mycomponent에게 전달하는 것을 수행
 <Mycomponent onClick = {doSomething}/>
@@ -32,6 +29,9 @@
     { /* (...) */}
 </div>
 ```
+- div, button, input, form, span 등 DOM 요소 → 이벤트 사용 가능
+- 사용자가 직접 생성한 컴포넌트 → 이벤트 사용 불가능
+- 컴포넌트에 자체적으로 이벤트를 설정 불가능하지만 전달받은 props를 컴포넌트 내부의 DOM 이벤트로 설정 가능
 #
 
 # 4. 이벤트 종류
