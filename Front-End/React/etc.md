@@ -19,3 +19,5 @@ export default EventPractice;
 
 # 2. 바벨의 transform-class-properties 문법
 - 화살표 함수 형태로 메소드를 정의
+
+# 3. ES6의 비구조화 할당 문법
