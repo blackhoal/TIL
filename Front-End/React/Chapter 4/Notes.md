@@ -60,6 +60,51 @@
     - Bind : 메소드에서 this를 사용할 수 있도록 메소드에 this를 묶어주는 역할 
     - Bind 작업을 수행하지 않고 메소드에서 this를 호출 시 undefined가 리턴
 ## ④ input 여러 개 다루기
+```js
+class EventPractice extends Component {
+    state = {
+      username: '',
+      message: ''
+    };
+    handleChange = (e) => {
+      this.setState({
+        [e.target.name]: e.target.value
+      });
+    };
+
+    handleClick = () => {
+      alert(this.state.username + ': ' + this.state.message);
+      this.setState({
+        username: '',
+        message: ''
+      });
+    };
+
+    render() {
+      return (
+        <div>
+          <h1>이벤트 연습</h1>
+          <input
+            type="text"
+            name="username"
+            placeholder="유저명"
+            value={this.state.username}
+            onChange={this.handleChange}
+          />
+          <input
+            type="text"
+            name="message"
+            placeholder="아무거나 입력해보세요"
+            value={this.state.message}
+            onChange={this.handleChange}
+          />
+          <button onClick={this.handleClick}>확인</button>
+        </div>
+      );
+    }
+}
+```
+- 핵심은 `[e.target.name]: e.target.value` 구문으로, 자바스크립트에서 [] 내의 값을 key 값으로 사용하는 것과 동일
 ## ⑤ onKeyPress 이벤트 핸들링
 #
 
