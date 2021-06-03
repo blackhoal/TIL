@@ -105,10 +105,11 @@
     className = {this.state.clicked ? (this.state.validated ? 'success' : 'failure') : ''}
   />
 ```
-## ③ 컴포넌트에 메소드 추가
+## ③ 컴포넌트에 메소드 생성
 ```js
 // ScrollBox.js
 class ScrollBox extends Component {
+    // 스크롤바를 맨 밑으로 내리는 메소드 생성
     scrollToBottom = () => {
         // 비구조화 할당 문법
         const { scrollHeight, clientHeight } = this.box;
