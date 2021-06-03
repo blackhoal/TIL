@@ -16,3 +16,6 @@ class EventPractice extends Component {
 
 export default EventPractice;
 ```
+
+# 2. 바벨의 transform-class-properties 문법
+- 화살표 함수 형태로 메소드를 정의
