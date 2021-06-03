@@ -109,7 +109,7 @@
 ```js
 // ScrollBox.js
 class ScrollBox extends Component {
-    scrollBottom = () => {
+    scrollToBottom = () => {
         // 비구조화 할당 문법
         const { scrollHeight, clientHeight } = this.box;
         /*
@@ -127,4 +127,17 @@ class ScrollBox extends Component {
 ```
 ```js
 // App.js
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <ScrollBox ref = {(ref) => this.scrollBox = ref}/>
+        <button onClick = {() => this.scrollBox.scrollToBottom()}>
+          맨 밑으로
+        </button>
+      </div>
+      
+    );
+  }
+}
 ```
