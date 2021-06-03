@@ -107,6 +107,7 @@
 ```
 ## ③ 컴포넌트에 메소드 추가
 ```js
+// ScrollBox.js
 class ScrollBox extends Component {
     scrollBottom = () => {
         // 비구조화 할당 문법
@@ -123,4 +124,7 @@ class ScrollBox extends Component {
         (...)
     }
 }
+```
+```js
+// App.js
 ```
