@@ -53,7 +53,53 @@
 
 # 5. 이벤트 핸들링 단계
 ## ① 컴포넌트 생성 및 불러오기
+```js
+class EventPractice extends Component {
+    render() {
+        return (
+            <div>
+                <h1>이벤트 연습</h1>
+            </div>
+        );
+    }
+}
+```
 ## ② onCharge 이벤트 핸들링
+```js
+class EventPractice extends Component {
+    state = {
+        message : ''
+    }
+
+    render() {
+        return (
+            <div>
+                <h1>이벤트 연습</h1>
+                <input
+                    type = "text"
+                    name = "message"
+                    placeholder = "아무거나 입력하세요."
+                    onChange = {
+                        (e) => {
+                            this.setState({
+                                message : e.target.value
+                            })
+                        }
+                    }
+                />
+                <button onClick = { 
+                    () => { 
+                        alert(this.state.message);
+                        this.setState({ 
+                            message : ''
+                        });
+                    }
+                }>확인</button>
+            </div>
+        );
+    }
+}
+```
 ## ③ 임의 메소드 생성
 ```js
 class EventPractice extends Component {
@@ -101,6 +147,45 @@ class EventPractice extends Component {
     - 컴포넌트의 생성자 메소드 constructor에서 각 메소드를 this와 바인딩하는 작업 필요
     - Bind : 메소드에서 this를 사용할 수 있도록 메소드에 this를 묶어주는 역할 
     - Bind 작업을 수행하지 않고 메소드에서 this를 호출 시 undefined가 리턴
+- 메소드 바인딩은 생성자 메소드(constructor)에서 하는 것이 정석이지만 새 메소드를 만들 때마다 constructor를 수정하는 불편함이 존재
+    - 바벨의 transform-class-propertiese 문법으로 해결
+        ```js
+        class EventPractice extends Component {
+            state = {
+                message : ''
+            }
+
+            handleChange = (e) => {
+                this.setState({
+                    message : e.target.value
+                })
+            }
+
+            handleClick = () => {
+                alert(this.state.message);
+                this.setState({
+                    message : ''
+                })
+            }
+
+            render() {
+                return (
+                    <div>
+                        <h1>이벤트 연습</h1>
+                        <input
+                            type = "text"
+                            name = "message"
+                            placeholder = "아무거나 입력하세요."
+                            value = {this.state.message}
+                            onChange = {this.handleChange}
+                        />
+                        <button onClick = {this.handleClick}>확인</button>
+                    </div>
+                );
+            }
+        }
+        ```
+    - 화살표 함수의 형태로 메소드를 정의
 ## ④ input 여러 개 다루기
 ```js
 class EventPractice extends Component {
