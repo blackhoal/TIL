@@ -17,7 +17,7 @@ public class JDBCTest {
 	}
 }
 ```
-## 3. DB와 연결
+## 3. DB와 연결(Connection)
 ```java
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -28,6 +28,7 @@ public class JDBCTest {
 		String url = "jdbc:oracle:thin:@localhost:1521:xe";
 		String user = "아이디";
 		String password = "비밀번호";
+		
 		try {
 			Class.forName(driver);
 			DriverManager.getConnection(url, user, password);
@@ -35,12 +36,20 @@ public class JDBCTest {
 			e.printStackTrace();
 		} catch (SQLException e) {
 			e.printStackTrace();
-    }
+    		}
+		
+		Connection conn = null;
+		try {
+			conn = DriverManager.getConnection(url, user, password);
+			System.out.println("DB 연결 성공");
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 	}
 }
 ```
-## 4. SQL 구문을 DB에 송신
-## 5. SQL 실행 결과를 수신
-## 6. 결과 활용
+## 4. SQL 구문을 DB에 송신(Statement)
+## 5. SQL 실행 결과를 수신(ResultSet)
+## 6. 결과 활용(rs.next() / rs.getter())
 ## 7. DB 연결 해제
 ___
