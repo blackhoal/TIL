@@ -1,5 +1,6 @@
 # JDBC 프로그래밍 절차
 ## 1. JDBC 드라이버 설치(ojdbc6.jar)
+[Link](https://www.oracle.com/database/technologies/jdbc-drivers-12c-downloads.html)
 ## 2. JDBC 드라이버 로드(ojdbc6.jar 압축파일에 있는 메인 역할용 클래스를 JVM에 로드)
 ```java
 import java.sql.DriverManager;
