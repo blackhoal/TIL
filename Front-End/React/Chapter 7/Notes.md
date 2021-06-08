@@ -1,44 +1,40 @@
-# 라이프사이클의 이해
+# 1. 라이프사이클의 이해
 - 모든 리액트 컴포넌트에는 라이프사이클(수명 주기)이 존재
 - `페이지에 렌더링되기 전 준비 과정`에서 시작 / `페이지에서 사라질 때` 종료
 
-# 라이프사이클 메소드
+# 2. 라이프사이클 메소드
 - 컴포넌트 상태에 변경이 있을 때 실행하는 메소드
 - 총 10가지가 존재
 - Will 접두사가 붙은 메소드 : 어떤 작업을 작동하기 **전** 실행하는 메소드
 - Did 접두사가 붙은 메소드 : 어떤 작업을 작동한 **후** 실행하는 메소드
 - 메소드는 개발자가 컴포넌트 클래스에서 덮어써서 선언하여 사용 가능
 
-# 컴포넌트의 라이프사이클
+# 3. 컴포넌트의 라이프사이클
 - 마운트, 업데이트, 언마운트의 카테고리로 분류 가능
+- 마운트 : DOM이 생성되고 웹 브라우저상에 나타나는 것
 
-# 마운트
-- DOM이 생성되고 웹 브라우저상에 나타나는 것
-
-# 마운트할 때 호출하는 메소드
+# 4. 마운트할 때 호출하는 메소드
 1. 컴포넌트 생성
 2. Constructor : 컴포넌트를 새로 생성할 때마다 호출되는 클래스 생성자 메소드
 3. getDerivedStateFromProps : props에 있는 값을 state에 동기화하는 메소드
 4. render : 개발자가 준비한 UI를 렌더링하는 메소드
 5. componentDidMount : 컴포넌트가 웹 브라우저상에 나타난 후 호출하는 메소드
 
-# 컴포넌트를 업데이트하는 경우
+# 5. 컴포넌트를 업데이트하는 경우
 1. props가 변경될 때
 2. state가 변경될 때
 3. 부모 컴포넌트가 리렌더링될 때
 4. this.forceUpdate로 강제로 렌더링을 트리거할 때
 
-# 업데이트할 때 호출하는 메소드
-```
-① getDerivedStateFromProps
-② shouldComponentUpdate
-③ render
-④ getSnapshotBeforeUpdate
-⑤ componentDidUpdate
-```
-## props 변경 / 부모 컴포넌트 리렌더링
-12345
-## state 변경
-2345
-## forceUpdate
-345
+# 6. 업데이트할 때 호출하는 메소드
+  ① getDerivedStateFromProps  
+  ② shouldComponentUpdate  
+  ③ render  
+  ④ getSnapshotBeforeUpdate  
+  ⑤ componentDidUpdate  
+## 6-1. props 변경 / 부모 컴포넌트 리렌더링
+① → ② → ③ → ④ → ⑤  
+## 6-2. state 변경
+② → ③ → ④ → ⑤  
+## 6-3. forceUpdate
+③ → ④ → ⑤  
