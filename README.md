@@ -45,7 +45,7 @@
 
 ## 6\. Learn a Language
 
--   [ ]  Java
+-   [X]  Java
 -   [ ]  Python
 
 ## 7\. Version Control Systems
