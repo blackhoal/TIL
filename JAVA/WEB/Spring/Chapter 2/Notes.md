@@ -25,28 +25,69 @@
 ## 1-6. IoC와 DI 간의 관계
 ![19-1](https://user-images.githubusercontent.com/48504392/126538364-14b6edda-81dc-47ca-8b9a-0e71d84c2a57.png)  
 - 일반적으로 스프링에서는 DI로 IoC의 기능을 구현하므로 IoC보다는 DI라는 용어를 더 많이 사용
+____
+#
 
 # 2. DI 실습
 ## 2-1. 스프링의 의존성 주입 방법
 - 생성자에 의한 주입
+```xml
+<!-- 인자가 1개인 생성자 -->
+<bean id = "personService1" class = "com.spring.ex02.PersonServiceImpl">
+    <constructor-arg value = "이순신"/>
+</bean>
+
+<!-- 인자가 2개인 생성자 -->
+<bean id = "personService2" class = "com.spring.ex02.PersonServiceImpl">
+    <constructor-arg value = "손흥민"/>
+    <constructor-arg value = "23"/>
+</bean>
+```
 ```java
-public class BoardServiceImpl implements BoardService{
-    private BoardDAO boarddao;
-    
-    public BoardServiceImpl(BoardDAO boarddao) {
-        this.boarddao = boarddao;
-    }
+public class PersonServiceImpl implements PersonService {
+	private String name;
+	private int age;
+
+    // 인자가 1개인 생성자
+	public PersonServiceImpl(String name) {
+		this.name = name;
+	}
+	
+    // 인자가 2개인 생성자
+	public PersonServiceImpl(String name, int age) {
+		this.name = name;
+		this.age = age;
+	}
+
+	@Override
+	public void sayHello() {
+		System.out.println("이름 : " + name);
+		System.out.println("나이 : " + age + "세");
+	}
 }
 ```
 - Setter에 의한 주입
+```xml
+<bean id = "personService" class = "com.spring.ex01.PersonServiceImpl">
+    <property name = "name">
+        <value>홍길동</value>
+    </property>
+</bean>
+```
 ```java
-public class BoardServiceImpl implements BoardService{
-    private BoardDAO boarddao;
-    
-    // setter를 이용하여 컨테이너에서 생성한 BoardDAOImpl 객체를 주입
-    public void setBoardDAO(BoardDAO boarddao) {
-        this.boarddao = boarddao;
-    }
+public class PersonServiceImpl implements PersonService {
+	private String name;
+	private int age;
+	
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	@Override
+	public void sayHello() {
+		System.out.println("이름 : " + name);
+		System.out.println("나이 : " + age);
+	}
 }
 ```
 ## 2-2. <bean> 태그에 사용되는 속성의 종류
@@ -58,3 +99,45 @@ public class BoardServiceImpl implements BoardService{
 |constructor-arg|생성자를 이용하여 값을 주입할 때 사용|
 |property|setter를 사용하여 값을 주입할 때 사용|
 |lazy-init|빈 생성을 톰캣 실행 시점이 아닌 해당 빈 요청 시 메모리를 생성 가능|
+
+## 2-3. 참조형 속성 주입
+![19-3](https://user-images.githubusercontent.com/48504392/126647145-57eb2263-d525-41e7-9e1a-0e63469ee9df.png)  
+![19-2](https://user-images.githubusercontent.com/48504392/126646951-fcf5c69d-0eb9-4d9b-9734-9eff4f8dbf68.png)  
+- 주입되는 데이터가 기본형이 아닌 참조형일 경우 `ref 속성`으로 설정
+```xml
+<bean id="memberService" class="com.spring.ex03.MemberServiceImpl">
+    <property name="memberDAO" ref="memberDAO" />
+</bean>
+<bean id="memberDAO" class="com.spring.ex03.MemberDAOImpl" />
+```
+
+## 2-4. lazy-init
+```xml
+<beans>
+    <!-- 
+        - firstBean과 thirdBean은 애플리케이션 실행 시 빈이 생성 
+        - secondBean은 context.getBean() 호출 후에 빈이 생성
+    -->
+	 <bean id="firstBean" class="com.spring.ex04.First" lazy-init="false" />
+    <bean id="secondBean" class="com.spring.ex04.Second" lazy-init="true" />
+    <bean id="thirdBean" class="com.spring.ex04.Third" lazy-init="default" />
+</beans>
+```
+```java
+public class LazyTest {
+	public static void main(String[] args) {
+		ApplicationContext context = new FileSystemXmlApplicationContext("lazy.xml");
+		System.out.println("SecondBean 얻기");
+		context.getBean("secondBean");
+	}
+}
+```
+- 빈 생성을 `톰캣 실행 시점`이 아닌 `해당 빈 요청 시` 메모리에 생성 가능
+- true, false, default 값을 지정 가능
+- 설정하지 않거나 `false`로 설정 후 `톰캣 실행 시` 빈이 생성
+- `true`로 설정 후 `해당 빈 사용 시` 빈이 생성
+____
+#
+    
+# 3. Conference
+[참조 1](https://www.youtube.com/watch?v=lECeDtOusiE&list=PLuvImYntyp-s76lJiia8YfskDRAypeoyh&index=136)
