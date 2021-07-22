@@ -11,6 +11,7 @@
 |:--:|:--:| 
 |aspect|구현하고자 하는 보조 기능|
 |advice|aspect의 실제 구현체(클래스)|
+|advisor|advice + pointcut|
 |joinpoint|advice를 적용하는 지점|
 |pointcut|advice가 적용되는 대상|
 |target|advice가 적용되는 클래스|
