@@ -52,15 +52,15 @@
     - XML 설정 파일에 <aop:aspectj-autoproxy />를 설정
 ## 1-7. Spring API를 이용한 AOP 구현 과정
 ```
-① 타깃 클래스를 지정  
+① 타깃(Target) 클래스를 지정  
         ↓
-② 어드바이스 클래스를 지정  
+② 어드바이스(Advice) 클래스를 지정  
         ↓
-③ 설정 파일에서 포인트컷을 설정  
+③ 설정 파일에서 포인트컷(Pointcut)을 설정  
         ↓
-④ 설정 파일에서 어드바이스와 포인트컷을 결합하는 어드바이저를 설정  
+④ 설정 파일에서 어드바이스(Advice)와 포인트컷(Pointcut)을 결합하는 어드바이저(Advisor)를 설정  
         ↓
-⑤ 설정 파일에서 스프링의 ProxyFactoryBean 클래스를 이용해 타킷에 어드바이스를 설정  
+⑤ 설정 파일에서 스프링의 ProxyFactoryBean 클래스를 이용해 타킷(Target)에 어드바이스(Advice)를 설정  
         ↓
 ⑥ getBean() 메소드로 빈 객체에 접근하여 사용  
 ```
