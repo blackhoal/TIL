@@ -75,5 +75,5 @@ ____
 #
 
 # Conference
-[참조 1](https://www.youtube.com/watch?v=9tkDze1Sfgc&list=PLuvImYntyp-s76lJiia8YfskDRAypeoyh&index=145)
-[참조 2](https://gmlwjd9405.github.io/2018/05/15/setting-for-db-programming.html)
+[참조 1](https://www.youtube.com/watch?v=9tkDze1Sfgc&list=PLuvImYntyp-s76lJiia8YfskDRAypeoyh&index=145)  
+[참조 2](https://gmlwjd9405.github.io/2018/05/15/setting-for-db-programming.html)  
