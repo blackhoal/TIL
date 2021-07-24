@@ -19,22 +19,22 @@
 ## 1-4. 스프링 MVC 기능 수행 과정
 <img src = "https://user-images.githubusercontent.com/48504392/126863638-2ee03d0a-3bf0-40ee-8f5f-9cd99c2e75c1.png" width = "60%" height = "60%" title = "21-2" alt = "21-2"></img>  
 ① `브라우저가 DispatcherServlet에 URL로 접근하여 해당 정보를 요청`  
-                ↓  
+　　　　　　　　↓  
 ② `HandlerMapping에서 해당 요청에 대한 매핑된 Controller가 존재하는지 요청`  
-                ↓  
+　　　　　　　　↓   
 ③ `매핑된 Controller가 존재할 경우 처리를 요청`  
-                ↓  
+　　　　　　　　↓  
 ④ `Controller가 클라이언트의 요청을 처리한 결과와 View의 이름을 ModelAndView에 저장하여 DispatcherServlet으로 반환`  
-                ↓  
+　　　　　　　　↓  
 ⑤ `DispatcherServlet에서는 Controller에서 보내온 View의 이름을 ViewResolver로 보내 해당 View를 요청`  
-                ↓  
+　　　　　　　　↓  
 ⑥ `ViewResolver는 요청한 View를 전송`  
-                ↓  
+　　　　　　　　↓  
 ⑦ `View의 처리 결과를 DispatcherServlet으로 전송`  
-                ↓  
+　　　　　　　　↓  
 ⑧ `DispatcherServlet에서 최종 결과를 브라우저로 전송`  
 ____
 #
 
-# Conference
+# 2. Conference
 [참조 1](https://www.youtube.com/watch?v=Kxy-OHCdbOY&list=PLuvImYntyp-s76lJiia8YfskDRAypeoyh&index=142)
