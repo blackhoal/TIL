@@ -5,7 +5,7 @@
 - 타일즈 / 사이트메시 같은 View 기술과의 연계 용이
 - 태그 라이브러리를 통해 메시지 출력, theme 적용, 입력 폼을 쉽게 구현 가능
 ## 1-2. 스프링 MVC 구조
-![21-1](https://user-images.githubusercontent.com/48504392/126863637-e6e4f145-77ec-4a10-9344-ef1a310c704d.png)  
+<img src = "https://user-images.githubusercontent.com/48504392/126863637-e6e4f145-77ec-4a10-9344-ef1a310c704d.png" width = "60%" height = "60%" title = "21-1" alt = "21-1"></img>
 ## 1-3. 스프링 MVC 구성 요소
 |요소명|설명|
 |:--:|:--:|
@@ -17,7 +17,7 @@
 |View|컨트롤러의 처리 결과 화면을 생성|
 
 ## 1-4. 스프링 MVC 기능 수행 과정
-![21-2](https://user-images.githubusercontent.com/48504392/126863638-2ee03d0a-3bf0-40ee-8f5f-9cd99c2e75c1.png)  
+<img src = "https://user-images.githubusercontent.com/48504392/126863638-2ee03d0a-3bf0-40ee-8f5f-9cd99c2e75c1.png" width = "60%" height = "60%" title = "21-2" alt = "21-2"></img>  
 ```
 ① 브라우저가 DispatcherServlet에 URL로 접근하여 해당 정보를 요청
 
