@@ -30,7 +30,6 @@ ____
 - 기존 JDBC의 장점과 단순함을 유지하면서 단점을 보완
 - 간결한 API를 포함하여 확장된 JDBC의 기능도 제공
 ## 2-2. JDBC 설정 프로세스
-```
 ① 연결 파라미터 정의  
 ② 연결 오픈  
 ③ SQL 문 지정  
@@ -41,10 +40,10 @@ ____
 ⑧ 모든 예외 처리  
 ⑨ 트랜잭션 제어  
 ⑩ 연결, Statement, resultset 닫기  
-```
+
 - 개발자가 담당 : ① ③ ④ ⑦  
 - 스프링이 담당 : ① ③ ④ ⑦ 외의 나머지  
-- 즉, 개발자는 `DataSource 설정`(①, ④) / `SQL문 작성`(③) / `결과에 대한 처리`(⑦)만 작업하며 나머지는 Spring Framework가 처리
+- 즉, 개발자는 DataSource 설정(①, ④) / SQL문 작성(③) / 결과에 대한 처리(⑦)만 작업하며 나머지는 Spring Framework가 처리
 ## 2-3. 스프링 JDBC 설정 파일
 |파일|설명|
 |:--:|:--:|
@@ -54,6 +53,7 @@ ____
 |jdbc.properties|데이터베이스 연결 정보를 저장|
 |action-service.xml|서비스 빈 생성을 설정|
 ## 2-4. JDBC Template
+![22-2](https://user-images.githubusercontent.com/48504392/126890174-e1f66c92-a5f1-408c-8d13-a09c464b00a2.png)  
 ### 2-4-1. 개요
 - 대표적인 Spring JDBC 접근 방법 
 - Plain JDBC API가 가진 문제점(코드 복잡화, 트랜잭션 처리, 코드의 반복 등)을 제거하여 Spring에서 제공하는 Class
@@ -71,6 +71,8 @@ ____
     - SELECT를 이용하여 데이터를 조회
 - 배치 
     - 여러 개의 쿼리를 한 번에 수행
+### 2-4-3. JDBC Template 클래스에서 제공하는 SQL 연관 메소드
+![22-3](https://user-images.githubusercontent.com/48504392/126890445-3df1dc7b-3ec3-4228-a70e-1bb54036743d.png)  
 ____
 #
 
