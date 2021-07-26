@@ -68,7 +68,7 @@
 
 ## 11\. API
 
--   [ ]  RESTFUL API
+-   [X]  [RESTFUL API](https://github.com/blackhoal/TIL/blob/master/JAVA/WEB/Spring/Chapter%2012/Notes.md)
 -   [ ]  JSON API
 
 ## 12\. Authentication
