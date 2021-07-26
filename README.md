@@ -7,7 +7,7 @@
 -   [ ]  Browsers and how they work?
 -   [ ]  DNS and how it works?
 -   [ ]  What is hosting?
--   [ ]  HTTP Status Code
+-   [X]  [HTTP Status Code](https://github.com/blackhoal/Study/blob/main/Network/Http%20Status%20Code.md)
 
 ## 2\. Basic Frontend knowledge
 
