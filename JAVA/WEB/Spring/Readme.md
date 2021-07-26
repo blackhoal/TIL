@@ -3,7 +3,7 @@
 - [X] Chapter 02 - [Spring DI & IoC](https://github.com/blackhoal/TIL/blob/master/JAVA/WEB/Spring/Chapter%202/Notes.md)
 - [X] Chapter 03 - [Spring AOP](https://github.com/blackhoal/TIL/blob/master/JAVA/WEB/Spring/Chapter%203/Notes.md)
 - [X] Chapter 04 - [Spring MVC](https://github.com/blackhoal/TIL/blob/master/JAVA/WEB/Spring/Chapter%204/Notes.md)
-- [X] Chapter 05 - [Spring JDBC](https://github.com/blackhoal/TIL/tree/master/JAVA/WEB/Spring/Chapter%205)
+- [X] Chapter 05 - [Spring JDBC](https://github.com/blackhoal/TIL/blob/master/JAVA/WEB/Spring/Chapter%205/Notes.md)
 - [ ] Chapter 06 - [MyBatis Framework]()
 - [ ] Chapter 07 - [Spring & MyBatis 연동]()
 - [ ] Chapter 08 - [Spring Transaction]()
