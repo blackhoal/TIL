@@ -33,6 +33,7 @@
 -   [ ]  OSI 7 Layers
 -   [ ]  TCP/IP 4 Layers
 -   [ ]  HTTP vs HTTPS
+-   [ ]  URL vs URI
 -   [X]  [HTTP Status Code](https://github.com/blackhoal/Study/blob/main/Network/Http%20Status%20Code.md)
 
 ## 5\. Basic DB knowledge
