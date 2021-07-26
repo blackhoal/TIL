@@ -10,4 +10,4 @@
 - [ ] Chapter 09 - [Spring Annotation]()
 - [ ] Chapter 10 - []()  
 - [ ] Chapter 11 - []()
-- [ ] Chapter 12 - [Spring REST API]()
+- [ ] Chapter 12 - [Spring REST API](https://github.com/blackhoal/TIL/blob/master/JAVA/WEB/Spring/Chapter%2012/Notes.md)
