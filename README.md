@@ -7,6 +7,7 @@
 -   [ ]  Browsers and how they work?
 -   [ ]  DNS and how it works?
 -   [ ]  What is hosting?
+-   [ ]  HTTP Status Code
 
 ## 2\. Basic Frontend knowledge
 
