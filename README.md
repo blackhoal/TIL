@@ -29,7 +29,7 @@
 
 -   [ ]  How does the web work?
 -   [ ]  TCP vs UDP
--   [ ]  GET vs POST
+-   [X]  [GET vs POST](https://github.com/blackhoal/Study/blob/main/Network/GET%20VS%20POST.md)
 -   [ ]  OSI 7 Layers
 -   [ ]  TCP/IP 4 Layers
 -   [ ]  HTTP vs HTTPS
