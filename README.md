@@ -29,12 +29,12 @@
 
 -   [ ]  How does the web work?
 -   [ ]  TCP vs UDP
--   [X]  [GET vs POST](https://github.com/blackhoal/Study/blob/main/Network/GET%20VS%20POST.md)
+-   [X]  [GET vs POST](https://passing-henry.tistory.com/22)
 -   [ ]  OSI 7 Layers
 -   [ ]  TCP/IP 4 Layers
 -   [ ]  HTTP vs HTTPS
--   [ ]  URL vs URI
--   [X]  [HTTP Status Code](https://github.com/blackhoal/Study/blob/main/Network/Http%20Status%20Code.md)
+-   [X]  [URL vs URI vs URN](https://passing-henry.tistory.com/20)
+-   [X]  [HTTP Status Code](https://passing-henry.tistory.com/21)
 
 ## 5\. Basic DB knowledge
 
