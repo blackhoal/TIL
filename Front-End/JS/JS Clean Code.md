@@ -257,7 +257,6 @@ const result = items
 
 # 8. Async - Await
 ```js
-// Promise Async/await
 // Bad Code
 function displayUser() {
     fetchUser()
